@@ -1,4 +1,5 @@
 const DEFAULT_CODEX_BASE_PATH = "/osrs-clone-codex/";
+const JOURNEY_SEGMENT = "journeys";
 
 const ENTITY_SEGMENTS = Object.freeze({
   item: "items",
@@ -48,6 +49,12 @@ function buildCodexEntityPath(entityType, entityId, options = {}) {
   return `${normalizeCodexBasePath(options.basePath)}${ENTITY_SEGMENTS[normalizedType]}/${encodeURIComponent(normalizedId)}${buildSearchParams(options)}`;
 }
 
+function buildCodexJourneyPath(journeyId, options = {}) {
+  const normalizedId = String(journeyId || "").trim();
+  assert(normalizedId, "journey id is required");
+  return `${normalizeCodexBasePath(options.basePath)}${JOURNEY_SEGMENT}/${encodeURIComponent(normalizedId)}${buildSearchParams(options)}`;
+}
+
 function buildCodexHomeUrl(options = {}) {
   if (!options.baseUrl) return buildCodexHomePath(options);
   return new URL(buildCodexHomePath(options), options.baseUrl).toString();
@@ -56,6 +63,11 @@ function buildCodexHomeUrl(options = {}) {
 function buildCodexEntityUrl(entityType, entityId, options = {}) {
   if (!options.baseUrl) return buildCodexEntityPath(entityType, entityId, options);
   return new URL(buildCodexEntityPath(entityType, entityId, options), options.baseUrl).toString();
+}
+
+function buildCodexJourneyUrl(journeyId, options = {}) {
+  if (!options.baseUrl) return buildCodexJourneyPath(journeyId, options);
+  return new URL(buildCodexJourneyPath(journeyId, options), options.baseUrl).toString();
 }
 
 function getCodexRouteTemplates(basePath = DEFAULT_CODEX_BASE_PATH) {
@@ -70,10 +82,13 @@ function getCodexRouteTemplates(basePath = DEFAULT_CODEX_BASE_PATH) {
 
 module.exports = {
   DEFAULT_CODEX_BASE_PATH,
+  JOURNEY_SEGMENT,
   normalizeCodexBasePath,
   buildCodexHomePath,
   buildCodexEntityPath,
+  buildCodexJourneyPath,
   buildCodexHomeUrl,
   buildCodexEntityUrl,
+  buildCodexJourneyUrl,
   getCodexRouteTemplates
 };

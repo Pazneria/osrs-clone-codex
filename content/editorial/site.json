@@ -1,18 +1,24 @@
 {
   "siteTitle": "OSRS Clone Codex",
-  "tagline": "Reference pages for the Pazneria low-poly MMO sandbox.",
+  "brandKicker": "Pazneria Reference Hub",
+  "tagline": "Player-first reference pages for the items, skills, and worlds that shape the Pazneria sandbox.",
+  "footerNote": "Reference-first today, with room for future guides and lore once the export-backed core is fully polished.",
   "intro": [
-    "This codex is built from the canonical item, skill, and world data exported from the OSRS Clone repository.",
-    "Mechanics and IDs stay grounded in the game repo while layout, navigation, editorial framing, and future lore pages live here."
+    "The codex is designed to answer practical player questions quickly: what an item does, how a skill loop works, and what a region actually offers.",
+    "It stays grounded in the canonical game export bundle so stable IDs, values, routes, services, and cross-links remain aligned with the source project."
   ],
   "homeSections": [
     {
-      "title": "Website-First",
-      "body": "The arcade, the codex, and the game can all deep-link to each other through stable site paths without sharing runtime state."
+      "title": "Readable First",
+      "body": "Guided summaries lead each page, while raw export data stays available underneath for deeper reference."
     },
     {
-      "title": "Reference-First",
-      "body": "Versioned exports keep this codex aligned with authored gameplay content while staying independent to ship on its own cadence."
+      "title": "Linked Systems",
+      "body": "Items, skills, and worlds cross-link through stable IDs so the codex can act as a dependable project-wide reference layer."
+    },
+    {
+      "title": "Ready to Grow",
+      "body": "The v1 shell stays reference-focused now, but leaves clear visual space for future editorial pages, guides, and worldbuilding."
     }
   ]
 }

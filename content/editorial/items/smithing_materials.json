@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "batchId": "smithing_materials",
+  "title": "Smithing Materials",
+  "entries": {
+    "adamant_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 30 at an anvil using Adamant Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Adamant Arrows x15.",
+      "status": "draft"
+    },
+    "adamant_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 34 using Adamant Arrowheads x15 and Maple Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "adamant_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 31 at an anvil using Adamant Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Adamant Axe.",
+      "status": "draft"
+    },
+    "adamant_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 30 at a furnace using Adamant ore and Coal x6.",
+      "uses": "Used in Smithing recipes that produce Adamant Arrowheads x15, Adamant Axe Head, Adamant Boots, Adamant Helmet, Adamant Pickaxe Head, Adamant Platebody, Adamant Platelegs, Adamant Shield, and Adamant Sword Blade.",
+      "status": "draft"
+    },
+    "adamant_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually sold by Thrain Deepforge in Starter Town.",
+      "uses": "Used in Smithing recipes that produce Adamant Bar. Can be sold to Thrain Deepforge.",
+      "status": "draft"
+    },
+    "adamant_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 31 at an anvil using Adamant Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Adamant Pickaxe.",
+      "status": "draft"
+    },
+    "adamant_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 31 at an anvil using Adamant Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Adamant Sword.",
+      "status": "draft"
+    },
+    "bronze_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 1 at an anvil using Bronze Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Bronze Arrows x15.",
+      "status": "draft"
+    },
+    "bronze_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 1 using Bronze Arrowheads x15 and Wooden Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "bronze_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 1 at an anvil using Bronze Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Bronze Axe.",
+      "status": "draft"
+    },
+    "bronze_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 1 at a furnace using Copper ore and Tin ore.",
+      "uses": "Used in Smithing recipes that produce Bronze Arrowheads x15, Bronze Axe Head, Bronze Boots, Bronze Helmet, Bronze Pickaxe Head, Bronze Platebody, Bronze Platelegs, Bronze Shield, and Bronze Sword Blade.",
+      "status": "draft"
+    },
+    "bronze_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 1 at an anvil using Bronze Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Bronze Pickaxe.",
+      "status": "draft"
+    },
+    "bronze_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 1 at an anvil using Bronze Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Bronze Sword.",
+      "status": "draft"
+    },
+    "coal": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Coal Rock nodes at level 20 in Starter Town. Usually sold by Borin Ironvein in North Road Camp and Starter Town.",
+      "uses": "Used in Smithing recipes that produce Adamant Bar, Mithril Bar, Rune Bar, and Steel Bar. Can be sold to Borin Ironvein.",
+      "status": "draft"
+    },
+    "copper_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Copper Rock nodes at level 1 in North Road Camp and Starter Town. Usually sold by Borin Ironvein in North Road Camp and Starter Town.",
+      "uses": "Used in Smithing recipes that produce Bronze Bar. Can be sold to Borin Ironvein.",
+      "status": "draft"
+    },
+    "gold_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 40 at a furnace using Gold ore.",
+      "uses": "Used in Smithing recipes that produce Gold Amulet, Gold Ring, and Gold Tiara.",
+      "status": "draft"
+    },
+    "gold_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Gold Rock nodes at level 40 in North Road Camp and Starter Town. Usually sold by Elira Gemhand in Starter Town.",
+      "uses": "Used in Smithing recipes that produce Gold Bar. Can be sold to Elira Gemhand.",
+      "status": "draft"
+    },
+    "iron_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 1 at an anvil using Iron Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Iron Arrows x15.",
+      "status": "draft"
+    },
+    "iron_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 5 using Iron Arrowheads x15 and Wooden Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "iron_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 2 at an anvil using Iron Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Iron Axe.",
+      "status": "draft"
+    },
+    "iron_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 1 at a furnace using Iron ore.",
+      "uses": "Used in Smithing recipes that produce Iron Arrowheads x15, Iron Axe Head, Iron Boots, Iron Helmet, Iron Pickaxe Head, Iron Platebody, Iron Platelegs, Iron Shield, and Iron Sword Blade.",
+      "status": "draft"
+    },
+    "iron_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Iron Rock nodes at level 10 in Starter Town. Usually sold by Borin Ironvein in North Road Camp and Starter Town.",
+      "uses": "Used in Smithing recipes that produce Iron Bar and Steel Bar. Can be sold to Borin Ironvein.",
+      "status": "draft"
+    },
+    "iron_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 2 at an anvil using Iron Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Iron Pickaxe.",
+      "status": "draft"
+    },
+    "iron_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 2 at an anvil using Iron Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Iron Sword.",
+      "status": "draft"
+    },
+    "mithril_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 20 at an anvil using Mithril Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Mithril Arrows x15.",
+      "status": "draft"
+    },
+    "mithril_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 23 using Mithril Arrowheads x15 and Willow Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "mithril_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 21 at an anvil using Mithril Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Mithril Axe.",
+      "status": "draft"
+    },
+    "mithril_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 20 at a furnace using Mithril ore and Coal x4.",
+      "uses": "Used in Smithing recipes that produce Mithril Arrowheads x15, Mithril Axe Head, Mithril Boots, Mithril Helmet, Mithril Pickaxe Head, Mithril Platebody, Mithril Platelegs, Mithril Shield, and Mithril Sword Blade.",
+      "status": "draft"
+    },
+    "mithril_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually sold by Borin Ironvein in North Road Camp and Starter Town.",
+      "uses": "Used in Smithing recipes that produce Mithril Bar. Can be sold to Borin Ironvein.",
+      "status": "draft"
+    },
+    "mithril_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 21 at an anvil using Mithril Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Mithril Pickaxe.",
+      "status": "draft"
+    },
+    "mithril_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 21 at an anvil using Mithril Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Mithril Sword.",
+      "status": "draft"
+    },
+    "rune_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 40 at an anvil using Rune Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Rune Arrows x15.",
+      "status": "draft"
+    },
+    "rune_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 45 using Rune Arrowheads x15 and Yew Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "rune_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 41 at an anvil using Rune Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Rune Axe.",
+      "status": "draft"
+    },
+    "rune_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 40 at a furnace using Rune ore and Coal x8.",
+      "uses": "Used in Smithing recipes that produce Rune Arrowheads x15, Rune Axe Head, Rune Boots, Rune Helmet, Rune Pickaxe Head, Rune Platebody, Rune Platelegs, Rune Shield, and Rune Sword Blade.",
+      "status": "draft"
+    },
+    "rune_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually sold by Thrain Deepforge in Starter Town.",
+      "uses": "Used in Smithing recipes that produce Rune Bar. Can be sold to Thrain Deepforge.",
+      "status": "draft"
+    },
+    "rune_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 41 at an anvil using Rune Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Rune Pickaxe.",
+      "status": "draft"
+    },
+    "rune_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 41 at an anvil using Rune Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Rune Sword.",
+      "status": "draft"
+    },
+    "silver_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 30 at a furnace using Silver ore.",
+      "uses": "Used in Smithing recipes that produce Silver Amulet, Silver Ring, and Silver Tiara.",
+      "status": "draft"
+    },
+    "silver_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Silver Rock nodes at level 30 in North Road Camp and Starter Town. Usually sold by Elira Gemhand in Starter Town.",
+      "uses": "Used in Smithing recipes that produce Silver Bar. Can be sold to Elira Gemhand.",
+      "status": "draft"
+    },
+    "steel_arrowheads": {
+      "description": "A bundle of metal arrowheads for assembling finished arrows.",
+      "acquisition": "Mainly produced through Smithing at level 10 at an anvil using Steel Bar. A hammer is also required.",
+      "uses": "Used in Fletching recipes that produce Steel Arrows x15.",
+      "status": "draft"
+    },
+    "steel_arrows": {
+      "description": "A finished bundle of arrows made through Fletching.",
+      "acquisition": "Mainly produced through Fletching at level 12 using Steel Arrowheads x15 and Oak Headless Arrows x15.",
+      "uses": "Can be sold to Advanced Fletcher.",
+      "status": "draft"
+    },
+    "steel_axe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 11 at an anvil using Steel Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Steel Axe.",
+      "status": "draft"
+    },
+    "steel_bar": {
+      "description": "A refined metal bar used in later Smithing and Crafting recipes.",
+      "acquisition": "Mainly produced through Smithing at level 10 at a furnace using Iron ore and Coal x2.",
+      "uses": "Used in Smithing recipes that produce Steel Arrowheads x15, Steel Axe Head, Steel Boots, Steel Helmet, Steel Pickaxe Head, Steel Platebody, Steel Platelegs, Steel Shield, and Steel Sword Blade.",
+      "status": "draft"
+    },
+    "steel_pickaxe_head": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 11 at an anvil using Steel Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Steel Pickaxe.",
+      "status": "draft"
+    },
+    "steel_sword_blade": {
+      "description": "A metal component used in later assembly recipes.",
+      "acquisition": "Mainly produced through Smithing at level 11 at an anvil using Steel Bar x2. A hammer is also required.",
+      "uses": "Used in Crafting recipes that produce Steel Sword.",
+      "status": "draft"
+    },
+    "tin_ore": {
+      "description": "A gathered ore resource used for smelting bars and other metalworking recipes.",
+      "acquisition": "Usually gathered through Mining from Tin Rock nodes at level 1 in North Road Camp and Starter Town. Usually sold by Borin Ironvein in North Road Camp and Starter Town.",
+      "uses": "Used in Smithing recipes that produce Bronze Bar. Can be sold to Borin Ironvein.",
+      "status": "draft"
+    }
+  }
+}

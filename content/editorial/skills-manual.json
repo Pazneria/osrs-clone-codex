@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "entries": {
+    "cooking": {
+      "overview": [
+        "Cooking turns the fishing loop into usable food. In the current bundle, the skill converts raw shrimp, trout, salmon, tuna, and swordfish into cooked versions, with burnt variants tracked as the failure path.",
+        "The recipe set is fire-based and level-gated at 1, 10, 20, 30, and 40, so it reads like a straight progression from starter food to stronger healing."
+      ],
+      "whyItMatters": [
+        "Cooked food is one of the clearest survival upgrades in the codex because it restores health instead of sitting as a raw gathering output.",
+        "Cooking also closes the loop between Fishing and the food economy in Starter Town, where both raw fish and cooked food are represented."
+      ],
+      "howToGetStarted": [
+        "Start with Raw Shrimp at level 1, then move through Trout, Salmon, Tuna, and Swordfish as your level climbs.",
+        "Use a fire target to cook, watch for burn outcomes, and keep the lower-level fish around until your success rate is comfortable."
+      ],
+      "connectedSystems": [
+        "Fishing supplies the raw fish inputs, while fire-based cooking uses the same starter survival loop as Firemaking.",
+        "Starter Town and North Road Camp are the two world anchors in the export, and both appear in the cooking bundle."
+      ],
+      "nextSteps": [
+        "Pair Cooking with Fishing so every catch can become food instead of just stock.",
+        "Check the cooked and burnt item pages together to see the full success and failure chain."
+      ],
+      "featuredItemIds": [
+        "raw_shrimp",
+        "raw_trout",
+        "raw_salmon",
+        "raw_tuna",
+        "raw_swordfish",
+        "cooked_shrimp",
+        "cooked_trout"
+      ],
+      "featuredSkillIds": [
+        "fishing",
+        "firemaking"
+      ],
+      "featuredWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "featuredJourneyIds": []
+    },
+    "crafting": {
+      "overview": [
+        "Crafting is the broadest assembly skill in the bundle. It covers leather work, gem cutting, jewelry, staff parts, tool heads, and strapped weapon or tool assemblies.",
+        "Its economy is built around Starter Town merchants, especially Crafting Teacher, Elira Gemhand, and Tanner Rusk, with inventory recipes that fan out from simple tools into higher-value outputs."
+      ],
+      "whyItMatters": [
+        "Crafting is the main glue skill for the item tree because it turns raw materials into finished gear, quest-like utility items, and tradeable upgrades.",
+        "It also connects directly to Smithing, Fletching, and Mining, which makes it one of the best places to understand how the codex links systems together."
+      ],
+      "howToGetStarted": [
+        "Open with the basic tools first: Chisel, Needle, Thread, and the leather or gem inputs they support.",
+        "From there, follow the level bands into gold jewelry, strapped handles, and the weapon and pickaxe assembly recipes."
+      ],
+      "connectedSystems": [
+        "Smithing provides bars, ore, and shaped bases, while Fletching feeds handles, shafts, and bow components into Crafting recipes.",
+        "Starter Town is the center of the craft economy, with both merchants and the smithing hall supporting the skill."
+      ],
+      "nextSteps": [
+        "Use the jewelry branch to understand how cut gems and gold bases combine.",
+        "Then follow the strapped-tool branch to see how Crafting turns ore-side parts into usable weapons and tools."
+      ],
+      "featuredItemIds": [
+        "chisel",
+        "needle",
+        "thread",
+        "cut_sapphire",
+        "cut_emerald",
+        "gold_amulet",
+        "maple_handle_strapped"
+      ],
+      "featuredSkillIds": [
+        "smithing",
+        "fletching",
+        "mining"
+      ],
+      "featuredWorldIds": [
+        "starter_town"
+      ],
+      "featuredJourneyIds": []
+    },
+    "firemaking": {
+      "overview": [
+        "Firemaking is the short, direct skill in the bundle: it lights logs with a tinderbox and tracks a fixed fire lifetime for each success.",
+        "The current recipes cover Logs, Oak Logs, Willow Logs, Maple Logs, and Yew Logs, with the same starter tool used throughout."
+      ],
+      "whyItMatters": [
+        "Firemaking turns gathered wood into a useful action instead of just inventory stock, and it is the cleanest bridge between Woodcutting and the cooking loop.",
+        "Because the export includes explicit log values and a tinderbox fallback stock, the skill has a simple but very readable economy."
+      ],
+      "howToGetStarted": [
+        "Start with Logs at level 1 and a Tinderbox, then move up through Oak, Willow, Maple, and Yew as your levels rise.",
+        "Keep an eye on the 90-tick fire lifetime shown in the export so you can think about pacing, not just ignition success."
+      ],
+      "connectedSystems": [
+        "Woodcutting supplies the log input, and Cooking often uses the same fire-side loop for food prep.",
+        "The general store fallback stocks Tinderbox, so the starter economy already supports the skill."
+      ],
+      "nextSteps": [
+        "Pair Firemaking with Woodcutting to treat logs as a complete resource loop.",
+        "Use it alongside Cooking when you want to see how one fire can support both utility and food."
+      ],
+      "featuredItemIds": [
+        "tinderbox",
+        "logs",
+        "oak_logs",
+        "willow_logs",
+        "maple_logs",
+        "yew_logs"
+      ],
+      "featuredSkillIds": [
+        "woodcutting",
+        "cooking"
+      ],
+      "featuredWorldIds": [],
+      "featuredJourneyIds": []
+    },
+    "fishing": {
+      "overview": [
+        "Fishing covers three different starter methods in the bundle: small net, rod with bait, and harpoon. Shallow Water and Deep Water are the two fishing spaces in the export.",
+        "The skill produces raw shrimp, trout, salmon, tuna, and swordfish, with merchant support that keeps the tool and food economy visible in Starter Town."
+      ],
+      "whyItMatters": [
+        "Fishing is the source step for the cooking loop, so it powers both food and the raw-material side of the economy.",
+        "Its method split makes it easy to read progression: net for shrimp, rod for trout and salmon, and harpoon for tuna and swordfish."
+      ],
+      "howToGetStarted": [
+        "Begin with Small Net at level 1 for shrimp, then switch to Fishing Rod and Bait at level 10 for trout and salmon.",
+        "Once you reach the higher brackets, move into Harpoon methods for tuna and swordfish, and keep the rune harpoon in mind as the stronger tool path."
+      ],
+      "connectedSystems": [
+        "Cooking consumes the fish you catch, while Starter Town merchants sell the tools and buy back the outputs.",
+        "The world data places fishing routes in Starter Town and North Road Camp, so the skill is anchored to the earliest regions."
+      ],
+      "nextSteps": [
+        "Read the raw fish and cooked fish item pages together to see the full progression.",
+        "Then compare the net, rod, and harpoon methods to see how the skill scales by tool and water type."
+      ],
+      "featuredItemIds": [
+        "small_net",
+        "fishing_rod",
+        "bait",
+        "harpoon",
+        "rune_harpoon",
+        "raw_shrimp",
+        "raw_tuna"
+      ],
+      "featuredSkillIds": [
+        "cooking",
+        "firemaking"
+      ],
+      "featuredWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "featuredJourneyIds": []
+    },
+    "fletching": {
+      "overview": [
+        "Fletching is the wood-processing and ammo assembly skill. In the export it makes shafts, headless arrows, bows, and plain staff parts from logs, feathers, knife work, and bow string.",
+        "Its progression is organized around fixed action timing and level bands from 1 through 40-plus, with the bow and arrow families expanding by log type."
+      ],
+      "whyItMatters": [
+        "Fletching turns gathered wood into combat-ready arrows and bows, which gives Woodcutting output a clear next use.",
+        "It also links directly to Smithing through arrowheads, so the skill is one of the cleanest examples of cross-skill item flow in the bundle."
+      ],
+      "howToGetStarted": [
+        "Start with logs, a knife, and the lowest shaft or bow recipes, then move into headless arrows and stringing once the unfinished forms are available.",
+        "Use the level 1, 5, 10, 20, 30, and 40 brackets to plan which log tier to process next."
+      ],
+      "connectedSystems": [
+        "Woodcutting provides logs, Smithing provides arrowheads, and Crafting appears in the broader item graph for handles and tool-related outputs.",
+        "Starter Town supports the loop through the Fletching Supplier and Advanced Fletcher merchant tables."
+      ],
+      "nextSteps": [
+        "Follow the arrow chain from shafts to headless arrows to finished arrows.",
+        "Then branch into bows and staff parts to see the non-ammo side of the skill."
+      ],
+      "featuredItemIds": [
+        "knife",
+        "bow_string",
+        "feathers_bundle",
+        "logs",
+        "maple_logs",
+        "wooden_headless_arrows",
+        "yew_longbow"
+      ],
+      "featuredSkillIds": [
+        "woodcutting",
+        "smithing",
+        "crafting"
+      ],
+      "featuredWorldIds": [
+        "starter_town"
+      ],
+      "featuredJourneyIds": []
+    },
+    "mining": {
+      "overview": [
+        "Mining extracts the bundle's base ores, rune essence, and gem-bearing resources. The current node table includes clay, copper, tin, iron, coal, silver, gold, sapphire, emerald, and rune essence.",
+        "The skill is tied to starter-world routes and uses a standard attempt loop with level bands at 1, 10, 20, 30, and 40."
+      ],
+      "whyItMatters": [
+        "Mining feeds Smithing, Crafting, and Runecrafting at the same time, so it is one of the strongest upstream skills in the whole export.",
+        "It also defines the gather-and-refine rhythm of the codex, with rock difficulty, depletion chance, respawn timing, and level thresholds all exposed."
+      ],
+      "howToGetStarted": [
+        "Start with Clay, Copper ore, Tin ore, and then move into Iron ore once the level 10 band opens up.",
+        "After that, use Coal for higher bars and watch for Silver, Gold, and gem nodes as the route table expands."
+      ],
+      "connectedSystems": [
+        "Smithing consumes most of the ore stream, Crafting uses certain ores and gems, and Runecrafting relies on Rune essence.",
+        "Starter Town and North Road Camp both appear in the mining world links, with a gated crystal seam in the world data."
+      ],
+      "nextSteps": [
+        "Compare ore items to the Smithing bar recipes to see the full pipeline.",
+        "Then open the Rune essence and gem item pages to follow the rarer branches."
+      ],
+      "featuredItemIds": [
+        "clay",
+        "copper_ore",
+        "tin_ore",
+        "iron_ore",
+        "coal",
+        "rune_essence",
+        "uncut_sapphire"
+      ],
+      "featuredSkillIds": [
+        "smithing",
+        "crafting",
+        "runecrafting"
+      ],
+      "featuredWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "featuredJourneyIds": []
+    },
+    "runecrafting": {
+      "overview": [
+        "Runecrafting turns Rune essence into elemental and combo runes through altar interactions. The bundle includes Air, Water, Earth, Ember, and the combo runes built from those foundations.",
+        "The skill also exposes pouches, an unlock flag for combo crafting, and level-gated recipes that start at 1, 10, 20, 30, and 40."
+      ],
+      "whyItMatters": [
+        "Runecrafting sits at the intersection of Mining and magic-style output because it converts a gathered resource into a reusable, value-bearing rune economy.",
+        "The combo rune recipes make the skill more than a one-step converter, since they also surface unlock state and secondary-rune inputs."
+      ],
+      "howToGetStarted": [
+        "Start with Rune essence and the basic Air or Water altar recipes before moving into Earth and the combo branches.",
+        "Add Small pouch, Medium pouch, and Large pouch as the merchant and unlock tables open up, since the bundle tracks them as part of the skill economy."
+      ],
+      "connectedSystems": [
+        "Mining supplies Rune essence, and the altar recipes consume it directly at the target object layer.",
+        "Starter Town and North Road Camp both anchor the skill in the world export, and the combo rune path is gated by the runecraftingComboUnlocked flag."
+      ],
+      "nextSteps": [
+        "Read the basic rune items first, then compare them to the combo rune outputs.",
+        "Use the pouch items and unlock flag as a reminder that this skill has more than one resource layer."
+      ],
+      "featuredItemIds": [
+        "rune_essence",
+        "small_pouch",
+        "medium_pouch",
+        "large_pouch",
+        "air_rune",
+        "water_rune",
+        "lava_rune"
+      ],
+      "featuredSkillIds": [
+        "mining",
+        "crafting"
+      ],
+      "featuredWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "featuredJourneyIds": []
+    },
+    "smithing": {
+      "overview": [
+        "Smithing is the bar-to-gear conversion skill in the export. It smelts bronze through rune bars, forges weapon and armor parts at the anvil, and also produces gold and silver jewelry bases.",
+        "The skill is built around furnace and anvil stations, with Starter Town explicitly showing both a furnace and an anvil in the world data."
+      ],
+      "whyItMatters": [
+        "Smithing is the backbone of the metal economy because it turns ore into bars and bars into usable weapons, armor, arrowheads, and jewelry bases.",
+        "It connects directly to Mining for inputs and to Crafting and Fletching for downstream assembly, which makes it one of the clearest cross-skill hubs in the bundle."
+      ],
+      "howToGetStarted": [
+        "Begin with Bronze Bar, then follow the bar ladder through Iron, Steel, Mithril, Adamant, and Rune.",
+        "After smelting, move to the anvil recipes for heads, blades, armor, and arrowheads so the whole metal pipeline stays visible."
+      ],
+      "connectedSystems": [
+        "Mining feeds the ore and coal chain, while Crafting consumes the forged parts for tools and weapons.",
+        "Fletching uses the arrowheads, and Starter Town's smithing hall gives the skill a strong location anchor even though the skill export itself has no world list."
+      ],
+      "nextSteps": [
+        "Use the bar pages first to understand the smelting ladder.",
+        "Then compare the head, blade, and armor part pages to see how one bar can branch into many outputs."
+      ],
+      "featuredItemIds": [
+        "hammer",
+        "bronze_bar",
+        "iron_bar",
+        "steel_bar",
+        "adamant_bar",
+        "rune_bar",
+        "gold_bar"
+      ],
+      "featuredSkillIds": [
+        "mining",
+        "crafting",
+        "fletching"
+      ],
+      "featuredWorldIds": [
+        "starter_town"
+      ],
+      "featuredJourneyIds": []
+    },
+    "woodcutting": {
+      "overview": [
+        "Woodcutting is the source skill for the bundle's logs. It covers Normal Tree, Oak Tree, Willow Tree, Maple Tree, and Yew Tree nodes with a single axe-driven attempt loop.",
+        "The export also includes merchant support for axes and log value tables, so the skill reads like a complete gather-and-sell system rather than a lone node table."
+      ],
+      "whyItMatters": [
+        "Woodcutting feeds Firemaking and Fletching immediately, which makes it one of the most connected starter skills in the codex.",
+        "It also matters for economy flow because the same logs are both raw materials and tradeable value entries."
+      ],
+      "howToGetStarted": [
+        "Start with Logs and a basic axe, then move through Oak, Willow, Maple, and Yew as the level bands open up.",
+        "Use the starter merchant tables and the general store fallback to keep your axe path moving while you train."
+      ],
+      "connectedSystems": [
+        "Firemaking burns the same logs, and Fletching turns them into shafts, handles, and bow parts.",
+        "Starter Town and North Road Camp are both present in the world export, and the skill has explicit route anchors in the world data."
+      ],
+      "nextSteps": [
+        "Follow the log items into Firemaking to see the burn side of the loop.",
+        "Then compare the log types against Fletching recipes to see how higher-tier wood branches into more outputs."
+      ],
+      "featuredItemIds": [
+        "logs",
+        "oak_logs",
+        "willow_logs",
+        "maple_logs",
+        "yew_logs",
+        "bronze_axe",
+        "iron_axe"
+      ],
+      "featuredSkillIds": [
+        "firemaking",
+        "fletching",
+        "crafting"
+      ],
+      "featuredWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "featuredJourneyIds": []
+    }
+  }
+}

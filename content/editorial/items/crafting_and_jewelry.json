@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "batchId": "crafting_and_jewelry",
+  "title": "Crafting And Jewelry",
+  "entries": {
+    "amulet_mould": {
+      "description": "A jewelry mould used to shape amulets during crafting recipes.",
+      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
+      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "status": "draft"
+    },
+    "bear_leather": {
+      "description": "A leather crafting material used in equipment and strap recipes.",
+      "acquisition": "Usually bought from Tanner Rusk in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Yew Handle w/ Strap.",
+      "status": "draft"
+    },
+    "bow_string": {
+      "description": "A Fletching supply used to finish wooden bows.",
+      "acquisition": "Usually bought from Fletching Supplier.",
+      "uses": "It is used in Fletching recipes that produce Maple Longbow, Maple Shortbow, Normal Longbow, Normal Shortbow, Oak Longbow, Oak Shortbow, Willow Longbow, Willow Shortbow, Yew Longbow, and Yew Shortbow.",
+      "status": "draft"
+    },
+    "chisel": {
+      "description": "A basic Crafting tool used to cut gems for higher-tier jewelry.",
+      "acquisition": "Usually bought from Crafting Teacher in Starter Town.",
+      "uses": "It is required to cut sapphire, ruby, emerald, and diamond into their cut forms, and it also appears in Crafting economy tables.",
+      "status": "draft"
+    },
+    "clay": {
+      "description": "A basic mining resource gathered from Clay Rock nodes.",
+      "acquisition": "Usually mined from Clay Rock at level 1 in North Road Camp and Starter Town.",
+      "uses": "No downstream recipe or tool use is exported here, so this remains a conservative draft entry.",
+      "status": "draft"
+    },
+    "cut_diamond": {
+      "description": "A cut diamond used in high-value jewelry and staff recipes.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory with a Chisel and Uncut diamond x1.",
+      "uses": "It is used in Crafting recipes that produce Air Staff, Diamond Gold Amulet, Diamond Gold Ring, and Diamond Gold Tiara, and it can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "cut_emerald": {
+      "description": "A cut emerald used in higher-value jewelry and staff recipes.",
+      "acquisition": "Mainly produced through Crafting at level 30 in the inventory with a Chisel and Uncut emerald x1.",
+      "uses": "It is used in Crafting recipes that produce Earth Staff, Emerald Gold Amulet, Emerald Gold Ring, and Emerald Gold Tiara, and it can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "cut_ruby": {
+      "description": "A cut ruby used in higher-value jewelry and staff recipes.",
+      "acquisition": "Mainly produced through Crafting at level 10 in the inventory with a Chisel and Uncut ruby x1.",
+      "uses": "It is used in Crafting recipes that produce Fire Staff, Ruby Gold Amulet, Ruby Gold Ring, Ruby Gold Tiara, Ruby Silver Amulet, Ruby Silver Ring, and Ruby Silver Tiara, and it can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "cut_sapphire": {
+      "description": "A cut sapphire used in higher-value jewelry and staff recipes.",
+      "acquisition": "Mainly produced through Crafting at level 20 in the inventory with a Chisel and Uncut sapphire x1.",
+      "uses": "It is used in Crafting recipes that produce Sapphire Gold Amulet, Sapphire Gold Ring, Sapphire Gold Tiara, Sapphire Silver Amulet, Sapphire Silver Ring, Sapphire Silver Tiara, and Water Staff, and it can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "diamond_gold_amulet": {
+      "description": "A gold amulet set with a cut diamond.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Amulet x1 and Cut diamond x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "diamond_gold_ring": {
+      "description": "A gold ring set with a cut diamond.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Ring x1 and Cut diamond x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "emerald_gold_amulet": {
+      "description": "A gold amulet set with a cut emerald.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Amulet x1 and Cut emerald x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "emerald_gold_ring": {
+      "description": "A gold ring set with a cut emerald.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Ring x1 and Cut emerald x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "gold_amulet": {
+      "description": "A plain gold amulet used as a base for gem-set jewelry.",
+      "acquisition": "Mainly produced through Smithing at level 44 in a Furnace using Gold Bar x1.",
+      "uses": "It is used in Crafting recipes that produce Diamond Gold Amulet, Emerald Gold Amulet, Ruby Gold Amulet, and Sapphire Gold Amulet.",
+      "status": "draft"
+    },
+    "gold_ring": {
+      "description": "A plain gold ring used as a base for gem-set jewelry.",
+      "acquisition": "Mainly produced through Smithing at level 40 in a Furnace using Gold Bar x1.",
+      "uses": "It is used in Crafting recipes that produce Diamond Gold Ring, Emerald Gold Ring, Ruby Gold Ring, and Sapphire Gold Ring.",
+      "status": "draft"
+    },
+    "needle": {
+      "description": "A basic Crafting tool kept in the Starter Town economy.",
+      "acquisition": "Usually bought from Crafting Teacher in Starter Town.",
+      "uses": "It can be traded back to Crafting Teacher in Starter Town and appears in Crafting economy tables.",
+      "status": "draft"
+    },
+    "normal_leather": {
+      "description": "A leather crafting material used in equipment and strap recipes.",
+      "acquisition": "Usually bought from Tanner Rusk in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Oak Handle w/ Strap and Wooden Handle w/ Strap.",
+      "status": "draft"
+    },
+    "ring_mould": {
+      "description": "A jewelry mould used to shape rings during crafting recipes.",
+      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
+      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "status": "draft"
+    },
+    "ruby_gold_amulet": {
+      "description": "A gold amulet set with a cut ruby.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Amulet x1 and Cut ruby x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "ruby_gold_ring": {
+      "description": "A gold ring set with a cut ruby.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Ring x1 and Cut ruby x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "ruby_silver_amulet": {
+      "description": "A silver amulet set with a cut ruby.",
+      "acquisition": "Mainly produced through Crafting at level 10 in the inventory using Silver Amulet x1 and Cut ruby x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "ruby_silver_ring": {
+      "description": "A silver ring set with a cut ruby.",
+      "acquisition": "Mainly produced through Crafting at level 10 in the inventory using Silver Ring x1 and Cut ruby x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_gold_amulet": {
+      "description": "A gold amulet set with a cut sapphire.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Amulet x1 and Cut sapphire x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_gold_ring": {
+      "description": "A gold ring set with a cut sapphire.",
+      "acquisition": "Mainly produced through Crafting at level 40 in the inventory using Gold Ring x1 and Cut sapphire x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_silver_amulet": {
+      "description": "A silver amulet set with a cut sapphire.",
+      "acquisition": "Mainly produced through Crafting at level 20 in the inventory using Silver Amulet x1 and Cut sapphire x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_silver_ring": {
+      "description": "A silver ring set with a cut sapphire.",
+      "acquisition": "Mainly produced through Crafting at level 20 in the inventory using Silver Ring x1 and Cut sapphire x1.",
+      "uses": "It appears in Crafting economy tables and can be traded to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "silver_amulet": {
+      "description": "A plain silver amulet used as a base for gem-set jewelry.",
+      "acquisition": "Mainly produced through Smithing at level 34 in a Furnace using Silver Bar x1.",
+      "uses": "It is used in Crafting recipes that produce Ruby Silver Amulet and Sapphire Silver Amulet.",
+      "status": "draft"
+    },
+    "silver_ring": {
+      "description": "A plain silver ring used as a base for gem-set jewelry.",
+      "acquisition": "Mainly produced through Smithing at level 30 in a Furnace using Silver Bar x1.",
+      "uses": "It is used in Crafting recipes that produce Ruby Silver Ring and Sapphire Silver Ring.",
+      "status": "draft"
+    },
+    "thread": {
+      "description": "A basic Crafting supply kept in the Starter Town economy.",
+      "acquisition": "Usually bought from Crafting Teacher in Starter Town.",
+      "uses": "It can be traded back to Crafting Teacher in Starter Town and appears in Crafting economy tables.",
+      "status": "draft"
+    },
+    "tiara_mould": {
+      "description": "A jewelry mould used to shape tiaras during crafting recipes.",
+      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
+      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "status": "draft"
+    },
+    "uncut_diamond": {
+      "description": "An uncut diamond that can be refined through Crafting.",
+      "acquisition": "Usually bought from Elira Gemhand in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Cut diamond, and it can be traded back to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "uncut_emerald": {
+      "description": "An uncut emerald that can be refined through Crafting.",
+      "acquisition": "Usually mined from Emerald Rock at level 40 in Starter Town, and it is also sold by Elira Gemhand in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Cut emerald, and it can be traded back to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "uncut_ruby": {
+      "description": "An uncut ruby that can be refined through Crafting.",
+      "acquisition": "Usually bought from Elira Gemhand in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Cut ruby, and it can be traded back to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "uncut_sapphire": {
+      "description": "An uncut sapphire that can be refined through Crafting.",
+      "acquisition": "Usually mined from Sapphire Rock at level 30 in Starter Town, and it is also sold by Elira Gemhand in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Cut sapphire, and it can be traded back to Elira Gemhand in Starter Town.",
+      "status": "draft"
+    },
+    "wolf_leather": {
+      "description": "A leather crafting material used in equipment and strap recipes.",
+      "acquisition": "Usually bought from Tanner Rusk in Starter Town.",
+      "uses": "It is used in Crafting recipes that produce Maple Handle w/ Strap and Willow Handle w/ Strap.",
+      "status": "draft"
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "batchId": "metal_gear",
+  "title": "Metal Gear",
+  "entries": {
+    "adamant_axe": {
+      "description": "The Adamant Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 30 in the Inventory from Adamant Axe Head x1 and Maple Handle w/ Strap x1. It is also sold by the Advanced Woodsman.",
+      "uses": "It can be equipped for combat and requires Attack 30; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Advanced Woodsman.",
+      "status": "draft"
+    },
+    "adamant_boots": {
+      "description": "The Adamant Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 31 on an Anvil with a Hammer from Adamant Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 30.",
+      "status": "draft"
+    },
+    "adamant_helmet": {
+      "description": "The Adamant Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 33 on an Anvil with a Hammer from Adamant Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 30.",
+      "status": "draft"
+    },
+    "adamant_pickaxe": {
+      "description": "The Adamant Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 30 in the Inventory from Adamant Pickaxe Head x1 and Maple Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 30; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "adamant_platebody": {
+      "description": "The Adamant Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 37 on an Anvil with a Hammer from Adamant Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 30.",
+      "status": "draft"
+    },
+    "adamant_platelegs": {
+      "description": "The Adamant Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 35 on an Anvil with a Hammer from Adamant Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 30.",
+      "status": "draft"
+    },
+    "adamant_shield": {
+      "description": "The Adamant Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 34 on an Anvil with a Hammer from Adamant Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 30.",
+      "status": "draft"
+    },
+    "adamant_sword": {
+      "description": "The Adamant Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 30 in the Inventory from Adamant Sword Blade x1 and Maple Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 30. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "bronze_axe": {
+      "description": "The Bronze Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Bronze Axe Head x1 and Wooden Handle w/ Strap x1. It is also sold by the Forester Teacher.",
+      "uses": "It can be equipped for combat and requires Attack 1; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Forester Teacher.",
+      "status": "draft"
+    },
+    "bronze_boots": {
+      "description": "The Bronze Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 1 on an Anvil with a Hammer from Bronze Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "bronze_helmet": {
+      "description": "The Bronze Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 1 on an Anvil with a Hammer from Bronze Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "bronze_pickaxe": {
+      "description": "The Bronze Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Bronze Pickaxe Head x1 and Wooden Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 1; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "bronze_platebody": {
+      "description": "The Bronze Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 1 on an Anvil with a Hammer from Bronze Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "bronze_platelegs": {
+      "description": "The Bronze Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 1 on an Anvil with a Hammer from Bronze Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "bronze_shield": {
+      "description": "The Bronze Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 1 on an Anvil with a Hammer from Bronze Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "bronze_sword": {
+      "description": "The Bronze Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Bronze Sword Blade x1 and Wooden Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 1. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "iron_axe": {
+      "description": "The Iron Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Iron Axe Head x1 and Wooden Handle w/ Strap x1. It is also sold by the Forester Teacher and stocked by the General Store in North Road Camp and Starter Town.",
+      "uses": "It can be equipped for combat and requires Attack 1; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Forester Teacher.",
+      "status": "draft"
+    },
+    "iron_boots": {
+      "description": "The Iron Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 2 on an Anvil with a Hammer from Iron Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "iron_helmet": {
+      "description": "The Iron Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 4 on an Anvil with a Hammer from Iron Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "iron_pickaxe": {
+      "description": "The Iron Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Iron Pickaxe Head x1 and Wooden Handle w/ Strap x1. It is also stocked by the General Store in North Road Camp and Starter Town.",
+      "uses": "It can be equipped for combat and requires Attack 1; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "iron_platebody": {
+      "description": "The Iron Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 8 on an Anvil with a Hammer from Iron Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "iron_platelegs": {
+      "description": "The Iron Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 6 on an Anvil with a Hammer from Iron Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "iron_shield": {
+      "description": "The Iron Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 5 on an Anvil with a Hammer from Iron Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 1.",
+      "status": "draft"
+    },
+    "iron_sword": {
+      "description": "The Iron Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 1 in the Inventory from Iron Sword Blade x1 and Wooden Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 1. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "mithril_axe": {
+      "description": "The Mithril Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 20 in the Inventory from Mithril Axe Head x1 and Willow Handle w/ Strap x1. It is also sold by the Advanced Woodsman.",
+      "uses": "It can be equipped for combat and requires Attack 20; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Advanced Woodsman.",
+      "status": "draft"
+    },
+    "mithril_boots": {
+      "description": "The Mithril Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 21 on an Anvil with a Hammer from Mithril Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 20.",
+      "status": "draft"
+    },
+    "mithril_helmet": {
+      "description": "The Mithril Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 23 on an Anvil with a Hammer from Mithril Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 20.",
+      "status": "draft"
+    },
+    "mithril_pickaxe": {
+      "description": "The Mithril Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 20 in the Inventory from Mithril Pickaxe Head x1 and Willow Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 20; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "mithril_platebody": {
+      "description": "The Mithril Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 27 on an Anvil with a Hammer from Mithril Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 20.",
+      "status": "draft"
+    },
+    "mithril_platelegs": {
+      "description": "The Mithril Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 25 on an Anvil with a Hammer from Mithril Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 20.",
+      "status": "draft"
+    },
+    "mithril_shield": {
+      "description": "The Mithril Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 24 on an Anvil with a Hammer from Mithril Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 20.",
+      "status": "draft"
+    },
+    "mithril_sword": {
+      "description": "The Mithril Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 20 in the Inventory from Mithril Sword Blade x1 and Willow Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 20. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "rune_axe": {
+      "description": "The Rune Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 40 in the Inventory from Rune Axe Head x1 and Yew Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 40; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Advanced Woodsman.",
+      "status": "draft"
+    },
+    "rune_boots": {
+      "description": "The Rune Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 41 on an Anvil with a Hammer from Rune Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 40.",
+      "status": "draft"
+    },
+    "rune_helmet": {
+      "description": "The Rune Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 43 on an Anvil with a Hammer from Rune Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 40.",
+      "status": "draft"
+    },
+    "rune_pickaxe": {
+      "description": "The Rune Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 40 in the Inventory from Rune Pickaxe Head x1 and Yew Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 40; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "rune_platebody": {
+      "description": "The Rune Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 47 on an Anvil with a Hammer from Rune Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 40.",
+      "status": "draft"
+    },
+    "rune_platelegs": {
+      "description": "The Rune Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 45 on an Anvil with a Hammer from Rune Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 40.",
+      "status": "draft"
+    },
+    "rune_shield": {
+      "description": "The Rune Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 44 on an Anvil with a Hammer from Rune Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 40.",
+      "status": "draft"
+    },
+    "rune_sword": {
+      "description": "The Rune Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 40 in the Inventory from Rune Sword Blade x1 and Yew Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 40. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "steel_axe": {
+      "description": "The Steel Axe can be equipped as a weapon and used as a Woodcutting tool.",
+      "acquisition": "Crafted through Crafting at level 10 in the Inventory from Steel Axe Head x1 and Oak Handle w/ Strap x1. It is also sold by the Forester Teacher.",
+      "uses": "It can be equipped for combat and requires Attack 10; it also functions as a Woodcutting tool. It can be sold to Tanner Rusk in Starter Town and the Forester Teacher.",
+      "status": "draft"
+    },
+    "steel_boots": {
+      "description": "The Steel Boots can be equipped in the feet slot.",
+      "acquisition": "Forged through Smithing at level 11 on an Anvil with a Hammer from Steel Bar x2.",
+      "uses": "It can be equipped in the feet slot and requires Defense 10.",
+      "status": "draft"
+    },
+    "steel_helmet": {
+      "description": "The Steel Helmet can be equipped in the head slot.",
+      "acquisition": "Forged through Smithing at level 13 on an Anvil with a Hammer from Steel Bar x5.",
+      "uses": "It can be equipped in the head slot and requires Defense 10.",
+      "status": "draft"
+    },
+    "steel_pickaxe": {
+      "description": "The Steel Pickaxe can be equipped as a weapon and used as a Mining tool.",
+      "acquisition": "Crafted through Crafting at level 10 in the Inventory from Steel Pickaxe Head x1 and Oak Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 10; it also functions as a Mining tool. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    },
+    "steel_platebody": {
+      "description": "The Steel Platebody can be equipped in the body slot.",
+      "acquisition": "Forged through Smithing at level 17 on an Anvil with a Hammer from Steel Bar x9.",
+      "uses": "It can be equipped in the body slot and requires Defense 10.",
+      "status": "draft"
+    },
+    "steel_platelegs": {
+      "description": "The Steel Platelegs can be equipped in the legs slot.",
+      "acquisition": "Forged through Smithing at level 15 on an Anvil with a Hammer from Steel Bar x7.",
+      "uses": "It can be equipped in the legs slot and requires Defense 10.",
+      "status": "draft"
+    },
+    "steel_shield": {
+      "description": "The Steel Shield can be equipped in the shield slot.",
+      "acquisition": "Forged through Smithing at level 14 on an Anvil with a Hammer from Steel Bar x6.",
+      "uses": "It can be equipped in the shield slot and requires Defense 10.",
+      "status": "draft"
+    },
+    "steel_sword": {
+      "description": "The Steel Sword can be equipped as a weapon.",
+      "acquisition": "Crafted through Crafting at level 10 in the Inventory from Steel Sword Blade x1 and Oak Handle w/ Strap x1.",
+      "uses": "It can be equipped for combat and requires Attack 10. It can be sold to Tanner Rusk in Starter Town.",
+      "status": "draft"
+    }
+  }
+}

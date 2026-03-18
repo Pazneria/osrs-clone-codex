@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "batchId": "utility_and_outliers",
+  "title": "Utility And Outliers",
+  "entries": {
+    "ashes": {
+      "description": "A low-value residue item associated with spent fires and other firemaking output.",
+      "acquisition": "The export links ashes to Firemaking economy data, but it does not expose the exact production step, so this remains a conservative fire-related byproduct entry.",
+      "uses": "No major downstream crafting use is exported, so it mainly functions as a minor economy item.",
+      "status": "draft"
+    },
+    "coins": {
+      "description": "Standard currency used across shop, trade, and value calculations.",
+      "acquisition": "The export does not expose a single primary source, so treat coins as general-purpose currency earned through broader gameplay systems.",
+      "uses": "Used to buy items from merchants and to represent value across the project economy.",
+      "status": "draft"
+    },
+    "feathers_bundle": {
+      "description": "A bundled feather resource used to finish headless arrow recipes in Fletching.",
+      "acquisition": "Sold by the Fletching Supplier in the exported fletching economy tables.",
+      "uses": "Combined with shafts across each wood tier to produce headless arrows for later arrow assembly.",
+      "status": "draft"
+    },
+    "hammer": {
+      "description": "A core workshop tool used throughout smithing and metal assembly recipes.",
+      "acquisition": "Sold by Borin Ironvein through the exported smithing merchant tables in Starter Town and North Road Camp.",
+      "uses": "Required for many smithing tasks and it also appears as a trade item in the smithing economy.",
+      "status": "draft"
+    },
+    "knife": {
+      "description": "A cutting tool used across fletching and simple crafting workflows.",
+      "acquisition": "Stocked by general stores in Starter Town and North Road Camp, with the exported default stock listing ten at a time.",
+      "uses": "Used to shape logs and related materials in fletching workflows, and it also appears in the fletching economy tables.",
+      "status": "draft"
+    },
+    "soft_clay": {
+      "description": "A worked clay resource kept as a conservative crafting-material entry.",
+      "acquisition": "No direct recipe or gathering source is exported for soft clay, so its acquisition remains intentionally sparse.",
+      "uses": "The export does not show strong downstream links, so it is described as general crafting stock rather than tied to unconfirmed recipes.",
+      "status": "draft"
+    },
+    "tinderbox": {
+      "description": "A basic firemaking tool used to ignite logs.",
+      "acquisition": "Stocked by general stores in Starter Town and North Road Camp through the exported firemaking and general-store economy data.",
+      "uses": "Used to light logs for Firemaking.",
+      "status": "draft"
+    }
+  }
+}

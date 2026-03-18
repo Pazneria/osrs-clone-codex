@@ -5,8 +5,11 @@
   "description": "Standalone static codex for the OSRS Clone project.",
   "scripts": {
     "sync:data": "node scripts/sync-data.js",
+    "scaffold:item-editorial": "node scripts/scaffold-item-editorial.js",
     "check": "node scripts/validate-data.js",
     "build": "node scripts/build.js",
-    "serve": "npm run build && start \"\" http://localhost:5520/osrs-clone-codex/ && python -m http.server 5520 -d dist"
+    "dev": "node scripts/dev-server.js",
+    "dev:open": "node scripts/dev-server.js --open",
+    "serve": "node scripts/dev-server.js --once --open"
   }
 }

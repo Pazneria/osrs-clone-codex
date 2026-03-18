@@ -1,0 +1,79 @@
+{
+  "amulet_mould": {
+    "descriptionHints": [
+      "A jewelry mould used to shape amulets during crafting recipes."
+    ],
+    "acquisitionHints": [
+      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+    ],
+    "useHints": [
+      "Used in amulet-making recipes that turn silver or gold bars into wearable jewelry."
+    ]
+  },
+  "ring_mould": {
+    "descriptionHints": [
+      "A jewelry mould used to shape rings during crafting recipes."
+    ],
+    "acquisitionHints": [
+      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+    ],
+    "useHints": [
+      "Used in ring-making recipes that turn silver or gold bars into wearable jewelry."
+    ]
+  },
+  "tiara_mould": {
+    "descriptionHints": [
+      "A jewelry mould used to shape tiaras during crafting recipes."
+    ],
+    "acquisitionHints": [
+      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+    ],
+    "useHints": [
+      "Used in tiara-making recipes that turn silver or gold bars into runecrafting-oriented headgear."
+    ]
+  },
+  "coins": {
+    "descriptionHints": [
+      "Standard currency used across shop and trade interactions."
+    ],
+    "acquisitionHints": [
+      "The export does not expose a single primary source, so treat coins as general economy currency earned through broader gameplay."
+    ],
+    "useHints": [
+      "Used to buy items from merchants and to represent value across the project economy."
+    ]
+  },
+  "ashes": {
+    "descriptionHints": [
+      "A low-value residue item associated with completed fires."
+    ],
+    "acquisitionHints": [
+      "The export links ashes to Firemaking economy data, but the exact production step is not spelled out, so keep the wording conservative."
+    ],
+    "useHints": [
+      "No major downstream crafting use is exported, so it mainly serves as a minor economy item."
+    ]
+  },
+  "soft_clay": {
+    "descriptionHints": [
+      "A worked clay resource with crafting-oriented utility."
+    ],
+    "acquisitionHints": [
+      "No direct recipe or gathering source is exported for soft clay, so keep its acquisition wording sparse."
+    ],
+    "useHints": [
+      "The export does not show strong downstream links, so describe it as a general crafting material rather than inventing specific recipes."
+    ]
+  },
+  "tinderbox": {
+    "descriptionHints": [
+      "A basic utility tool used to start fires."
+    ],
+    "acquisitionHints": [
+      "Usually stocked through general-store style economy data and firemaking support tables."
+    ],
+    "useHints": [
+      "Used to light logs for Firemaking and other fire-starting interactions."
+    ]
+  }
+}

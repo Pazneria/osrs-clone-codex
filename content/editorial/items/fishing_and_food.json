@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "batchId": "fishing_and_food",
+  "title": "Fishing And Food",
+  "entries": {
+    "bait": {
+      "description": "A basic fishing consumable used with rod-based methods.",
+      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "uses": "It is consumed by rod-based fishing methods and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_salmon": {
+      "description": "A burnt version of Raw Salmon created by a failed Cooking attempt.",
+      "acquisition": "It is created when Raw Salmon burns during Cooking.",
+      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_shrimp": {
+      "description": "A burnt version of Raw Shrimp created by a failed Cooking attempt.",
+      "acquisition": "It is created when Raw Shrimp burns during Cooking.",
+      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_swordfish": {
+      "description": "A burnt version of Raw Swordfish created by a failed Cooking attempt.",
+      "acquisition": "It is created when Raw Swordfish burns during Cooking.",
+      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_trout": {
+      "description": "A burnt version of Raw Trout created by a failed Cooking attempt.",
+      "acquisition": "It is created when Raw Trout burns during Cooking.",
+      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_tuna": {
+      "description": "A burnt version of Raw Tuna created by a failed Cooking attempt.",
+      "acquisition": "It is created when Raw Tuna burns during Cooking.",
+      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "cooked_salmon": {
+      "description": "A cooked fish food item that restores 7 HP when eaten.",
+      "acquisition": "It is usually made by Cooking Raw Salmon starting at level 20.",
+      "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "cooked_shrimp": {
+      "description": "A cooked fish food item that restores 3 HP when eaten.",
+      "acquisition": "It is usually made by Cooking Raw Shrimp starting at level 1.",
+      "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "cooked_swordfish": {
+      "description": "A cooked fish food item that restores 12 HP when eaten.",
+      "acquisition": "It is usually made by Cooking Raw Swordfish starting at level 40.",
+      "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "cooked_trout": {
+      "description": "A cooked fish food item that restores 5 HP when eaten.",
+      "acquisition": "It is usually made by Cooking Raw Trout starting at level 10.",
+      "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "cooked_tuna": {
+      "description": "A cooked fish food item that restores 9 HP when eaten.",
+      "acquisition": "It is usually made by Cooking Raw Tuna starting at level 30.",
+      "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "fishing_rod": {
+      "description": "A fishing tool used for rod fishing methods.",
+      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "uses": "It is used for rod fishing methods, usually with bait, and can be traded to the Fishing Supplier or Fishing Teacher in Starter Town.",
+      "status": "draft"
+    },
+    "harpoon": {
+      "description": "A fishing tool used for harpoon fishing methods.",
+      "acquisition": "This batch does not export a direct acquisition path for it, so the entry stays conservative.",
+      "uses": "It is used for harpoon fishing methods and can be equipped for combat.",
+      "status": "draft"
+    },
+    "raw_salmon": {
+      "description": "A raw fish resource gathered through Fishing and used in Cooking.",
+      "acquisition": "It is usually gathered at Shallow Water with a Fishing Rod starting at level 20.",
+      "uses": "It is a Cooking input for Cooked Salmon and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "raw_shrimp": {
+      "description": "A raw fish resource gathered through Fishing and used in Cooking.",
+      "acquisition": "It is usually gathered at Shallow Water with a Small Net starting at level 1.",
+      "uses": "It is a Cooking input for Cooked Shrimp and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "raw_swordfish": {
+      "description": "A raw fish resource gathered through Fishing and used in Cooking.",
+      "acquisition": "It is usually gathered at Deep Water with a Harpoon-class tool starting at level 40.",
+      "uses": "It is a Cooking input for Cooked Swordfish and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "raw_trout": {
+      "description": "A raw fish resource gathered through Fishing and used in Cooking.",
+      "acquisition": "It is usually gathered at Shallow Water with a Fishing Rod starting at level 10.",
+      "uses": "It is a Cooking input for Cooked Trout and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "raw_tuna": {
+      "description": "A raw fish resource gathered through Fishing and used in Cooking.",
+      "acquisition": "It is usually gathered at Deep Water or Shallow Water with a Harpoon-class tool starting at level 30.",
+      "uses": "It is a Cooking input for Cooked Tuna and can be traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "rune_harpoon": {
+      "description": "A fishing tool used for harpoon fishing methods.",
+      "acquisition": "This batch does not export a direct acquisition path for it, so the entry stays conservative.",
+      "uses": "It is used for harpoon fishing methods and can be traded to the Fishing Teacher in Starter Town. It can also be equipped for combat.",
+      "status": "draft"
+    },
+    "small_net": {
+      "description": "A fishing tool used for small net fishing methods.",
+      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "uses": "It is used for small net fishing methods and can be traded to the Fishing Supplier or Fishing Teacher in Starter Town.",
+      "status": "draft"
+    }
+  }
+}

@@ -1,6 +1,8 @@
 const path = require("path");
 
 const { loadCodexBundle, validateCodexBundle } = require("./lib/codex-data");
+const { loadItemEditorial, writeItemAuthoringArtifacts } = require("./lib/item-editorial");
+const { loadManualContent } = require("./lib/manual-content");
 const { syncCodexData } = require("./sync-data");
 
 function run() {
@@ -8,9 +10,14 @@ function run() {
   const { outDir } = syncCodexData();
   const bundle = loadCodexBundle(projectRoot, outDir);
   validateCodexBundle(bundle);
+  writeItemAuthoringArtifacts(projectRoot, bundle);
+  const itemEditorial = loadItemEditorial(projectRoot, bundle);
+  const manualContent = loadManualContent(projectRoot, bundle);
   console.log(
     `Validated codex bundle `
-    + `(${bundle.items.length} items, ${bundle.skills.length} skills, ${bundle.worlds.length} worlds).`
+    + `(${bundle.items.length} items, ${bundle.skills.length} skills, ${bundle.worlds.length} worlds, `
+    + `${Object.keys(itemEditorial.entriesByItemId).length} item descriptions, `
+    + `${manualContent.journeys.journeys.length} journeys).`
   );
 }
 

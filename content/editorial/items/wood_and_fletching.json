@@ -1,0 +1,308 @@
+{
+    "schemaVersion":  1,
+    "batchId":  "wood_and_fletching",
+    "title":  "Wood And Fletching",
+    "entries":  {
+                    "logs":  {
+                                 "description":  "Logs are a woodcutting resource used in Firemaking and Fletching.",
+                                 "acquisition":  "They are usually gathered from Normal Trees with Woodcutting at level 1.",
+                                 "uses":  "They are used in Firemaking, and in Fletching to make Normal Longbow (u), Normal Shortbow (u), Plain Staff (Wood), Wooden Handle, and Wooden Shafts.",
+                                 "status":  "draft"
+                             },
+                    "maple_handle":  {
+                                         "description":  "A wooden component used as the base for strapped tool and weapon recipes.",
+                                         "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 30.",
+                                         "uses":  "It is used in Crafting to make Maple Handle w/ Strap.",
+                                         "status":  "draft"
+                                     },
+                    "maple_handle_strapped":  {
+                                                  "description":  "A strapped wooden component used in tool and weapon crafting.",
+                                                  "acquisition":  "It is made in Crafting at level 30 in the inventory using Maple Handle x1 and Wolf Leather x1.",
+                                                  "uses":  "It is used in Crafting to make Adamant Axe, Adamant Pickaxe, and Adamant Sword.",
+                                                  "status":  "draft"
+                                              },
+                    "maple_headless_arrows":  {
+                                                  "description":  "A bundled arrow component used in Fletching.",
+                                                  "acquisition":  "It is made through Fletching at level 32 using Maple Shafts x15 and Feathers x15.",
+                                                  "uses":  "It is used in Fletching to make Adamant Arrows x15.",
+                                                  "status":  "draft"
+                                              },
+                    "maple_logs":  {
+                                       "description":  "Maple Logs are a woodcutting resource used in Firemaking and Fletching.",
+                                       "acquisition":  "They are usually gathered from Maple Trees with Woodcutting at level 30.",
+                                       "uses":  "They are used in Firemaking, and in Fletching to make Maple Handle, Maple Longbow (u), Maple Shafts, Maple Shortbow (u), and Plain Staff (Maple).",
+                                       "status":  "draft"
+                                   },
+                    "maple_longbow":  {
+                                          "description":  "A finished bow made through Fletching.",
+                                          "acquisition":  "It is made by stringing Maple Longbow (u) with Bow String at level 32.",
+                                          "uses":  "It can be sold to Advanced Fletcher.",
+                                          "status":  "draft"
+                                      },
+                    "maple_longbow_u":  {
+                                            "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                            "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 32.",
+                                            "uses":  "It is used in Fletching to make Maple Longbow.",
+                                            "status":  "draft"
+                                        },
+                    "maple_shafts":  {
+                                         "description":  "A bundle of shafts used in Fletching arrow recipes.",
+                                         "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 31.",
+                                         "uses":  "It is used in Fletching to make Maple Headless Arrows x15.",
+                                         "status":  "draft"
+                                     },
+                    "maple_shortbow":  {
+                                           "description":  "A finished bow made through Fletching.",
+                                           "acquisition":  "It is made by stringing Maple Shortbow (u) with Bow String at level 34.",
+                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "status":  "draft"
+                                       },
+                    "maple_shortbow_u":  {
+                                             "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                             "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 34.",
+                                             "uses":  "It is used in Fletching to make Maple Shortbow.",
+                                             "status":  "draft"
+                                         },
+                    "normal_longbow":  {
+                                           "description":  "A finished bow made through Fletching.",
+                                           "acquisition":  "It is made by stringing Normal Longbow (u) with Bow String at level 3.",
+                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "status":  "draft"
+                                       },
+                    "normal_longbow_u":  {
+                                             "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                             "acquisition":  "It is made through Fletching with a Knife from Logs at level 3.",
+                                             "uses":  "It is used in Fletching to make Normal Longbow.",
+                                             "status":  "draft"
+                                         },
+                    "normal_shortbow":  {
+                                            "description":  "A finished bow made through Fletching.",
+                                            "acquisition":  "It is made by stringing Normal Shortbow (u) with Bow String at level 5.",
+                                            "uses":  "It can be sold to Advanced Fletcher.",
+                                            "status":  "draft"
+                                        },
+                    "normal_shortbow_u":  {
+                                              "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                              "acquisition":  "It is made through Fletching with a Knife from Logs at level 5.",
+                                              "uses":  "It is used in Fletching to make Normal Shortbow.",
+                                              "status":  "draft"
+                                          },
+                    "oak_handle":  {
+                                       "description":  "A wooden component used as the base for strapped tool and weapon recipes.",
+                                       "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 10.",
+                                       "uses":  "It is used in Crafting to make Oak Handle w/ Strap.",
+                                       "status":  "draft"
+                                   },
+                    "oak_handle_strapped":  {
+                                                "description":  "A strapped wooden component used in tool and weapon crafting.",
+                                                "acquisition":  "It is made in Crafting at level 10 in the inventory using Oak Handle x1 and Normal Leather x1.",
+                                                "uses":  "It is used in Crafting to make Steel Axe, Steel Pickaxe, and Steel Sword.",
+                                                "status":  "draft"
+                                            },
+                    "oak_headless_arrows":  {
+                                                "description":  "A bundled arrow component used in Fletching.",
+                                                "acquisition":  "It is made through Fletching at level 12 using Oak Shafts x15 and Feathers x15.",
+                                                "uses":  "It is used in Fletching to make Steel Arrows x15.",
+                                                "status":  "draft"
+                                            },
+                    "oak_logs":  {
+                                     "description":  "Oak Logs are a woodcutting resource used in Firemaking and Fletching.",
+                                     "acquisition":  "They are usually gathered from Oak Trees with Woodcutting at level 10.",
+                                     "uses":  "They are used in Firemaking, and in Fletching to make Oak Handle, Oak Longbow (u), Oak Shafts, Oak Shortbow (u), and Plain Staff (Oak).",
+                                     "status":  "draft"
+                                 },
+                    "oak_longbow":  {
+                                        "description":  "A finished bow made through Fletching.",
+                                        "acquisition":  "It is made by stringing Oak Longbow (u) with Bow String at level 12.",
+                                        "uses":  "It can be sold to Advanced Fletcher.",
+                                        "status":  "draft"
+                                    },
+                    "oak_longbow_u":  {
+                                          "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 12.",
+                                          "uses":  "It is used in Fletching to make Oak Longbow.",
+                                          "status":  "draft"
+                                      },
+                    "oak_shafts":  {
+                                       "description":  "A bundle of shafts used in Fletching arrow recipes.",
+                                       "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 11.",
+                                       "uses":  "It is used in Fletching to make Oak Headless Arrows x15.",
+                                       "status":  "draft"
+                                   },
+                    "oak_shortbow":  {
+                                         "description":  "A finished bow made through Fletching.",
+                                         "acquisition":  "It is made by stringing Oak Shortbow (u) with Bow String at level 14.",
+                                         "uses":  "It can be sold to Advanced Fletcher.",
+                                         "status":  "draft"
+                                     },
+                    "oak_shortbow_u":  {
+                                           "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                           "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 14.",
+                                           "uses":  "It is used in Fletching to make Oak Shortbow.",
+                                           "status":  "draft"
+                                       },
+                    "plain_staff_maple":  {
+                                              "description":  "A plain staff base used in elemental staff crafting.",
+                                              "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 31.",
+                                              "uses":  "It is used in Crafting to make Earth Staff.",
+                                              "status":  "draft"
+                                          },
+                    "plain_staff_oak":  {
+                                            "description":  "A plain staff base used in elemental staff crafting.",
+                                            "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 11.",
+                                            "uses":  "It is used in Crafting to make Fire Staff.",
+                                            "status":  "draft"
+                                        },
+                    "plain_staff_willow":  {
+                                               "description":  "A plain staff base used in elemental staff crafting.",
+                                               "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 21.",
+                                               "uses":  "It is used in Crafting to make Water Staff.",
+                                               "status":  "draft"
+                                           },
+                    "plain_staff_wood":  {
+                                             "description":  "A plain staff base used in elemental staff crafting.",
+                                             "acquisition":  "It is made through Fletching with a Knife from Logs at level 2.",
+                                             "uses":  "It can be sold to Advanced Fletcher.",
+                                             "status":  "draft"
+                                         },
+                    "plain_staff_yew":  {
+                                            "description":  "A plain staff base used in elemental staff crafting.",
+                                            "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 41.",
+                                            "uses":  "It is used in Crafting to make Air Staff.",
+                                            "status":  "draft"
+                                        },
+                    "willow_handle":  {
+                                          "description":  "A wooden component used as the base for strapped tool and weapon recipes.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 20.",
+                                          "uses":  "It is used in Crafting to make Willow Handle w/ Strap.",
+                                          "status":  "draft"
+                                      },
+                    "willow_handle_strapped":  {
+                                                   "description":  "A strapped wooden component used in tool and weapon crafting.",
+                                                   "acquisition":  "It is made in Crafting at level 20 in the inventory using Willow Handle x1 and Wolf Leather x1.",
+                                                   "uses":  "It is used in Crafting to make Mithril Axe, Mithril Pickaxe, and Mithril Sword.",
+                                                   "status":  "draft"
+                                               },
+                    "willow_headless_arrows":  {
+                                                   "description":  "A bundled arrow component used in Fletching.",
+                                                   "acquisition":  "It is made through Fletching at level 22 using Willow Shafts x15 and Feathers x15.",
+                                                   "uses":  "It is used in Fletching to make Mithril Arrows x15.",
+                                                   "status":  "draft"
+                                               },
+                    "willow_logs":  {
+                                        "description":  "Willow Logs are a woodcutting resource used in Firemaking and Fletching.",
+                                        "acquisition":  "They are usually gathered from Willow Trees with Woodcutting at level 20.",
+                                        "uses":  "They are used in Firemaking, and in Fletching to make Willow Handle, Willow Longbow (u), Willow Shafts, Willow Shortbow (u), and Plain Staff (Willow).",
+                                        "status":  "draft"
+                                    },
+                    "willow_longbow":  {
+                                           "description":  "A finished bow made through Fletching.",
+                                           "acquisition":  "It is made by stringing Willow Longbow (u) with Bow String at level 22.",
+                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "status":  "draft"
+                                       },
+                    "willow_longbow_u":  {
+                                             "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                             "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 22.",
+                                             "uses":  "It is used in Fletching to make Willow Longbow.",
+                                             "status":  "draft"
+                                         },
+                    "willow_shafts":  {
+                                          "description":  "A bundle of shafts used in Fletching arrow recipes.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 21.",
+                                          "uses":  "It is used in Fletching to make Willow Headless Arrows x15.",
+                                          "status":  "draft"
+                                      },
+                    "willow_shortbow":  {
+                                            "description":  "A finished bow made through Fletching.",
+                                            "acquisition":  "It is made by stringing Willow Shortbow (u) with Bow String at level 24.",
+                                            "uses":  "It can be sold to Advanced Fletcher.",
+                                            "status":  "draft"
+                                        },
+                    "willow_shortbow_u":  {
+                                              "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                              "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 24.",
+                                              "uses":  "It is used in Fletching to make Willow Shortbow.",
+                                              "status":  "draft"
+                                          },
+                    "wooden_handle":  {
+                                          "description":  "A wooden component used as the base for strapped tool and weapon recipes.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Logs at level 1.",
+                                          "uses":  "It is used in Crafting to make Wooden Handle w/ Strap.",
+                                          "status":  "draft"
+                                      },
+                    "wooden_handle_strapped":  {
+                                                   "description":  "A strapped wooden component used in tool and weapon crafting.",
+                                                   "acquisition":  "It is made in Crafting at level 1 in the inventory using Wooden Handle x1 and Normal Leather x1.",
+                                                   "uses":  "It is used in Crafting to make Bronze Axe, Bronze Pickaxe, and Bronze Sword.",
+                                                   "status":  "draft"
+                                               },
+                    "wooden_headless_arrows":  {
+                                                   "description":  "A bundled arrow component used in Fletching.",
+                                                   "acquisition":  "It is made through Fletching at level 3 using Wooden Shafts x15 and Feathers x15.",
+                                                   "uses":  "It is used in Fletching to make Bronze Arrows x15 and Iron Arrows x15.",
+                                                   "status":  "draft"
+                                               },
+                    "wooden_shafts":  {
+                                          "description":  "A bundle of shafts used in Fletching arrow recipes.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Logs at level 2.",
+                                          "uses":  "It is used in Fletching to make Wooden Headless Arrows x15.",
+                                          "status":  "draft"
+                                      },
+                    "yew_handle":  {
+                                       "description":  "A wooden component used as the base for strapped tool and weapon recipes.",
+                                       "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 40.",
+                                       "uses":  "It is used in Crafting to make Yew Handle w/ Strap.",
+                                       "status":  "draft"
+                                   },
+                    "yew_handle_strapped":  {
+                                                "description":  "A strapped wooden component used in tool and weapon crafting.",
+                                                "acquisition":  "It is made in Crafting at level 40 in the inventory using Yew Handle x1 and Bear Leather x1.",
+                                                "uses":  "It is used in Crafting to make Rune Axe, Rune Pickaxe, and Rune Sword.",
+                                                "status":  "draft"
+                                            },
+                    "yew_headless_arrows":  {
+                                                "description":  "A bundled arrow component used in Fletching.",
+                                                "acquisition":  "It is made through Fletching at level 42 using Yew Shafts x15 and Feathers x15.",
+                                                "uses":  "It is used in Fletching to make Rune Arrows x15.",
+                                                "status":  "draft"
+                                            },
+                    "yew_logs":  {
+                                     "description":  "Yew Logs are a woodcutting resource used in Firemaking and Fletching.",
+                                     "acquisition":  "They are usually gathered from Yew Trees with Woodcutting at level 40.",
+                                     "uses":  "They are used in Firemaking, and in Fletching to make Yew Handle, Yew Longbow (u), Yew Shafts, Yew Shortbow (u), and Plain Staff (Yew).",
+                                     "status":  "draft"
+                                 },
+                    "yew_longbow":  {
+                                        "description":  "A finished bow made through Fletching.",
+                                        "acquisition":  "It is made by stringing Yew Longbow (u) with Bow String at level 42.",
+                                        "uses":  "It can be sold to Advanced Fletcher.",
+                                        "status":  "draft"
+                                    },
+                    "yew_longbow_u":  {
+                                          "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                          "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 42.",
+                                          "uses":  "It is used in Fletching to make Yew Longbow.",
+                                          "status":  "draft"
+                                      },
+                    "yew_shafts":  {
+                                       "description":  "A bundle of shafts used in Fletching arrow recipes.",
+                                       "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 41.",
+                                       "uses":  "It is used in Fletching to make Yew Headless Arrows x15.",
+                                       "status":  "draft"
+                                   },
+                    "yew_shortbow":  {
+                                         "description":  "A finished bow made through Fletching.",
+                                         "acquisition":  "It is made by stringing Yew Shortbow (u) with Bow String at level 44.",
+                                         "uses":  "It can be sold to Advanced Fletcher.",
+                                         "status":  "draft"
+                                     },
+                    "yew_shortbow_u":  {
+                                           "description":  "An unfinished bow that needs Bow String before it can be finished.",
+                                           "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 44.",
+                                           "uses":  "It is used in Fletching to make Yew Shortbow.",
+                                           "status":  "draft"
+                                       }
+                }
+}
+

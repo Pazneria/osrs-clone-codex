@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "journeyId": "early_progression",
+      "title": "Early Progression",
+      "summary": [
+        "A starter path that ties together the first tools, basic gathering loops, and the town services that keep a new account moving.",
+        "It stays close to Starter Town and North Road Camp so the first upgrades come from the same small map slice the export already centers."
+      ],
+      "audience": "new players",
+      "difficulty": "beginner",
+      "relatedItemIds": [
+        "knife",
+        "tinderbox",
+        "hammer",
+        "logs",
+        "wooden_handle",
+        "bronze_bar",
+        "bronze_axe",
+        "bronze_pickaxe",
+        "fishing_rod",
+        "small_net",
+        "bait"
+      ],
+      "relatedSkillIds": [
+        "woodcutting",
+        "mining",
+        "smithing",
+        "fishing",
+        "crafting"
+      ],
+      "relatedWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "nextJourneyIds": [
+        "bronze_gear",
+        "fishing_to_food",
+        "first_runes"
+      ],
+      "steps": [
+        {
+          "stepId": "claim-basics",
+          "title": "Claim the basics",
+          "body": [
+            "Start in Starter Town by making sure you have the universal utility tools in hand: a knife for shaping wood, a tinderbox for firemaking, and a hammer for later smithing.",
+            "Those items are the simplest way to unlock the export's first resource loops without leaving the starter map."
+          ],
+          "itemIds": [
+            "knife",
+            "tinderbox",
+            "hammer"
+          ],
+          "skillIds": [
+            "woodcutting",
+            "smithing"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        },
+        {
+          "stepId": "build-gather-tools",
+          "title": "Build the first gather tools",
+          "body": [
+            "Use early woodcutting and crafting materials to make the first handles, then turn them into practical tools.",
+            "Bronze and basic wood gear are the point where the codex export starts to feel like a loop instead of a shopping list."
+          ],
+          "itemIds": [
+            "logs",
+            "wooden_handle",
+            "bronze_axe",
+            "bronze_pickaxe"
+          ],
+          "skillIds": [
+            "woodcutting",
+            "crafting",
+            "smithing",
+            "mining"
+          ],
+          "worldIds": [
+            "starter_town",
+            "north_road_camp"
+          ]
+        },
+        {
+          "stepId": "stabilize-the-loop",
+          "title": "Stabilize the loop",
+          "body": [
+            "Keep the first run going by pairing gathering with bronze smelting and simple fishing.",
+            "That leaves you with a safer route into the bronze gear, food, and rune journeys that follow."
+          ],
+          "itemIds": [
+            "bronze_bar",
+            "copper_ore",
+            "tin_ore",
+            "fishing_rod",
+            "small_net",
+            "bait"
+          ],
+          "skillIds": [
+            "mining",
+            "smithing",
+            "fishing",
+            "cooking"
+          ],
+          "worldIds": [
+            "starter_town",
+            "north_road_camp"
+          ]
+        }
+      ]
+    },
+    {
+      "journeyId": "bronze_gear",
+      "title": "Bronze Gear",
+      "summary": [
+        "The first real equipment path in the codex, built around bronze bars, basic forging, and the early strapped tool assemblies.",
+        "It is the cleanest entry point into the metal gear batch because the export keeps the entire bronze tier close together."
+      ],
+      "audience": "new players",
+      "difficulty": "beginner",
+      "relatedItemIds": [
+        "hammer",
+        "copper_ore",
+        "tin_ore",
+        "bronze_bar",
+        "bronze_axe_head",
+        "bronze_sword_blade",
+        "bronze_pickaxe_head",
+        "bronze_axe",
+        "bronze_sword",
+        "bronze_pickaxe",
+        "bronze_shield",
+        "bronze_helmet",
+        "bronze_platebody",
+        "bronze_platelegs",
+        "bronze_boots"
+      ],
+      "relatedSkillIds": [
+        "mining",
+        "smithing",
+        "crafting",
+        "woodcutting"
+      ],
+      "relatedWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "nextJourneyIds": [
+        "fishing_to_food",
+        "first_runes"
+      ],
+      "steps": [
+        {
+          "stepId": "smelt-the-base-metal",
+          "title": "Smelt the base metal",
+          "body": [
+            "Mine copper and tin, then smelt them into bronze bars.",
+            "The bronze bar is the shared starting point for every bronze armor and weapon piece in this batch."
+          ],
+          "itemIds": [
+            "copper_ore",
+            "tin_ore",
+            "bronze_bar",
+            "hammer"
+          ],
+          "skillIds": [
+            "mining",
+            "smithing"
+          ],
+          "worldIds": [
+            "starter_town",
+            "north_road_camp"
+          ]
+        },
+        {
+          "stepId": "assemble-the-tools",
+          "title": "Assemble the tools",
+          "body": [
+            "Forge the bronze axe, sword, and pickaxe from their heads and blades, then finish the assembly recipes.",
+            "This is the first place where the export shows a clear bridge between smithing output and practical combat or gathering use."
+          ],
+          "itemIds": [
+            "bronze_axe_head",
+            "bronze_sword_blade",
+            "bronze_pickaxe_head",
+            "bronze_axe",
+            "bronze_sword",
+            "bronze_pickaxe"
+          ],
+          "skillIds": [
+            "smithing",
+            "crafting",
+            "woodcutting",
+            "mining"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        },
+        {
+          "stepId": "finish-the-kit",
+          "title": "Finish the kit",
+          "body": [
+            "Round out the bronze set with the shield and armor pieces once the resource flow is stable.",
+            "The export keeps these pieces simple on purpose, so the guide can focus on when bronze gear becomes the obvious early answer instead of the most efficient end state."
+          ],
+          "itemIds": [
+            "bronze_shield",
+            "bronze_helmet",
+            "bronze_platebody",
+            "bronze_platelegs",
+            "bronze_boots"
+          ],
+          "skillIds": [
+            "smithing"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        }
+      ]
+    },
+    {
+      "journeyId": "fishing_to_food",
+      "title": "Fishing To Food",
+      "summary": [
+        "A food loop that starts with the simplest catches and ends with reliable cooked supplies for the early game.",
+        "It uses the exported Fishing and Cooking data together so the path reads as one loop instead of two separate skills."
+      ],
+      "audience": "new players",
+      "difficulty": "beginner",
+      "relatedItemIds": [
+        "small_net",
+        "fishing_rod",
+        "bait",
+        "raw_shrimp",
+        "cooked_shrimp",
+        "raw_trout",
+        "cooked_trout",
+        "raw_salmon",
+        "cooked_salmon",
+        "raw_tuna",
+        "cooked_tuna",
+        "raw_swordfish",
+        "cooked_swordfish"
+      ],
+      "relatedSkillIds": [
+        "fishing",
+        "cooking"
+      ],
+      "relatedWorldIds": [
+        "starter_town",
+        "north_road_camp"
+      ],
+      "nextJourneyIds": [
+        "first_runes",
+        "bronze_gear"
+      ],
+      "steps": [
+        {
+          "stepId": "pick-the-tool",
+          "title": "Pick the tool",
+          "body": [
+            "Use a small net for the earliest catches or a fishing rod with bait when you want the rod-based loop.",
+            "Starter Town is the cleanest place to think about the fishing kit because the export keeps the supplier and teacher there."
+          ],
+          "itemIds": [
+            "small_net",
+            "fishing_rod",
+            "bait"
+          ],
+          "skillIds": [
+            "fishing"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        },
+        {
+          "stepId": "cook-the-catch",
+          "title": "Cook the catch",
+          "body": [
+            "Turn raw shrimp into cooked shrimp and raw trout into cooked trout as soon as you can.",
+            "The cooking side is the reason this journey matters: the value is not just in gathering food, but in turning it into something usable."
+          ],
+          "itemIds": [
+            "raw_shrimp",
+            "cooked_shrimp",
+            "raw_trout",
+            "cooked_trout"
+          ],
+          "skillIds": [
+            "fishing",
+            "cooking"
+          ],
+          "worldIds": [
+            "starter_town",
+            "north_road_camp"
+          ]
+        },
+        {
+          "stepId": "scale-the-supplies",
+          "title": "Scale the supplies",
+          "body": [
+            "As the loop opens up, fish toward salmon, tuna, and swordfish so the food shelf keeps pace with harder content.",
+            "This is the point where fishing stops being a side activity and becomes the most stable support skill in the starter export."
+          ],
+          "itemIds": [
+            "raw_salmon",
+            "cooked_salmon",
+            "raw_tuna",
+            "cooked_tuna",
+            "raw_swordfish",
+            "cooked_swordfish"
+          ],
+          "skillIds": [
+            "fishing",
+            "cooking"
+          ],
+          "worldIds": [
+            "starter_town",
+            "north_road_camp"
+          ]
+        }
+      ]
+    },
+    {
+      "journeyId": "first_runes",
+      "title": "First Runes",
+      "summary": [
+        "The first runecrafting route in the export, centered on rune essence, the basic altars, and the pouches that expand each trip.",
+        "It leans on the starter map because the codex export keeps the mine and altar loop tightly localized."
+      ],
+      "audience": "new players",
+      "difficulty": "beginner",
+      "relatedItemIds": [
+        "rune_essence",
+        "small_pouch",
+        "medium_pouch",
+        "large_pouch",
+        "ember_rune",
+        "air_rune",
+        "earth_rune",
+        "water_rune",
+        "dust_rune",
+        "lava_rune",
+        "mist_rune",
+        "mud_rune",
+        "smoke_rune",
+        "steam_rune"
+      ],
+      "relatedSkillIds": [
+        "mining",
+        "runecrafting"
+      ],
+      "relatedWorldIds": [
+        "starter_town"
+      ],
+      "nextJourneyIds": [
+        "early_progression",
+        "bronze_gear"
+      ],
+      "steps": [
+        {
+          "stepId": "mine-essence",
+          "title": "Mine essence",
+          "body": [
+            "Start at the Rune Essence Mine in Starter Town and gather rune essence as the base input for every rune recipe in this batch.",
+            "This is the cleanest example of a loop where the world export, the skill export, and the item batch all point at the same activity."
+          ],
+          "itemIds": [
+            "rune_essence"
+          ],
+          "skillIds": [
+            "mining",
+            "runecrafting"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        },
+        {
+          "stepId": "unlock-basic-altars",
+          "title": "Unlock the basic altars",
+          "body": [
+            "Use the ember, air, earth, and water paths to make the four basic runes first.",
+            "Those four are the backbone for the combo-rune recipes and the easiest way to understand the batch's runecrafting structure."
+          ],
+          "itemIds": [
+            "ember_rune",
+            "air_rune",
+            "earth_rune",
+            "water_rune"
+          ],
+          "skillIds": [
+            "runecrafting"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        },
+        {
+          "stepId": "expand-capacity",
+          "title": "Expand capacity",
+          "body": [
+            "Pick up the pouches when you want longer essence runs and then branch into combination runes.",
+            "The export keeps the pouch ladder and the combo runes side by side, which makes this the natural place to push efficiency."
+          ],
+          "itemIds": [
+            "small_pouch",
+            "medium_pouch",
+            "large_pouch",
+            "dust_rune",
+            "lava_rune",
+            "mist_rune",
+            "mud_rune",
+            "smoke_rune",
+            "steam_rune"
+          ],
+          "skillIds": [
+            "runecrafting"
+          ],
+          "worldIds": [
+            "starter_town"
+          ]
+        }
+      ]
+    }
+  ]
+}

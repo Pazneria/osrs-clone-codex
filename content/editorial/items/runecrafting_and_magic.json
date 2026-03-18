@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "batchId": "runecrafting_and_magic",
+  "title": "Runecrafting And Magic",
+  "entries": {
+    "air_rune": {
+      "description": "A basic Runecrafting rune made at the Air Altar. It also feeds into Dust rune, Mist rune, and Smoke rune combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at the Air Altar starting at level 30 using Rune essence. Rune Tutor also sells it in Starter Town.",
+      "uses": "It is used in Runecrafting recipes that produce Dust rune, Mist rune, and Smoke rune. Rune Tutor buys it in Starter Town.",
+      "status": "draft"
+    },
+    "air_staff": {
+      "description": "A crafted staff component made with a Plain Staff (Yew) and a cut diamond. No downstream recipe inputs or tool uses are listed in this batch.",
+      "acquisition": "It is produced through Crafting at level 40 in the inventory using Plain Staff (Yew) x1 and Cut diamond x1.",
+      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "status": "draft"
+    },
+    "diamond_gold_tiara": {
+      "description": "A Gold Tiara upgraded with a cut diamond. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 40 in the inventory using Gold Tiara x1 and Cut diamond x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "dust_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from either Air or Earth altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Air Altar using Rune essence and Earth rune, or at the Earth Altar using Rune essence and Air rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "earth_rune": {
+      "description": "A basic Runecrafting rune made at the Earth Altar. It also feeds into Dust rune, Lava rune, and Mud rune combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at the Earth Altar starting at level 20 using Rune essence. Rune Tutor also sells it in Starter Town.",
+      "uses": "It is used in Runecrafting recipes that produce Dust rune, Lava rune, and Mud rune. Rune Tutor buys it in Starter Town.",
+      "status": "draft"
+    },
+    "earth_staff": {
+      "description": "A crafted staff component made with a Plain Staff (Maple) and a cut emerald. No downstream recipe inputs or tool uses are listed in this batch.",
+      "acquisition": "It is produced through Crafting at level 30 in the inventory using Plain Staff (Maple) x1 and Cut emerald x1.",
+      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "status": "draft"
+    },
+    "ember_rune": {
+      "description": "A basic Runecrafting rune made at the Ember Altar. It also feeds into Lava rune, Smoke rune, and Steam rune combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at the Ember Altar starting at level 1 using Rune essence. Rune Tutor also sells it in Starter Town.",
+      "uses": "It is used in Runecrafting recipes that produce Lava rune, Smoke rune, and Steam rune. Rune Tutor buys it in Starter Town.",
+      "status": "draft"
+    },
+    "emerald_gold_tiara": {
+      "description": "A Gold Tiara upgraded with a cut emerald. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 40 in the inventory using Gold Tiara x1 and Cut emerald x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "fire_staff": {
+      "description": "A crafted staff component made with a Plain Staff (Oak) and a cut ruby. No downstream recipe inputs or tool uses are listed in this batch.",
+      "acquisition": "It is produced through Crafting at level 10 in the inventory using Plain Staff (Oak) x1 and Cut ruby x1.",
+      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "status": "draft"
+    },
+    "gold_tiara": {
+      "description": "A plain tiara made through Smithing. It is used as the base for several gem tiaras in Crafting.",
+      "acquisition": "It is produced through Smithing at level 42 at a Furnace using Gold Bar x1.",
+      "uses": "It is used in Crafting recipes for Diamond Gold Tiara, Emerald Gold Tiara, Ruby Gold Tiara, and Sapphire Gold Tiara. Elira Gemhand also buys it in Starter Town.",
+      "status": "draft"
+    },
+    "large_pouch": {
+      "description": "A Runecrafting pouch that increases how much essence can be carried at once. It is sold by Combination Sage in Starter Town.",
+      "acquisition": "It is sold by Combination Sage in Starter Town.",
+      "uses": "It increases Runecrafting capacity to 26 at level 30. Combination Sage also buys it in Starter Town.",
+      "status": "draft"
+    },
+    "lava_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from Earth or Ember altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Earth Altar using Rune essence and Ember rune, or at the Ember Altar using Rune essence and Earth rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "medium_pouch": {
+      "description": "A Runecrafting pouch that increases how much essence can be carried at once. It is sold by Combination Sage in Starter Town.",
+      "acquisition": "It is sold by Combination Sage in Starter Town.",
+      "uses": "It increases Runecrafting capacity to 13 at level 20. Combination Sage also buys it in Starter Town.",
+      "status": "draft"
+    },
+    "mist_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from Air or Water altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Air Altar using Rune essence and Water rune, or at the Water Altar using Rune essence and Air rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "mud_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from Earth or Water altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Earth Altar using Rune essence and Water rune, or at the Water Altar using Rune essence and Earth rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "ruby_gold_tiara": {
+      "description": "A Gold Tiara upgraded with a cut ruby. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 40 in the inventory using Gold Tiara x1 and Cut ruby x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "ruby_silver_tiara": {
+      "description": "A Silver Tiara upgraded with a cut ruby. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 10 in the inventory using Silver Tiara x1 and Cut ruby x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "rune_essence": {
+      "description": "The base Runecrafting essence used throughout this batch. It is also gathered through Mining from Rune Essence nodes in Starter Town.",
+      "acquisition": "It is gathered from Rune Essence nodes starting at level 1 in Starter Town. Combination Sage and Rune Tutor also sell it there.",
+      "uses": "It is used in the Air, Earth, Water, and Ember altar recipes and in the Dust, Lava, Mist, Mud, Smoke, and Steam combo recipes. Combination Sage and Rune Tutor both buy it in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_gold_tiara": {
+      "description": "A Gold Tiara upgraded with a cut sapphire. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 40 in the inventory using Gold Tiara x1 and Cut sapphire x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "sapphire_silver_tiara": {
+      "description": "A Silver Tiara upgraded with a cut sapphire. It is a Crafting output and Elira Gemhand buys it in Starter Town.",
+      "acquisition": "It is produced through Crafting at level 20 in the inventory using Silver Tiara x1 and Cut sapphire x1.",
+      "uses": "Elira Gemhand buys it in Starter Town.",
+      "status": "draft"
+    },
+    "silver_tiara": {
+      "description": "A plain tiara made through Smithing. It is used as the base for the ruby and sapphire silver tiaras in Crafting.",
+      "acquisition": "It is produced through Smithing at level 32 at a Furnace using Silver Bar x1.",
+      "uses": "It is used in Crafting recipes for Ruby Silver Tiara and Sapphire Silver Tiara. Elira Gemhand also buys it in Starter Town.",
+      "status": "draft"
+    },
+    "small_pouch": {
+      "description": "A Runecrafting pouch that increases how much essence can be carried at once. It is sold by Combination Sage in Starter Town.",
+      "acquisition": "It is sold by Combination Sage in Starter Town.",
+      "uses": "It increases Runecrafting capacity to 6 at level 10. Combination Sage also buys it in Starter Town.",
+      "status": "draft"
+    },
+    "smoke_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from Air or Ember altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Air Altar using Rune essence and Ember rune, or at the Ember Altar using Rune essence and Air rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "steam_rune": {
+      "description": "A combination rune made through Runecrafting. It can be produced from Ember or Water altar combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at level 40 at the Ember Altar using Rune essence and Water rune, or at the Water Altar using Rune essence and Ember rune. Combination Sage also sells it in Starter Town.",
+      "uses": "Combination Sage buys it in Starter Town.",
+      "status": "draft"
+    },
+    "water_rune": {
+      "description": "A basic Runecrafting rune made at the Water Altar. It also feeds into Mist rune, Mud rune, and Steam rune combo recipes in this batch.",
+      "acquisition": "It is crafted through Runecrafting at the Water Altar starting at level 10 using Rune essence. Rune Tutor also sells it in Starter Town.",
+      "uses": "It is used in Runecrafting recipes that produce Mist rune, Mud rune, and Steam rune. Rune Tutor buys it in Starter Town.",
+      "status": "draft"
+    },
+    "water_staff": {
+      "description": "A crafted staff component made with a Plain Staff (Willow) and a cut sapphire. No downstream recipe inputs or tool uses are listed in this batch.",
+      "acquisition": "It is produced through Crafting at level 20 in the inventory using Plain Staff (Willow) x1 and Cut sapphire x1.",
+      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "status": "draft"
+    }
+  }
+}

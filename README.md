@@ -19,6 +19,7 @@ This repo assumes the game repo sits beside it:
 npm run sync:data
 npm run check
 npm run build
+npm run dev
 npm run serve
 ```
 
@@ -27,7 +28,8 @@ What they do:
 - `sync:data`: runs the exporter in `../OSRS Clone` and copies the bundle into `content/generated/codex-export/`
 - `check`: syncs the bundle and validates routes, indexes, and cross-links
 - `build`: syncs the bundle and generates the static codex site into `dist/osrs-clone-codex/`
-- `serve`: builds and serves the generated site locally at `http://localhost:5520/osrs-clone-codex/`
+- `dev`: runs an initial build, serves the codex locally at `http://localhost:5520/osrs-clone-codex/`, watches both this repo and the sibling `OSRS Clone` source, and live-reloads after rebuilds
+- `serve`: runs a single build and serves the generated codex locally with the browser opened automatically
 
 ## Route contract
 
