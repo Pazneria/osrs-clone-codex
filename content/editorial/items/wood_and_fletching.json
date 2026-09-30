@@ -77,8 +77,8 @@
                                          },
                     "normal_shortbow":  {
                                             "description":  "A finished bow made through Fletching.",
-                                            "acquisition":  "It is made by stringing Normal Shortbow (u) with Bow String at level 5.",
-                                            "uses":  "It can be sold to Advanced Fletcher.",
+                                            "acquisition":  "Mainly produced through Fletching at level 1 using Normal Shortbow (u) x1, Bow String x1.",
+                                            "uses":  "Equip it for ranged combat with compatible arrows, or sell it to the Advanced Fletcher when his trade access is open.",
                                             "status":  "draft"
                                         },
                     "normal_shortbow_u":  {

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "entries": {
-    "starter_town": {
+    "main_overworld": {
       "overview": [
-        "Starter Town is the project's main service hub and now also its broadest authored combat region, with encounter pockets running from the castle training dummy and south field out to the far goblin, boar, and wolf bands.",
+        "Main Overworld contains Starter Town, the main service hub, and the surrounding resource and combat regions. Starter Town is now an area in this world rather than a separate world ID.",
         "The hub is denser than before: named NPCs live in bespoke homesteads and work plots, town NPCs roam instead of reading as static markers, and the castle, store, smithing, tannery, pond, grove, mine, and altar lanes all connect cleanly.",
         "It still exports the broadest early-game resource coverage in the bundle, but the current build also uses it as the reference map for dialogue, quest hooks, merchant gating, bespoke NPC presentation, and safe-versus-dangerous route spacing."
       ],
       "whyItMatters": [
-        "This is still the clearest onboarding world, but now it shows more of the real game loop in one place: gather, refine, craft, talk, quest, trade, travel, and fight without leaving the starter map.",
+        "After Tutorial Island, this world connects gathering, refining, crafting, dialogue, quests, trade, and combat.",
         "It is the main reference world for authored encounter rollout, with roaming chickens, rats, goblins, boars, wolves, guards, and training content layered around protected service lanes.",
         "It also anchors the first named-NPC presentation pass: bespoke homesteads, Talk-to dialogue, roaming service NPC behavior, Tanner Rusk's dedicated tannery plot and bespoke appearance, and his first quest/shop gate."
       ],
@@ -25,7 +25,7 @@
       "nextSteps": [
         "Use Starter Town as the baseline world for comparing hub-safe paths against outer encounter density, roaming behavior, and named-NPC placement quality.",
         "Cross-check Tanner Rusk's tannery, dialogue, quest gate, and leather shop against the crafting pages, item pages, and the newer enemy drops that feed them.",
-        "After the hub is clear, follow the road connection to North Road Camp and compare its tighter threshold-guarded outpost flow to Starter Town's broader encounter lattice."
+        "Explore the resource and encounter routes within Main Overworld. The old separate North Road Camp world is absent from the current world manifest."
       ],
       "featuredItemIds": [
         "hammer",
@@ -45,58 +45,53 @@
         "woodcutting"
       ],
       "featuredWorldIds": [
-        "north_road_camp"
+        "tutorial_island"
       ],
       "featuredJourneyIds": [
         "early_progression",
         "hides_of_the_frontier"
       ]
     },
-    "north_road_camp": {
+    "tutorial_island": {
       "overview": [
-        "North Road Camp is a smaller forward region that compresses the same core skill families into a tighter outpost layout.",
-        "Its quarry, brazier, pine loop, caravan point, and guarded road threshold sit close together, so it reads as a faster field-test version of the starter loop.",
-        "The gated crystal seam and outer goblin, boar, and wolf pockets give the camp a clearer progression wall, which makes the region feel like a checkpoint rather than a duplicate of Starter Town."
+        "Tutorial Island is the starting world for new characters. Its instructors introduce gathering, food, forging, melee, ranged, magic, runecrafting, crafting, and banking before you enter Main Overworld."
       ],
       "whyItMatters": [
-        "This world proves the project can support a second playable region without rebuilding the entire hub structure.",
-        "It combines minimal service coverage with enough resources and roadside combat pressure to stay useful, which is important for testing sparse-but-functional world design.",
-        "The locked gem seam adds a concrete progression hook and makes the camp valuable both early and later."
+        "Tutorial gates and practical checks track what you have completed. Follow the guidance marker and speak to the current instructor before practising."
       ],
       "howToGetStarted": [
-        "Arrive through the caravan guide, then use the outpost furnace and anvil to turn nearby ore into usable smithing stock.",
-        "Clear the quarry first for copper, tin, and clay, then return later for the crystal seam once the gate is unlocked.",
-        "The pine loop and camp pond keep the region productive even before the gated mine opens, so you can gather while you train."
+        "Speak to the Tutorial Guide in the cabin and choose I am ready. Visit each instructor, complete their activity, and return to report your result.",
+        "The bank lesson requires a deposit at one booth and a withdrawal at the other. Once the Bank Tutor accepts that proof, speak to the Tutorial Guide to leave."
       ],
       "connectedSystems": [
-        "Services: shopkeeper, caravan guide, Prospector Dain, furnace, and anvil.",
-        "Routes: outpost quarry, crystal seam, pine loop, camp pond bank, outpost brazier, and breeze shrine.",
-        "Skills: cooking, fishing, mining, runecrafting, and woodcutting."
+        "Tutorial Island uses the same inventory, equipment, skills, and shared bank as Main Overworld. It includes chickens for combat practice and instructor recovery supplies."
       ],
       "nextSteps": [
-        "Use North Road Camp as the field-test region for early mining and travel.",
-        "Compare its route density and threshold-guarded road encounters to Starter Town so the difference between a hub and an outpost stays obvious.",
-        "Return after progression to unlock the crystal seam and verify the gated resource path."
+        "Open How to play for the lesson order and common sticking points, then continue the early progression journey in Main Overworld."
       ],
       "featuredItemIds": [
-        "copper_ore",
-        "tin_ore",
-        "clay",
-        "iron_ore",
-        "silver_ore",
-        "gold_ore",
+        "bronze_axe",
+        "small_net",
+        "tinderbox",
+        "bronze_pickaxe",
         "hammer",
-        "logs"
+        "bronze_sword",
+        "plain_staff_wood",
+        "ember_rune"
       ],
       "featuredSkillIds": [
-        "cooking",
+        "woodcutting",
         "fishing",
+        "firemaking",
+        "cooking",
         "mining",
+        "smithing",
+        "fletching",
         "runecrafting",
-        "woodcutting"
+        "crafting"
       ],
       "featuredWorldIds": [
-        "starter_town"
+        "main_overworld"
       ],
       "featuredJourneyIds": [
         "early_progression"

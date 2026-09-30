@@ -9,8 +9,11 @@ const {
 const { loadCodexBundle, validateCodexBundle } = require("./lib/codex-data");
 const { loadItemEditorial, writeItemAuthoringArtifacts } = require("./lib/item-editorial");
 const { loadManualContent } = require("./lib/manual-content");
+const { loadPlayerGuide } = require("./lib/player-guide");
 const { syncCodexData } = require("./sync-data");
 const { renderHomePage } = require("./render/home");
+const { renderPlayerGuide } = require("./render/player-guide");
+const { renderLayout } = require("./render/layout");
 const { renderEnemyIndexPage, renderEnemyPage } = require("./render/enemies");
 const { renderItemIndexPage, renderItemPage } = require("./render/items");
 const { renderJourneyIndexPage, renderJourneyPage } = require("./render/journeys");
@@ -147,21 +150,21 @@ function validateRenderedOutput(siteRoot, routePaths) {
   assertInlineLink(
     boarTuskHtml,
     buildCodexEntityPath("enemy", "enemy_boar"),
-    "Boars",
-    "boar_tusk item page is missing the inline Boars link"
+    "Boar",
+    "boar_tusk item page is missing the inline Boar link"
   );
   assertInlineLink(
     boarTuskHtml,
-    buildCodexEntityPath("world", "starter_town"),
-    "Starter Town",
-    "boar_tusk item page is missing the inline Starter Town link"
+    buildCodexEntityPath("world", "main_overworld"),
+    "Main Overworld",
+    "boar_tusk item page is missing the inline Main Overworld link"
   );
 
   const craftingHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("skill", "crafting")));
   assert(!craftingHtml.includes("Journey Links"), "crafting skill page still shows the Journey Links section");
   assertInlineLink(
     craftingHtml,
-    buildCodexEntityPath("world", "starter_town"),
+    buildCodexEntityPath("world", "main_overworld"),
     "Starter Town",
     "crafting skill page is missing the inline Starter Town link"
   );
@@ -172,7 +175,7 @@ function validateRenderedOutput(siteRoot, routePaths) {
     "crafting skill page is missing the inline Hides Of The Frontier link"
   );
 
-  const starterTownHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("world", "starter_town")));
+  const starterTownHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("world", "main_overworld")));
   assert(!starterTownHtml.includes("Featured Loops"), "starter_town world page still shows the Featured Loops section");
   assert(!starterTownHtml.includes("Journey Links"), "starter_town world page still shows the Journey Links section");
   assertInlineLink(
@@ -194,29 +197,29 @@ function validateRenderedOutput(siteRoot, routePaths) {
     "starter_town world page is missing the inline wolves link"
   );
 
-  const northRoadCampHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("world", "north_road_camp")));
+  const tutorialIslandHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("world", "tutorial_island")));
   assertInlineLink(
-    northRoadCampHtml,
-    buildCodexEntityPath("world", "starter_town"),
-    "Starter Town",
-    "north_road_camp world page is missing the inline Starter Town link"
+    tutorialIslandHtml,
+    buildCodexEntityPath("world", "main_overworld"),
+    "Main Overworld",
+    "tutorial_island world page is missing the inline Main Overworld link"
   );
 
   const rawChickenHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("item", "raw_chicken")));
   assertInlineLink(
     rawChickenHtml,
-    buildCodexEntityPath("world", "starter_town"),
-    "Starter Town(?:&#39;|')s",
-    "raw_chicken item page is missing the inline possessive Starter Town link"
+    buildCodexEntityPath("world", "main_overworld"),
+    "Main Overworld",
+    "raw_chicken item page is missing the inline Main Overworld link"
   );
 
   const boarEnemyHtml = readText(routePathToOutputFile(siteRoot, buildCodexEntityPath("enemy", "enemy_boar")));
   assert(!boarEnemyHtml.includes("Drop-linked items"), "enemy_boar page still shows the Drop-linked items wall");
   assertInlineLink(
     boarEnemyHtml,
-    buildCodexEntityPath("world", "starter_town"),
-    "Starter Town",
-    "enemy_boar page is missing the inline Starter Town link"
+    buildCodexEntityPath("world", "main_overworld"),
+    "Main Overworld",
+    "enemy_boar page is missing the inline Main Overworld link"
   );
   assertInlineLink(
     boarEnemyHtml,
@@ -229,7 +232,7 @@ function validateRenderedOutput(siteRoot, routePaths) {
   assert(!frontierJourneyHtml.includes("Pages to keep open while you follow it"), "hides_of_the_frontier page still shows the old connected-pages wall");
   assertInlineLink(
     frontierJourneyHtml,
-    buildCodexEntityPath("world", "starter_town"),
+    buildCodexEntityPath("world", "main_overworld"),
     "Starter Town",
     "hides_of_the_frontier page is missing the inline Starter Town link"
   );
@@ -256,6 +259,7 @@ function run() {
   writeItemAuthoringArtifacts(projectRoot, bundle);
   const itemEditorial = loadItemEditorial(projectRoot, bundle);
   const manualContent = loadManualContent(projectRoot, bundle);
+  const playerGuide = loadPlayerGuide(projectRoot, bundle);
 
   const siteRoot = path.join(projectRoot, "dist", "osrs-clone-codex");
   removeDir(siteRoot);
@@ -272,6 +276,9 @@ function run() {
 
   const routePaths = [
     buildCodexHomePath(),
+    `${buildCodexHomePath()}wiki/`,
+    buildCodexEntityPath("world", "starter_town"),
+    buildCodexEntityPath("world", "north_road_camp"),
     buildSectionPath("journeys"),
     buildSectionPath("items"),
     buildSectionPath("skills"),
@@ -286,6 +293,7 @@ function run() {
 
   const staticPages = [
     { routePath: buildCodexHomePath(), html: renderHomePage(bundle, siteEditorial, manualContent, renderAssets) },
+    renderPlayerGuide(bundle, siteEditorial, playerGuide),
     renderJourneyIndexPage(bundle, siteEditorial, manualContent, renderAssets),
     renderItemIndexPage(bundle, siteEditorial, manualContent, renderAssets),
     renderSkillIndexPage(bundle, siteEditorial, manualContent, renderAssets),
@@ -294,6 +302,15 @@ function run() {
   ];
 
   staticPages.forEach((page) => writeRoutePage(siteRoot, page));
+  for (const [legacyId, title, note] of [
+    ["starter_town", "Starter Town is in Main Overworld", "Starter Town is now an area within Main Overworld. Use the current world page for resources, services, and encounters."],
+    ["north_road_camp", "North Road Camp is retired", "North Road Camp is not a separate playable world in this revision. The current worlds are Main Overworld and Tutorial Island."]
+  ]) {
+    const routePath = buildCodexEntityPath("world", legacyId);
+    writeRoutePage(siteRoot, { routePath, html: renderLayout({ editorial: siteEditorial, manifest: bundle.manifest,
+      currentPath: routePath, pageTitle: title, eyebrow: "Updated world reference", heroTitle: title,
+      heroBody: `<p>${note}</p>`, body: `<section class="section-card guide-contents"><a href="${buildCodexEntityPath("world", "main_overworld")}">Main Overworld</a><a href="${buildCodexEntityPath("world", "tutorial_island")}">Tutorial Island</a></section>` }) });
+  }
   manualContent.journeys.journeys.forEach((journey) => writeRoutePage(siteRoot, renderJourneyPage(bundle, siteEditorial, manualContent, journey, renderAssets)));
   bundle.items.forEach((item) => writeRoutePage(siteRoot, renderItemPage(bundle, siteEditorial, itemEditorial, manualContent, item, renderAssets)));
   bundle.skills.forEach((skill) => writeRoutePage(siteRoot, renderSkillPage(bundle, siteEditorial, manualContent, skill, renderAssets)));

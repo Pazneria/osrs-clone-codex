@@ -34,6 +34,8 @@ function getRequirementSummary(item) {
   if (item.data && item.data.requiredAttackLevel !== undefined) bits.push(`Atk ${item.data.requiredAttackLevel}`);
   if (item.data && item.data.requiredDefenseLevel !== undefined) bits.push(`Def ${item.data.requiredDefenseLevel}`);
   if (item.data && item.data.requiredFishingLevel !== undefined) bits.push(`Fish ${item.data.requiredFishingLevel}`);
+  if (item.data && item.data.combat && item.data.combat.requiredRangedLevel !== undefined) bits.push(`Ranged ${item.data.combat.requiredRangedLevel}`);
+  if (item.data && item.data.combat && item.data.combat.requiredMagicLevel !== undefined) bits.push(`Magic ${item.data.combat.requiredMagicLevel}`);
   if (item.data && item.data.toolTier !== undefined) bits.push(`Tier ${item.data.toolTier}`);
   return bits.length ? bits.join(" | ") : "No level gate";
 }
@@ -156,6 +158,10 @@ function renderCombatSection(item) {
   const bonusMap = [
     { label: "Melee accuracy", value: item.data.combat.bonuses && item.data.combat.bonuses.meleeAccuracyBonus },
     { label: "Melee strength", value: item.data.combat.bonuses && item.data.combat.bonuses.meleeStrengthBonus },
+    { label: "Ranged accuracy", value: item.data.combat.bonuses && item.data.combat.bonuses.rangedAccuracyBonus },
+    { label: "Ranged strength", value: item.data.combat.bonuses && item.data.combat.bonuses.rangedStrengthBonus },
+    { label: "Magic accuracy", value: item.data.combat.bonuses && item.data.combat.bonuses.magicAccuracyBonus },
+    { label: "Magic strength", value: item.data.combat.bonuses && item.data.combat.bonuses.magicStrengthBonus },
     { label: "Melee defense", value: item.data.combat.bonuses && item.data.combat.bonuses.meleeDefenseBonus },
     { label: "Ranged defense", value: item.data.combat.bonuses && item.data.combat.bonuses.rangedDefenseBonus },
     { label: "Magic defense", value: item.data.combat.bonuses && item.data.combat.bonuses.magicDefenseBonus }
@@ -174,6 +180,9 @@ function renderCombatSection(item) {
         { label: "Damage type", value: attackProfile.damageType ? humanizeId(attackProfile.damageType) : "None" },
         { label: "Range", value: attackProfile.range },
         { label: "Attack cycle", value: attackProfile.tickCycle ? `${attackProfile.tickCycle} ticks` : "None" },
+        { label: "Ranged requirement", value: item.data.combat.requiredRangedLevel },
+        { label: "Magic requirement", value: item.data.combat.requiredMagicLevel },
+        { label: "Uses ammunition", value: attackProfile.ammoUse === true ? "Yes" : "No" },
         { label: "Weapon family", value: item.data.combat.weaponFamily ? humanizeId(item.data.combat.weaponFamily) : "None" },
         { label: "Tool family", value: item.data.combat.toolFamily ? humanizeId(item.data.combat.toolFamily) : "None" }
       ])}

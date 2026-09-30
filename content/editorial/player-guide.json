@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "f4703d738f6dc208fdf4fffeb1665a313ecf5b42",
+  "reviewedAt": "2026-09-30",
+  "sections": [
+    {
+      "id": "start",
+      "title": "Start and choose a goal",
+      "paragraphs": [
+        "Create your adventurer and choose Start Adventure. A new character begins on Tutorial Island. Returning progress resumes your character and tutorial state.",
+        "Progress comes from skill XP, higher levels, better equipment, supplies, and completed quests. Skills cap at level 99. Hitpoints starts at level 10; the other implemented skills start at level 1.",
+        "After the tutorial, a useful first goal is to prepare cooked food and a bronze kit, then explore the Starter Town area of Main Overworld. The linked journeys explain the gathering, smithing, fishing, and rune loops."
+      ],
+      "links": [
+        { "label": "Early progression", "href": "/osrs-clone-codex/journeys/early_progression" },
+        { "label": "Bronze gear", "href": "/osrs-clone-codex/journeys/bronze_gear" },
+        { "label": "Main Overworld", "href": "/osrs-clone-codex/world/main_overworld" }
+      ]
+    },
+    {
+      "id": "controls",
+      "title": "Controls",
+      "paragraphs": [
+        "The reviewed game revision uses mouse actions for world movement and interaction. Keep game text fields unfocused when using camera keys. Arrow keys move the camera; character movement uses destinations selected in the world or minimap.",
+        "This wiki works with Tab, Enter, Space, and touch. The game's dedicated touch gestures and mobile input changes are outside this source revision, so desktop secondary-click and camera controls below are the verified baseline."
+      ],
+      "columns": [ { "key": "action", "label": "Action" }, { "key": "input", "label": "Input" } ],
+      "rows": [
+        { "action": "Walk or perform a default action", "input": "Left-click a ground destination, object, NPC, or inventory item." },
+        { "action": "Choose another action", "input": "Right-click to open the context menu, then select an action such as Talk-to, Attack, Use, or Examine." },
+        { "action": "Use an item on something", "input": "Choose Use on an inventory item, then click its target. Recipe ingredients and tools still have to meet the skill requirements." },
+        { "action": "Turn and tilt the camera", "input": "Hold the middle mouse button and drag, or use the arrow keys." },
+        { "action": "Zoom the camera", "input": "Scroll the mouse wheel over the game view." },
+        { "action": "Walk using the minimap", "input": "Left-click a destination on the minimap." },
+        { "action": "Read the world map", "input": "Open the map button; wheel zooms and left-drag pans. Escape closes it." },
+        { "action": "Chat", "input": "Enter focuses chat; Enter submits it; Escape leaves the chat field." },
+        { "action": "Close overlays", "input": "Use their close buttons. Escape closes NPC dialogue, the bank, and the world map." }
+      ]
+    },
+    {
+      "id": "tutorial",
+      "title": "Finish Tutorial Island",
+      "paragraphs": [
+        "Talk to each instructor before practising, and return to report the result. The guidance marker points to your next instructor or activity. Talking alone does not finish a practical lesson; gates follow your tutorial step.",
+        "Follow this order: Tutorial Guide, Woodcutting, Fishing, Firemaking and Cooking, Mining and Smithing, melee Combat, Ranged, Magic, Runecrafting, Crafting, then the Bank Tutor. The guide sends you to Main Overworld after banking is complete.",
+        "At the forge, mine copper and tin for three bronze bars: two make the sword blade and one makes arrowheads. Assemble the blade with the strapped wooden handle. Keep the arrowheads for the ranged lesson.",
+        "For magic, equip the plain staff and keep ember runes in your inventory; attacking a chicken from range uses a rune automatically. For crafting, soften clay at the pond, stand near the bench, and use soft clay on the borrowed ring in your inventory.",
+        "The bank lesson requires depositing the supplied coin at one booth and withdrawing it at the other, then reporting to the Bank Tutor. Both booths share your bank. If supplies are missing, talk to the current instructor again for the lesson's recovery items."
+      ],
+      "links": [ { "label": "Tutorial Island reference", "href": "/osrs-clone-codex/world/tutorial_island" } ]
+    },
+    {
+      "id": "skills",
+      "title": "Gather, make, trade, and bank",
+      "paragraphs": [
+        "Carry the matching tool, click a resource or choose its gathering action, and wait for attempts. Your skill level, tool, resource, and available inventory space affect what you can do. The inventory has 28 slots; stackable items share a slot.",
+        "Mining feeds Smithing and Crafting. Woodcutting feeds Firemaking and Fletching. Fishing and animal drops feed Cooking. Firemaking creates temporary fires for cooking; cooked food heals, while raw and burnt items are different outcomes.",
+        "Use a furnace to smelt and an anvil to forge. Some outputs are components that need a separate inventory assembly step. Recipe tables show required levels, ingredients, tools, stations, and XP; owning a component does not automatically make the finished tool.",
+        "Runecrafting begins with ember runes at level 1, then water at 10, earth at 20, and air at 30. Combination recipes start at 40 and require the combination unlock as well as essence and a secondary rune. Pouches hold extra essence subject to their level and capacity rules.",
+        "Talk-to explains NPC roles and quest gates. Trade and shop options handle merchant stock; a value in an item table alone does not guarantee a merchant currently sells it. Use bank booths to store items in the shared bank and free inventory space."
+      ],
+      "links": [
+        { "label": "Skill requirements and recipes", "href": "/osrs-clone-codex/skills/" },
+        { "label": "Food and items", "href": "/osrs-clone-codex/items/" },
+        { "label": "First runes", "href": "/osrs-clone-codex/journeys/first_runes" }
+      ]
+    },
+    {
+      "id": "combat",
+      "title": "Combat and survival",
+      "paragraphs": [
+        "Choose Attack on an enemy. Combat locks a target and runs on attack cooldowns, range, hit rolls, and equipment requirements. Walking away changes your position and engagement; it does not guarantee that a chasing enemy immediately gives up.",
+        "Melee supports Attack, Strength, and Defense training styles. Bows use compatible arrows, and staffs use compatible runes. Ranged ammunition can be equipped or selected from inventory; magic runes come from inventory. The current runtime spends one ammunition item on each consuming attack, including misses.",
+        "Damage above zero grants four XP per damage point to the attack's training skill and one XP per damage point to Hitpoints. Melee uses the selected training style; ranged and magic award their respective skill XP.",
+        "Eat cooked food from your inventory to restore Hitpoints, up to your maximum. Food has its own eating delay, and you cannot eat on the same tick as attacking or casting. Check each food's healing amount before relying on it.",
+        "At zero Hitpoints, you return to the current world's default safety spawn with full health and cleared combat state. The reviewed defeat handler retains inventory and equipment. Enemy drops appear as ground loot; choose Take to collect them. Enemy pages show their current drop tables, aggression, and respawn data."
+      ],
+      "links": [ { "label": "Enemies and drops", "href": "/osrs-clone-codex/enemies/" } ]
+    },
+    {
+      "id": "quests",
+      "title": "Quest objectives and unlocks",
+      "paragraphs": [
+        "Six quests are defined in the reviewed runtime. Talk to their NPCs to begin or check progress, then follow the dialogue to finish. Turn-in quests consume the requested materials; the quest log records objectives and status.",
+        "Tanner Rusk's quest is one early option. Boars and wolves are stronger than tutorial chickens, so bring suitable equipment and food before collecting his materials. Advanced merchant quests open their associated trade access."
+      ],
+      "columns": [ { "key": "quest", "label": "Quest and NPC" }, { "key": "objective", "label": "Objective" }, { "key": "reward", "label": "Reward / unlock" } ],
+      "rows": [
+        { "quest": "Hides of the Frontier — Tanner Rusk", "objective": "Turn in 4 boar tusks and 2 wolf fangs.", "reward": "200 coins, 125 Crafting XP, tannery merchant access." },
+        { "quest": "Proof of the Deepforge — Thrain Deepforge", "objective": "Turn in 6 coal, 2 gold ore, and 1 uncut emerald.", "reward": "200 Smithing XP and advanced ore stock." },
+        { "quest": "Proof of the Yew — Advanced Fletcher", "objective": "Turn in 1 yew handle, 1 yew longbow, and 1 yew shortbow.", "reward": "250 Fletching XP and the full buyer ledger." },
+        { "quest": "Proof of the Grain — Advanced Woodsman", "objective": "Turn in 1 willow log, 1 maple log, and 1 yew log.", "reward": "200 Woodcutting XP and full merchant stock." },
+        { "quest": "From Net to Harpoon — Fishing Teacher", "objective": "Turn in 1 each of raw shrimp, trout, salmon, tuna, and swordfish.", "reward": "1 rune harpoon and 250 Fishing XP." },
+        { "quest": "Moulds of the Trade — Elira Gemhand", "objective": "Use her borrowed jewelry to imprint clay moulds, fire them, and hold a ring, amulet, and tiara mould.", "reward": "150 Crafting XP and all three mould unlocks. Borrowed jewelry is removed on completion." }
+      ],
+      "links": [ { "label": "Tanner Rusk walkthrough", "href": "/osrs-clone-codex/journeys/hides_of_the_frontier" } ]
+    },
+    {
+      "id": "settings",
+      "title": "Settings, saves, and limits",
+      "paragraphs": [
+        "Use the Run button to toggle running. Combat controls let you choose a melee training style and toggle Auto Retaliate. Inventory context menus can set a preferred left-click action; that preference is saved.",
+        "Progress saves to local browser storage every 10 seconds and through lifecycle save hooks. It includes your character, position, skill XP, inventory, bank, equipment, quests, unlocks, run mode, and item preferences. The current storage key is osrsClone.progress.v2. A different browser or device has separate local storage; there is no account-based cloud-save workflow in this revision.",
+        "Keep browser site data to retain progress. Starting a fresh session or clearing the game's storage resets local progress. This wiki update does not modify the game's saves.",
+        "Combat, ranged, magic, tutorial lessons, and quests are implemented even though the export only creates nine gathering and production skill pages. A spellbook progression system, dedicated touch camera/context-menu gestures, and the old standalone North Road Camp region are not documented as playable features at this revision."
+      ]
+    }
+  ],
+  "sources": [
+    { "path": "src/js/core.js", "label": "Character defaults, save key, run mode, keyboard bindings" },
+    { "path": "src/js/core-player-entry-runtime.js", "label": "Character creation and returning characters" },
+    { "path": "src/js/core-tutorial-runtime.js", "label": "Tutorial order, gates, practical checks, and recovery items" },
+    { "path": "src/game/input/controller.ts", "label": "Mouse camera and interaction decisions" },
+    { "path": "src/js/input-render.js", "label": "Camera keys and world interactions" },
+    { "path": "src/js/world/map-hud-runtime.js", "label": "Minimap movement and world-map controls" },
+    { "path": "src/js/combat.js", "label": "Attack resolution, ammunition consumption, combat XP" },
+    { "path": "src/game/combat/formulas.ts", "label": "Melee, ranged, and magic requirements and snapshots" },
+    { "path": "src/js/food-item-runtime.js", "label": "Healing and eating delays" },
+    { "path": "src/js/combat-player-defeat-runtime.js", "label": "Defeat and safety respawn" },
+    { "path": "src/js/content/quest-catalog.js", "label": "Six quests, objectives, rewards, and merchant gates" },
+    { "path": "src/js/core-progress-runtime.js", "label": "Local persistence and fresh-session behavior" },
+    { "path": "src/game/session/save.ts", "label": "Saved progress fields" },
+    { "path": "src/js/skill-progress-runtime.js", "label": "Skill XP and level cap" },
+    { "path": "content/world/manifest.json", "label": "Current playable world registry" },
+    { "path": "tools/content/codex-export.js", "label": "Canonical export scope and entity links" }
+  ]
+}

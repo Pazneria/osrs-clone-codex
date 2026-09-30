@@ -28,12 +28,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Pazneria/osrs-clone
+          # Keep runtime facts and reviewed editorial on the same revision.
+          ref: f4703d738f6dc208fdf4fffeb1665a313ecf5b42
           path: osrs-clone-source
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+
+      - name: Install exporter dependencies
+        working-directory: osrs-clone-source
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Validate codex data
         run: npm run check

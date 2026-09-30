@@ -6,7 +6,7 @@
       "title": "Early Progression",
       "summary": [
         "A starter path that ties together the first tools, the named NPC houses around Starter Town, and the basic gathering loops that keep a new account moving.",
-        "It stays close to Starter Town and North Road Camp so the first upgrades, Talk-to detours, and combat drops come from the same small map slice the export already centers."
+        "Start after Tutorial Island in the Starter Town area of Main Overworld, where tools, food, services, and nearby encounters support the first upgrades."
       ],
       "audience": "new players",
       "difficulty": "beginner",
@@ -35,8 +35,7 @@
         "cooking"
       ],
       "relatedWorldIds": [
-        "starter_town",
-        "north_road_camp"
+        "main_overworld"
       ],
       "nextJourneyIds": [
         "hides_of_the_frontier",
@@ -62,14 +61,14 @@
             "smithing"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
           "stepId": "build-gather-tools",
           "title": "Build the first gather tools",
           "body": [
-            "Use early woodcutting and crafting materials to make the first handles, then turn them into practical tools.",
+            "Fletching makes handles from logs; Crafting straps them for tool assembly. Smithing produces metal heads and blades, which are then assembled with the matching handles.",
             "Do not separate combat too hard from this step. If rats, chickens, or goblins are sitting on the same route, fold their early drops into the same run so the export reads like one starter economy."
           ],
           "itemIds": [
@@ -85,8 +84,7 @@
             "mining"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         },
         {
@@ -111,8 +109,7 @@
             "cooking"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         }
       ]
@@ -121,11 +118,11 @@
       "journeyId": "hides_of_the_frontier",
       "title": "Hides Of The Frontier",
       "summary": [
-        "A beginner journey built around Tanner Rusk, the named NPC houses, and the frontier combat pockets that turn Starter Town into more than a pure skilling hub.",
-        "The export currently shows Tanner through leather stock rather than a raw-hide tanning recipe, so the guide focuses on how early drops, food, Talk-to NPCs, and leather crafting still form one onboarding loop."
+        "Tanner Rusk needs 4 boar tusks and 2 wolf fangs for Hides of the Frontier in Main Overworld.",
+        "Completing this quest awards 200 coins and 125 Crafting XP and opens his tannery merchant access. Bring suitable equipment and cooked food before hunting."
       ],
-      "audience": "new players",
-      "difficulty": "beginner",
+      "audience": "players prepared for boars and wolves",
+      "difficulty": "intermediate",
       "relatedItemIds": [
         "bronze_sword",
         "cooked_shrimp",
@@ -145,8 +142,7 @@
         "cooking"
       ],
       "relatedWorldIds": [
-        "starter_town",
-        "north_road_camp"
+        "main_overworld"
       ],
       "nextJourneyIds": [
         "bronze_gear",
@@ -158,8 +154,8 @@
           "stepId": "read-the-town-through-npcs",
           "title": "Read the town through NPCs",
           "body": [
-            "Open with the named houses in Starter Town, especially Tanner Rusk. The updated onboarding makes more sense if you use Talk-to as the first discovery tool instead of treating every service as a silent shop counter.",
-            "That habit is what turns the starter map into a quest path: the NPC names tell you which loops matter, and Tanner is the clearest signpost for the leather-and-frontier side of town."
+            "Talk to Tanner Rusk at the tannery in the Starter Town area of Main Overworld to begin Hides of the Frontier.",
+            "Check the quest log and prepare a weapon and cooked food before heading for boars and wolves."
           ],
           "itemIds": [
             "needle",
@@ -170,15 +166,15 @@
             "crafting"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
           "stepId": "work-the-frontier-loop",
           "title": "Work the frontier loop",
           "body": [
-            "Once you have a basic weapon and some cooked food, take short runs into the early combat pockets for goblins, boars, and wolves.",
-            "The important lesson is not raw efficiency. It is learning that early combat now feeds the same starter economy through meat, straightforward monster drops, and merchant-facing cleanup."
+            "Hunt boars and wolves in Main Overworld and take their ground drops. Collect 4 boar tusks and 2 wolf fangs.",
+            "Raw boar and wolf meat also have Cooking recipes, but these meats do not replace the tusks and fangs required for the quest."
           ],
           "itemIds": [
             "bronze_sword",
@@ -194,16 +190,15 @@
             "cooking"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         },
         {
           "stepId": "bring-the-haul-back-to-tanner",
           "title": "Bring the haul back to Tanner",
           "body": [
-            "Bring the frontier haul back to Tanner Rusk and the crafting side of Starter Town. Even though the current export does not surface raw hide tanning as its own recipe chain, Tanner's leather stock makes the intended progression readable.",
-            "Use that moment to pivot into normal and wolf leather, then carry the loop forward into strapped handles, gear assembly, and the broader crafting economy."
+            "Return to Tanner Rusk with all 4 tusks and 2 fangs and use his quest dialogue to turn them in. The requested materials are consumed.",
+            "The reward is 200 coins and 125 Crafting XP, and his leather merchant becomes available. His stock supports the later Crafting assembly loop."
           ],
           "itemIds": [
             "normal_leather",
@@ -215,7 +210,7 @@
             "crafting"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         }
       ]
@@ -253,8 +248,7 @@
         "woodcutting"
       ],
       "relatedWorldIds": [
-        "starter_town",
-        "north_road_camp"
+        "main_overworld"
       ],
       "nextJourneyIds": [
         "fishing_to_food",
@@ -279,8 +273,7 @@
             "smithing"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         },
         {
@@ -305,7 +298,7 @@
             "mining"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
@@ -326,7 +319,7 @@
             "smithing"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         }
       ]
@@ -360,8 +353,7 @@
         "cooking"
       ],
       "relatedWorldIds": [
-        "starter_town",
-        "north_road_camp"
+        "main_overworld"
       ],
       "nextJourneyIds": [
         "first_runes",
@@ -384,7 +376,7 @@
             "fishing"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
@@ -405,8 +397,7 @@
             "cooking"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         },
         {
@@ -429,8 +420,7 @@
             "cooking"
           ],
           "worldIds": [
-            "starter_town",
-            "north_road_camp"
+            "main_overworld"
           ]
         }
       ]
@@ -465,7 +455,7 @@
         "runecrafting"
       ],
       "relatedWorldIds": [
-        "starter_town"
+        "main_overworld"
       ],
       "nextJourneyIds": [
         "early_progression",
@@ -487,15 +477,15 @@
             "runecrafting"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
           "stepId": "unlock-basic-altars",
           "title": "Unlock the basic altars",
           "body": [
-            "Use the ember, air, earth, and water paths to make the four basic runes first.",
-            "Those four are the backbone for the combo-rune recipes and the easiest way to understand the batch's runecrafting structure."
+            "Start with ember runes at level 1, then water at 10, earth at 20, and air at 30.",
+            "The altar must match the recipe. Combination runes require level 40, the combination unlock, essence, and a secondary rune."
           ],
           "itemIds": [
             "ember_rune",
@@ -507,7 +497,7 @@
             "runecrafting"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         },
         {
@@ -532,7 +522,7 @@
             "runecrafting"
           ],
           "worldIds": [
-            "starter_town"
+            "main_overworld"
           ]
         }
       ]

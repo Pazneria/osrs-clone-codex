@@ -5,14 +5,26 @@
   "entries": {
     "amulet_mould": {
       "description": "A jewelry mould used to shape amulets during crafting recipes.",
-      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
-      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "acquisition": "Mainly produced through Crafting at level 1 at a fire using Imprinted Amulet Mould x1.",
+      "uses": "Used in jewelry-crafting recipes to shape rings, amulets, or tiaras.",
       "status": "draft"
     },
     "bear_leather": {
       "description": "A leather crafting material used in equipment and strap recipes.",
       "acquisition": "Usually bought from Tanner Rusk in Starter Town.",
       "uses": "It is used in Crafting recipes that produce Yew Handle w/ Strap.",
+      "status": "draft"
+    },
+    "borrowed_amulet": {
+      "description": "Jewelry loaned for clay mould practice.",
+      "acquisition": "Elira Gemhand supplies it when Moulds of the Trade starts.",
+      "uses": "Used in Crafting recipes that produce Imprinted Amulet Mould.",
+      "status": "draft"
+    },
+    "borrowed_ring": {
+      "description": "Jewelry loaned for clay mould practice.",
+      "acquisition": "Elira Gemhand supplies it when Moulds of the Trade starts. The Crafting Instructor also supplies a borrowed ring on Tutorial Island.",
+      "uses": "Used in Crafting recipes that produce Imprinted Ring Mould.",
       "status": "draft"
     },
     "bow_string": {
@@ -29,8 +41,8 @@
     },
     "clay": {
       "description": "A basic mining resource gathered from Clay Rock nodes.",
-      "acquisition": "Usually mined from Clay Rock at level 1 in North Road Camp and Starter Town.",
-      "uses": "No downstream recipe or tool use is exported here, so this remains a conservative draft entry.",
+      "acquisition": "Usually mined from Clay Rock at level 1 in Main Overworld.",
+      "uses": "Used in Crafting recipes that produce Soft Clay.",
       "status": "draft"
     },
     "cut_diamond": {
@@ -93,6 +105,24 @@
       "uses": "It is used in Crafting recipes that produce Diamond Gold Ring, Emerald Gold Ring, Ruby Gold Ring, and Sapphire Gold Ring.",
       "status": "draft"
     },
+    "imprinted_amulet_mould": {
+      "description": "A crafting tool used to shape jewelry during metalworking recipes.",
+      "acquisition": "Mainly produced through Crafting at level 1 in inventory using Soft Clay x1, Borrowed Amulet x1.",
+      "uses": "Used in Crafting recipes that produce Amulet mould.",
+      "status": "draft"
+    },
+    "imprinted_ring_mould": {
+      "description": "A crafting tool used to shape jewelry during metalworking recipes.",
+      "acquisition": "Mainly produced through Crafting at level 1 in inventory using Soft Clay x1, Borrowed Ring x1.",
+      "uses": "Used in Crafting recipes that produce Ring mould.",
+      "status": "draft"
+    },
+    "imprinted_tiara_mould": {
+      "description": "A crafting tool used to shape jewelry during metalworking recipes.",
+      "acquisition": "Mainly produced through Crafting at level 1 in inventory using Soft Clay x1, Borrowed Tiara x1.",
+      "uses": "Used in Crafting recipes that produce Tiara mould.",
+      "status": "draft"
+    },
     "needle": {
       "description": "A basic Crafting tool kept in the Starter Town economy.",
       "acquisition": "Usually bought from Crafting Teacher in Starter Town.",
@@ -107,8 +137,8 @@
     },
     "ring_mould": {
       "description": "A jewelry mould used to shape rings during crafting recipes.",
-      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
-      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "acquisition": "Mainly produced through Crafting at level 1 at a fire using Imprinted Ring Mould x1.",
+      "uses": "Used in jewelry-crafting recipes to shape rings, amulets, or tiaras.",
       "status": "draft"
     },
     "ruby_gold_amulet": {
@@ -179,8 +209,8 @@
     },
     "tiara_mould": {
       "description": "A jewelry mould used to shape tiaras during crafting recipes.",
-      "acquisition": "The export does not list a direct source for this mould, so it is surfaced only through the jewelry crafting tables.",
-      "uses": "It is used in jewelry-crafting recipes that shape rings, amulets, or tiaras.",
+      "acquisition": "Mainly produced through Crafting at level 1 at a fire using Imprinted Tiara Mould x1.",
+      "uses": "Used in jewelry-crafting recipes to shape rings, amulets, or tiaras.",
       "status": "draft"
     },
     "uncut_diamond": {
