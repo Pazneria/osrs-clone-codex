@@ -4,79 +4,79 @@
   "title": "Utility And Outliers",
   "entries": {
     "ashes": {
-      "description": "A low-value residue item associated with spent fires and other firemaking output.",
-      "acquisition": "The export links ashes to Firemaking economy data, but it does not expose the exact production step, so this remains a conservative fire-related byproduct entry.",
-      "uses": "No major downstream crafting use is exported, so it mainly functions as a minor economy item.",
+      "description": "Ashes left by a burnt-out fire.",
+      "acquisition": "Take the Ashes that appear on the ground when a Firemaking fire burns out.",
+      "uses": "Ashes have no recipe use in the current game.",
       "status": "draft"
     },
     "boar_tusk": {
-      "description": "A boar tusk kept as one of the first animal-specific trophy drops in the starter combat loop.",
+      "description": "A Boar drop used in Hides of the Frontier.",
       "acquisition": "Drops from Boar in Main Overworld.",
       "uses": "Turn in 4 boar tusks with 2 wolf fangs to Tanner Rusk for Hides of the Frontier.",
       "status": "draft"
     },
     "coins": {
-      "description": "Standard currency used across shop, trade, and value calculations.",
-      "acquisition": "The export does not expose a single primary source, so treat coins as general-purpose currency earned through broader gameplay systems.",
-      "uses": "Used to buy items from merchants and to represent value across the project economy.",
+      "description": "Currency used to buy items from merchants.",
+      "acquisition": "Earn Coins by selling items, collecting enemy drops, or completing quests such as Hides of the Frontier.",
+      "uses": "Spend Coins at merchants. Check stock and trade access before planning a purchase.",
       "status": "draft"
     },
     "feathers_bundle": {
       "description": "A bundled feather resource used to finish headless arrow recipes in Fletching.",
-      "acquisition": "Sold by the Fletching Supplier in the exported fletching economy tables.",
+      "acquisition": "Sold by the Fletching Supplier.",
       "uses": "Combined with shafts across each wood tier to produce headless arrows for later arrow assembly.",
       "status": "draft"
     },
     "goblin_club": {
-      "description": "A rough goblin club recovered as low-tier camp loot rather than player-ready equipment.",
+      "description": "A trophy dropped by Goblin Grunts.",
       "acquisition": "Drops from Goblin Grunt in Main Overworld.",
-      "uses": "No recipe or shop path is exported for it, so it mainly marks the jump from critter drops into roaming goblin encounters.",
+      "uses": "This drop is not equippable and has no recipe use in the current game.",
       "status": "draft"
     },
     "guard_crest": {
-      "description": "A guard crest taken as a recognizable patrol drop with more identity than the starter animal trophies.",
+      "description": "A crest dropped by Guards.",
       "acquisition": "Drops from Guard in Main Overworld.",
-      "uses": "No crafting or merchant path is exported for it, so it mainly serves as higher-tier patrol loot and named-faction flavor.",
+      "uses": "This drop is not equippable and has no recipe use in the current game.",
       "status": "draft"
     },
     "guard_spear": {
-      "description": "A guard spear recovered as loot rather than exported player equipment.",
+      "description": "A trophy dropped by Guards.",
       "acquisition": "Drops from Guard in Main Overworld.",
-      "uses": "No equipment, recipe, or merchant path is exported for it yet, so it currently reads as higher-tier guard loot with presentation value more than utility.",
+      "uses": "This drop is not equippable and has no recipe use in the current game.",
       "status": "draft"
     },
     "hammer": {
       "description": "A core workshop tool used throughout smithing and metal assembly recipes.",
-      "acquisition": "Sold by Borin Ironvein through the exported smithing merchant tables in Main Overworld.",
-      "uses": "Required for many smithing tasks and it also appears as a trade item in the smithing economy.",
+      "acquisition": "Sold by Borin Ironvein in Main Overworld.",
+      "uses": "Required for many smithing tasks.",
       "status": "draft"
     },
     "knife": {
       "description": "A cutting tool used across fletching and simple crafting workflows.",
       "acquisition": "Stocked by general stores in Main Overworld, with the exported default stock listing ten at a time.",
-      "uses": "Used to shape logs and related materials in fletching workflows, and it also appears in the fletching economy tables.",
+      "uses": "Used to shape logs and related materials in fletching workflows.",
       "status": "draft"
     },
     "rat_tail": {
-      "description": "A rat tail kept as a disposable proof-of-kill drop from the very bottom of the combat ladder.",
+      "description": "A tail dropped by Rats.",
       "acquisition": "Drops from Rat in Main Overworld.",
-      "uses": "No recipe or merchant path is exported for it, so it mainly serves as low-value starter loot and encounter flavor.",
+      "uses": "This drop is not equippable and has no recipe use in the current game.",
       "status": "draft"
     },
     "soft_clay": {
-      "description": "A worked clay resource kept as a conservative crafting-material entry.",
-      "acquisition": "Mainly produced through Crafting at level 1 at a water using Clay x1.",
-      "uses": "Used in Crafting recipes that produce Imprinted Amulet Mould, Imprinted Ring Mould, Imprinted Tiara Mould.",
+      "description": "Soft clay used to imprint jewelry moulds.",
+      "acquisition": "Use Clay on water at Crafting level 1.",
+      "uses": "Near a crafting bench, use Soft Clay on a Borrowed Ring, Borrowed Amulet, or Borrowed Tiara to make the matching imprinted mould. Fire the imprinted mould before using it for jewelry.",
       "status": "draft"
     },
     "tinderbox": {
       "description": "A basic firemaking tool used to ignite logs.",
-      "acquisition": "Stocked by general stores in Main Overworld through the exported firemaking and general-store economy data.",
+      "acquisition": "Stocked by general stores in Main Overworld.",
       "uses": "Used to light logs for Firemaking.",
       "status": "draft"
     },
     "wolf_fang": {
-      "description": "A wolf fang kept as a more dangerous animal trophy from the far-out starter-region encounter bands.",
+      "description": "A Wolf drop used in Hides of the Frontier.",
       "acquisition": "Drops from Wolf in Main Overworld.",
       "uses": "Turn in 2 wolf fangs with 4 boar tusks to Tanner Rusk for Hides of the Frontier.",
       "status": "draft"

@@ -5,67 +5,67 @@
   "entries": {
     "bait": {
       "description": "A basic fishing consumable used with rod-based methods.",
-      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "acquisition": "Buy it from the Fishing Supplier in Starter Town.",
       "uses": "It is consumed by rod-based fishing methods and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
     "burnt_boar_meat": {
       "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
       "acquisition": "Produced when Raw Boar Meat burns during Cooking attempts.",
-      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "uses": "Does not restore Hitpoints.",
       "status": "draft"
     },
     "burnt_chicken": {
       "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
       "acquisition": "Produced when Raw Chicken burns during Cooking attempts.",
-      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "uses": "Does not restore Hitpoints.",
       "status": "draft"
     },
     "burnt_salmon": {
       "description": "A burnt version of Raw Salmon created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Salmon burns during Cooking.",
-      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "uses": "Does not restore Hitpoints. The Fishing Supplier in Starter Town buys it.",
       "status": "draft"
     },
     "burnt_shrimp": {
       "description": "A burnt version of Raw Shrimp created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Shrimp burns during Cooking.",
-      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "uses": "Does not restore Hitpoints. The Fishing Supplier in Starter Town buys it.",
       "status": "draft"
     },
     "burnt_swordfish": {
       "description": "A burnt version of Raw Swordfish created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Swordfish burns during Cooking.",
-      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "uses": "Does not restore Hitpoints. The Fishing Supplier in Starter Town buys it.",
       "status": "draft"
     },
     "burnt_trout": {
       "description": "A burnt version of Raw Trout created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Trout burns during Cooking.",
-      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "uses": "Does not restore Hitpoints. The Fishing Supplier in Starter Town buys it.",
       "status": "draft"
     },
     "burnt_tuna": {
       "description": "A burnt version of Raw Tuna created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Tuna burns during Cooking.",
-      "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "uses": "Does not restore Hitpoints. The Fishing Supplier in Starter Town buys it.",
       "status": "draft"
     },
     "burnt_wolf_meat": {
       "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
       "acquisition": "Produced when Raw Wolf Meat burns during Cooking attempts.",
-      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "uses": "Does not restore Hitpoints.",
       "status": "draft"
     },
     "cooked_boar_meat": {
       "description": "Cooked animal meat that restores health when eaten.",
-      "acquisition": "Mainly made through Cooking by cooking Raw Boar Meat starting at level 15.",
+      "acquisition": "Made through Cooking by cooking Raw Boar Meat starting at level 15.",
       "uses": "Restores 6 HP when eaten.",
       "status": "draft"
     },
     "cooked_chicken": {
       "description": "Cooked animal meat that restores health when eaten.",
-      "acquisition": "Mainly made through Cooking by cooking Raw Chicken starting at level 5.",
+      "acquisition": "Made through Cooking by cooking Raw Chicken starting at level 5.",
       "uses": "Restores 4 HP when eaten.",
       "status": "draft"
     },
@@ -101,19 +101,19 @@
     },
     "cooked_wolf_meat": {
       "description": "Cooked animal meat that restores health when eaten.",
-      "acquisition": "Mainly made through Cooking by cooking Raw Wolf Meat starting at level 25.",
+      "acquisition": "Made through Cooking by cooking Raw Wolf Meat starting at level 25.",
       "uses": "Restores 8 HP when eaten.",
       "status": "draft"
     },
     "fishing_rod": {
       "description": "A fishing tool used for rod fishing methods.",
-      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "acquisition": "Buy it from the Fishing Supplier in Starter Town.",
       "uses": "It is used for rod fishing methods, usually with bait, and can be traded to the Fishing Supplier or Fishing Teacher in Starter Town.",
       "status": "draft"
     },
     "harpoon": {
       "description": "A fishing tool used for harpoon fishing methods.",
-      "acquisition": "This batch does not export a direct acquisition path for it, so the entry stays conservative.",
+      "acquisition": "Buy it from the Fishing Supplier in Starter Town. Harpoon fishing requires Fishing level 30.",
       "uses": "It is used for harpoon fishing methods and can be equipped for combat.",
       "status": "draft"
     },
@@ -131,31 +131,31 @@
     },
     "raw_salmon": {
       "description": "A raw fish resource gathered through Fishing and used in Cooking.",
-      "acquisition": "It is usually gathered at Shallow Water with a Fishing Rod starting at level 20.",
+      "acquisition": "Catch it at Shallow Water with a Fishing Rod and Bait starting at Fishing level 20.",
       "uses": "It is a Cooking input for Cooked Salmon and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
     "raw_shrimp": {
       "description": "A raw fish resource gathered through Fishing and used in Cooking.",
-      "acquisition": "It is usually gathered at Shallow Water with a Small Net starting at level 1.",
+      "acquisition": "Catch it at Shallow Water with a Small Net starting at level 1.",
       "uses": "It is a Cooking input for Cooked Shrimp and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
     "raw_swordfish": {
       "description": "A raw fish resource gathered through Fishing and used in Cooking.",
-      "acquisition": "It is usually gathered at Deep Water with a Harpoon-class tool starting at level 40.",
+      "acquisition": "Catch it at Deep Water with a Harpoon-class tool starting at level 40.",
       "uses": "It is a Cooking input for Cooked Swordfish and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
     "raw_trout": {
       "description": "A raw fish resource gathered through Fishing and used in Cooking.",
-      "acquisition": "It is usually gathered at Shallow Water with a Fishing Rod starting at level 10.",
+      "acquisition": "Catch it at Shallow Water with a Fishing Rod and Bait starting at Fishing level 10.",
       "uses": "It is a Cooking input for Cooked Trout and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
     "raw_tuna": {
       "description": "A raw fish resource gathered through Fishing and used in Cooking.",
-      "acquisition": "It is usually gathered at Deep Water or Shallow Water with a Harpoon-class tool starting at level 30.",
+      "acquisition": "Catch it at Deep Water or Shallow Water with a Harpoon-class tool starting at level 30.",
       "uses": "It is a Cooking input for Cooked Tuna and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
@@ -167,13 +167,13 @@
     },
     "rune_harpoon": {
       "description": "A fishing tool used for harpoon fishing methods.",
-      "acquisition": "This batch does not export a direct acquisition path for it, so the entry stays conservative.",
+      "acquisition": "Complete From Net to Harpoon for the Fishing Teacher: turn in one each of raw shrimp, trout, salmon, tuna, and swordfish. You receive a Rune Harpoon and 250 Fishing XP. After completing the quest, the teacher sells a replacement when you carry none.",
       "uses": "It is used for harpoon fishing methods and can be traded to the Fishing Teacher in Starter Town. It can also be equipped for combat.",
       "status": "draft"
     },
     "small_net": {
       "description": "A fishing tool used for small net fishing methods.",
-      "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
+      "acquisition": "Buy it from the Fishing Supplier in Starter Town.",
       "uses": "It is used for small net fishing methods and can be traded to the Fishing Supplier or Fishing Teacher in Starter Town.",
       "status": "draft"
     }

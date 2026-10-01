@@ -171,8 +171,7 @@ function renderCombatSection(item) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Combat Profile</p>
-          <h3>${escapeHtml(item.title)} in combat</h3>
+          <h2>${escapeHtml(item.title)} in combat</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -204,8 +203,7 @@ function renderToolSection(item) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Tooling</p>
-          <h3>Gathering and utility profile</h3>
+          <h2>Gathering and utility profile</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -237,15 +235,14 @@ function renderCookingSection(bundle, item, itemIndex, options = {}) {
   });
 
   const chainParagraph = relatedLabels.length
-    ? `<p class="card-note">${renderInlineLinkedText(`This cooking chain runs through ${describeList(relatedLabels)}.`, options)}</p>`
+    ? `<p class="card-note">${renderInlineLinkedText(`Related cooking items: ${describeList(relatedLabels)}.`, options)}</p>`
     : `<p class="subtle">No cooking-linked items.</p>`;
 
   return `
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Cooking</p>
-          <h3>Prep, burn, and recovery details</h3>
+          <h2>Cooking and healing</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -274,38 +271,10 @@ function collectItemJourneyLinks(manualContent, item) {
     }));
 }
 
-function buildItemGuideBlocks(bundle, item, entry, manualContent) {
-  const worlds = item.relatedWorldIds.map(humanizeId);
-  const skills = item.relatedSkillIds.map(humanizeId);
-  const nextSteps = [];
-
-  if (item.data && item.data.cookResultId) nextSteps.push(`Cook this into ${humanizeId(item.data.cookResultId)} when you are ready to move the loop forward.`);
-  if (item.data && item.data.burnResultId) nextSteps.push(`Watch the burn result path into ${humanizeId(item.data.burnResultId)} if Cooking goes wrong.`);
-  if (skills.length) nextSteps.push(`Open ${skills.slice(0, 2).join(" and ")} to see the larger systems that produce or consume this item.`);
-  const journeyLinks = collectItemJourneyLinks(manualContent, item);
-  if (journeyLinks.length) nextSteps.push(`Follow ${journeyLinks[0].label} if you want a guided route instead of reading this item in isolation.`);
-
+function buildItemGuideBlocks(bundle, item, entry) {
   return [
-    { label: "Overview", body: entry.description },
-    { label: "Why It Matters", body: entry.uses },
-    {
-      label: "How To Get Started",
-      body: [
-        entry.acquisition,
-        skills.length ? `The fastest way to understand this item is to pair it with ${skills.slice(0, 2).join(" and ")}.` : ""
-      ].filter(Boolean)
-    },
-    {
-      label: "Connected Systems",
-      body: [
-        skills.length ? `This item touches ${skills.join(", ")}.` : "This item sits on the edge of the manual and stays intentionally sparse.",
-        worlds.length ? `You will see it show up around ${worlds.join(", ")}.` : ""
-      ].filter(Boolean)
-    },
-    {
-      label: "Next Steps",
-      body: nextSteps.length ? nextSteps : ["Use the connected skill, world, and journey references in this guide to see where the item leads next."]
-    }
+    { label: "Uses", body: entry.uses },
+    { label: "Where to get it", body: entry.acquisition }
   ];
 }
 
@@ -315,9 +284,9 @@ function renderEditorialSection(bundle, item, itemEditorial, manualContent, site
 
   return `
     ${renderGuideBlockSection({
-      eyebrow: "Living Manual",
-      title: "What this item is for and where it leads",
-      badges: [entry.status === "reviewed" ? "Reviewed guide copy" : "Draft guide copy"],
+      eyebrow: "Item guide",
+      title: "Uses and acquisition",
+      badges: [],
       blocks: buildItemGuideBlocks(bundle, item, entry, manualContent),
       linkRegistry: siteAssets.linkRegistry,
       excludeHrefs: [item.path]
@@ -362,8 +331,7 @@ function renderItemPage(bundle, editorial, itemEditorial, manualContent, item, s
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Reference Layer</p>
-          <h3>Core facts and exported numbers</h3>
+          <h2>Item details</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -385,8 +353,7 @@ function renderItemPage(bundle, editorial, itemEditorial, manualContent, item, s
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Reference Context</p>
-          <h3>Where this item fits in the larger codex</h3>
+          <h2>Related skills, places, and journeys</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -413,16 +380,6 @@ function renderItemPage(bundle, editorial, itemEditorial, manualContent, item, s
         },
         { label: "Icon asset", value: getItemIconAssetId(item) || "None" }
       ], { emptyText: "No cross-reference metadata." })}
-      <p class="card-note">${renderInlineLinkedText(
-        `Read this item alongside ${describeList(
-          [
-            ...item.relatedSkillIds.map((skillId) => (skillIndex.get(skillId) || {}).title || skillId),
-            ...item.relatedWorldIds.map((worldId) => (worldIndex.get(worldId) || {}).title || worldId),
-            ...collectItemJourneyLinks(manualContent, item).map((journey) => journey.label)
-          ].filter(Boolean).slice(0, 8)
-        )}.`,
-        { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [item.path] }
-      )}</p>
     </section>
     <section class="section-card">
       ${renderJsonDetails("Raw exported item data", item.data)}
@@ -438,7 +395,7 @@ function renderItemPage(bundle, editorial, itemEditorial, manualContent, item, s
       pageTitle: item.title,
       eyebrow: "Item Manual",
       heroTitle: item.title,
-      heroBody: `<p>${escapeHtml(`Use this page to understand ${buildPossessiveLabel(item.title)} role in the sandbox, what system teaches it best, and which loop to open next before dropping into raw export details.`)}</p>`,
+      heroBody: `<p>${renderInlineLinkedText(itemEditorial?.entriesByItemId?.[item.itemId]?.description || buildItemSummaryLine(item), { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [item.path] })}</p>`,
       heroBadges: [getItemTypeLabel(item), item.data.defaultAction || "No default action", item.data.stackable ? "Stackable" : "Single slot", `${collectItemJourneyLinks(manualContent, item).length} linked journeys`],
       heroAside,
       body
@@ -452,9 +409,9 @@ function renderItemIndexPage(bundle, editorial, manualContent, siteAssets) {
   const heroAside = `
     <div class="hero-panel">
       ${renderStatGrid([
-        { label: "Items", value: bundle.items.length, detail: "All canonical exports" },
+        { label: "Items", value: bundle.items.length, detail: "Equipment, supplies, and materials" },
         { label: "Journeys", value: manualContent.journeys.journeys.length, detail: "Curated guided routes" },
-        { label: "Icon coverage", value: `${bundle.items.filter((item) => getItemIconAssetId(item)).length} with artwork`, detail: "Pixel assets copied into the codex build" },
+        { label: "Icon coverage", value: `${bundle.items.filter((item) => getItemIconAssetId(item)).length} with artwork`, detail: "Item artwork" },
         { label: "Equipment", value: bundle.items.filter((item) => EQUIPMENT_TYPES.has(item.data.type) || item.data.type === "weapon").length, detail: "Combat and gear pages" }
       ], {
         className: "hero-stat-grid",
@@ -467,8 +424,7 @@ function renderItemIndexPage(bundle, editorial, manualContent, siteAssets) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Browse Items</p>
-          <h3>Search by item, role, type, or the systems that teach it.</h3>
+          <h2>Find an item</h2>
         </div>
         ${renderSearchHeader("items", "Search items by role, type, skill, world, or title", bundle.items.length)}
       </div>
@@ -488,8 +444,8 @@ function renderItemIndexPage(bundle, editorial, manualContent, siteAssets) {
       pageTitle: "Items",
       eyebrow: "Living Manual",
       heroTitle: "Items",
-      heroBody: "<p>Browse the item layer as part of a bigger manual: what each item does, which system teaches it, and what journey it belongs to.</p>",
-      heroBadges: ["Item-first guides", "Linked journeys", "Export-backed data"],
+      heroBody: "<p>Find uses, acquisition methods, requirements, and combat or cooking details for each item.</p>",
+      heroBadges: [],
       heroAside,
       body
     })

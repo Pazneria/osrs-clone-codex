@@ -15,11 +15,11 @@ function normalizeParagraphs(value) {
 
 function renderRichText(value, options = {}) {
   const paragraphs = normalizeParagraphs(value);
-  if (!paragraphs.length) return `<p class="subtle">${escapeHtml(options.emptyText || "No manual notes yet.")}</p>`;
+  if (!paragraphs.length) return "";
   if (paragraphs.length === 1) {
     return `<p class="card-note">${renderInlineLinkedText(paragraphs[0], options)}</p>`;
   }
-  return `<ul class="${escapeHtml(options.listClassName || "guide-list")}">${paragraphs.map((entry) => `<li>${renderInlineLinkedText(entry, options)}</li>`).join("")}</ul>`;
+  return `<div class="prose">${paragraphs.map((entry) => `<p>${renderInlineLinkedText(entry, options)}</p>`).join("")}</div>`;
 }
 
 function renderGuideBlockSection(options = {}) {
@@ -32,15 +32,14 @@ function renderGuideBlockSection(options = {}) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">${escapeHtml(options.eyebrow || "Manual Guide")}</p>
-          <h3>${escapeHtml(options.title || "Start Here")}</h3>
+          <h2>${escapeHtml(options.title || "Start Here")}</h2>
         </div>
         ${badgeHtml}
       </div>
       <div class="manual-grid">
         ${blocks.map((block) => `
           <article class="section-card section-card--nested manual-card">
-            <p class="eyebrow">${escapeHtml(block.label)}</p>
+            <h3>${escapeHtml(block.label)}</h3>
             ${renderRichText(block.body, options)}
           </article>
         `).join("")}
@@ -56,8 +55,7 @@ function renderLinkedEntitySection(options = {}) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">${escapeHtml(options.eyebrow || "Connected Systems")}</p>
-          <h3>${escapeHtml(options.title || "Follow the loop outward")}</h3>
+          <h2>${escapeHtml(options.title || "Related guides")}</h2>
         </div>
       </div>
       ${renderLinkList(rows, { className: options.className || "manual-link-list", emptyText: options.emptyText || "No connected pages." })}

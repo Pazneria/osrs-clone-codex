@@ -2,7 +2,8 @@ const { buildCodexEntityPath } = require("../lib/codex-link-contract");
 const { renderLayout } = require("./layout");
 const {
   renderGuideBlockSection,
-  renderJourneyCard
+  renderJourneyCard,
+  renderRichText
 } = require("./manual");
 const {
   buildSectionPath,
@@ -107,38 +108,12 @@ function buildSkillIndexTeaser(skill, itemIndex, manualEntry) {
   return buildSkillSummaryLine(skill, itemIndex);
 }
 
-function buildManualGuidanceBlocks(skill, manualEntry) {
+function buildManualGuidanceBlocks(skill, entry = {}) {
   return [
-    {
-      label: "Overview",
-      body: manualEntry && Array.isArray(manualEntry.overview) && manualEntry.overview.length
-        ? manualEntry.overview
-        : [`Use ${skill.title} as a living reference: start with the manual story, then follow the linked systems and journey routes before opening the raw export data.`]
-    },
-    {
-      label: "Why It Matters",
-      body: manualEntry && Array.isArray(manualEntry.whyItMatters) && manualEntry.whyItMatters.length
-        ? manualEntry.whyItMatters
-        : [`${skill.title} is where item flow, unlock pacing, and regional loops meet in one place.`]
-    },
-    {
-      label: "How To Get Started",
-      body: manualEntry && Array.isArray(manualEntry.howToGetStarted) && manualEntry.howToGetStarted.length
-        ? manualEntry.howToGetStarted
-        : [`Open the unlock highlights first, then jump into the connected systems and journey links that fit your current goal.`]
-    },
-    {
-      label: "Connected Systems",
-      body: manualEntry && Array.isArray(manualEntry.connectedSystems) && manualEntry.connectedSystems.length
-        ? manualEntry.connectedSystems
-        : [`Treat the linked items, worlds, and journeys on this page as the operational map around ${skill.title}.`]
-    },
-    {
-      label: "Next Steps",
-      body: manualEntry && Array.isArray(manualEntry.nextSteps) && manualEntry.nextSteps.length
-        ? manualEntry.nextSteps
-        : [`Use the deeper reference tables below once you have the manual story in mind.`]
-    }
+    { label: "Uses", body: entry.whyItMatters },
+    { label: "Start training", body: entry.howToGetStarted },
+    { label: "Materials and other skills", body: entry.connectedSystems },
+    { label: "Plan your next step", body: entry.nextSteps }
   ];
 }
 
@@ -187,7 +162,7 @@ function buildUnlockHighlights(skill, itemIndex) {
     {
       label: "Primary Resource",
       value: getPrimaryResource(skill, itemIndex),
-      detail: "Backbone resource for the loop"
+      detail: "Main material"
     }
   ];
 }
@@ -213,13 +188,8 @@ function renderManualGuidanceSection(skill, manualEntry, linkRegistry) {
 
   return renderGuideBlockSection({
     eyebrow: "Manual Guidance",
-    title: `How to read ${skill.title}`,
-    badges: [
-      `${featuredItemCount} featured items`,
-      `${featuredSkillCount} featured skills`,
-      `${featuredWorldCount} featured worlds`,
-      `${featuredJourneyCount} featured journeys`
-    ],
+    title: `Train ${skill.title}`,
+    badges: [],
     blocks: buildManualGuidanceBlocks(skill, manualEntry),
     linkRegistry,
     excludeHrefs: [skill.path]
@@ -231,8 +201,7 @@ function renderUnlockHighlightsSection(skill, itemIndex) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Unlock Highlights</p>
-          <h3>What opens up as you progress</h3>
+          <h2>Requirements and unlocks</h2>
         </div>
       </div>
       ${renderStatGrid(buildUnlockHighlights(skill, itemIndex), {
@@ -267,13 +236,9 @@ function renderSkillConnectionsSection(skill, itemIndex, skillIndex, worldIndex,
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Connected Systems</p>
-          <h3>Items, skills, and worlds that anchor the loop</h3>
+          <h2>Related materials, skills, and places</h2>
         </div>
       </div>
-      ${summaryParagraphs.length
-        ? `<div class="prose">${summaryParagraphs.map((paragraph) => `<p>${renderInlineLinkedText(paragraph, { linkRegistry, excludeHrefs: [skill.path] })}</p>`).join("")}</div>`
-        : `<p class="subtle">No connected systems yet.</p>`}
       ${renderMetaList([
         { label: "Related items", html: renderInlineLinkedList(itemLabels, { linkRegistry, excludeHrefs: [skill.path], emptyText: "None" }) },
         { label: "Related skills", html: renderInlineLinkedList(skillLabels, { linkRegistry, excludeHrefs: [skill.path], emptyText: "None" }) },
@@ -292,8 +257,7 @@ function renderJourneySection(skill, manualEntry, journeys, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Guided Routes</p>
-          <h3>Guided routes that teach this skill in context</h3>
+          <h2>Walkthroughs</h2>
         </div>
       </div>
       ${spotlightJourneys.length
@@ -369,8 +333,7 @@ function renderRecipeSection(skill, itemIndex, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Recipes</p>
-          <h3>Crafting and conversion routes</h3>
+          <h2>Recipes</h2>
         </div>
       </div>
       ${renderTable({
@@ -404,8 +367,7 @@ function renderNodeSection(skill, itemIndex, linkRegistry) {
       <section class="section-card">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Node Families</p>
-            <h3>Gathering methods and unlock breakpoints</h3>
+            <h2>Fishing methods</h2>
           </div>
         </div>
         <div class="entity-grid">
@@ -415,7 +377,7 @@ function renderNodeSection(skill, itemIndex, linkRegistry) {
             return `
               <article class="entity-card">
                 <p class="eyebrow">${escapeHtml(humanizeId(nodeId))}</p>
-                <h4>${escapeHtml(`${node.unlockLevel || 1}+ unlock`)}${node.baseCatchChance !== undefined ? ` | ${escapeHtml(String(Math.round(node.baseCatchChance * 100)))}% base` : ""}</h4>
+                <h3>${escapeHtml(`${node.unlockLevel || 1}+ unlock`)}${node.baseCatchChance !== undefined ? ` | ${escapeHtml(String(Math.round(node.baseCatchChance * 100)))}% base` : ""}</h3>
                 ${renderMetaList([
                   { label: "Level scaling", value: node.levelScaling !== undefined ? node.levelScaling : "None" },
                   { label: "Max success", value: node.maxCatchChance !== undefined ? `${Math.round(node.maxCatchChance * 100)}%` : "None" },
@@ -470,8 +432,7 @@ function renderNodeSection(skill, itemIndex, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Node Table</p>
-          <h3>Gathering targets and reward pacing</h3>
+          <h2>Resource nodes</h2>
         </div>
       </div>
       ${renderTable({
@@ -511,7 +472,7 @@ function renderMerchantSection(skill, itemIndex, linkRegistry) {
         return `
           <article class="entity-card">
             <p class="eyebrow">${escapeHtml(humanizeId(merchantId))}</p>
-            <h4>${escapeHtml(`${(merchant.buys || []).length} buys | ${(merchant.sells || []).length} sells`)}</h4>
+            <h3>${escapeHtml(`${(merchant.buys || []).length} buys | ${(merchant.sells || []).length} sells`)}</h3>
             ${renderMetaList([
               { label: "Strict buys", value: merchant.strictBuys ? "Yes" : "No" },
               {
@@ -547,8 +508,7 @@ function renderMerchantSection(skill, itemIndex, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Economy</p>
-          <h3>Merchants, buyback rules, and value references</h3>
+          <h2>Merchants and prices</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -576,8 +536,7 @@ function renderFormulaSection(skill) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Rules</p>
-          <h3>Timing, formulas, and progression ranges</h3>
+          <h2>Timing, formulas, and progression ranges</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -637,8 +596,7 @@ function renderSkillPage(bundle, editorial, manualContentOrSkill, skillOrSiteAss
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Overview</p>
-          <h3>What this skill contributes to the sandbox</h3>
+          <h2>Skill details</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -674,7 +632,7 @@ function renderSkillPage(bundle, editorial, manualContentOrSkill, skillOrSiteAss
       pageTitle: skill.title,
       eyebrow: "Skill Reference",
       heroTitle: skill.title,
-      heroBody: `<p>${escapeHtml(`Use this page to review ${skill.title}'s manual guidance, unlock highlights, inline reference context, and guided routes before opening the raw export bundle.`)}</p>`,
+      heroBody: renderRichText(manualEntry?.overview || buildSkillSummaryLine(skill, itemIndex), { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [skill.path] }),
       heroBadges: [getPrimaryResource(skill, itemIndex), `${countRecipes(skill)} recipes`, `${countNodes(skill)} node families`],
       heroAside,
       body
@@ -725,9 +683,9 @@ function renderSkillIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
     <div class="hero-panel">
       ${renderStatGrid([
         { label: "Skills", value: bundle.skills.length, detail: "Core sandbox systems" },
-        { label: "Recipes", value: bundle.skills.reduce((total, skill) => total + countRecipes(skill), 0), detail: "Actionable crafting rows" },
+        { label: "Recipes", value: bundle.skills.reduce((total, skill) => total + countRecipes(skill), 0), detail: "Recipes" },
         { label: "Node Families", value: bundle.skills.reduce((total, skill) => total + countNodes(skill), 0), detail: "Gathering and method groups" },
-        { label: "Journeys", value: journeyCount, detail: "Manual learning routes" }
+        { label: "Journeys", value: journeyCount, detail: "Walkthroughs" }
       ], {
         className: "hero-stat-grid",
         itemClassName: "hero-stat-card"
@@ -736,39 +694,11 @@ function renderSkillIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
   `;
 
   const body = `
-    <section class="section-card">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Manual Primer</p>
-          <h3>Use the index like a field guide, not just a directory.</h3>
-        </div>
-      </div>
-      ${renderGuideBlockSection({
-        eyebrow: "Skill Index Manual",
-        title: "How to navigate the skill layer",
-        badges: [
-          `${bundle.skills.length} skills`,
-          `${journeyCount} journeys`,
-          "Manual-first reading"
-        ],
-        blocks: [
-          {
-            label: "Start With Intent",
-            body: ["Pick the skill page that matches the loop you want to understand, then read the manual guidance before the raw tables."]
-          },
-          {
-            label: "Follow The Links",
-            body: ["Use the connected systems and journey routes to understand how the skill fits into items, worlds, and progression."]
-          }
-        ]
-      })}
-    </section>
     ${journeySpotlights ? `
       <section class="section-card">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Journey Spotlight</p>
-            <h3>Routes that teach the skill layer in motion</h3>
+            <h2>Walkthroughs</h2>
           </div>
         </div>
         <div class="entity-grid">
@@ -779,8 +709,7 @@ function renderSkillIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Browse Skills</p>
-          <h3>Search by skill ID, merchant, or the items a system touches.</h3>
+          <h2>Find a skill</h2>
         </div>
         ${renderSearchHeader("skills", "Search skills by id, merchant, or referenced item", bundle.skills.length)}
       </div>
@@ -799,8 +728,8 @@ function renderSkillIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
       pageTitle: "Skills",
       eyebrow: "Entity Index",
       heroTitle: "Skills",
-      heroBody: "<p>Browse skill pages designed as living manuals: guidance first, then unlocks, connected systems, and journey links, with raw reference data waiting below.</p>",
-      heroBadges: ["Manual-first pages", "Journey-linked", "Connected systems"],
+      heroBody: "<p>Choose a skill to find tools, resources, recipes, levels, XP, and merchants. Combat training is explained in How to play.</p>",
+      heroBadges: [],
       heroAside,
       body
     })

@@ -60,7 +60,7 @@ function getEnemyRespawnTicks(enemy) {
 
 function getEnemyRoamingRadius(enemy) {
   const data = enemy && enemy.data && typeof enemy.data === "object" ? enemy.data : {};
-  return data.roamingRadius !== undefined ? data.roamingRadius : enemy.roamingRadius !== undefined ? enemy.roamingRadius : null;
+  return data.behavior?.roamingRadius ?? data.roamingRadius ?? enemy.roamingRadius ?? null;
 }
 
 function getEnemyDropCount(enemy) {
@@ -94,7 +94,8 @@ function buildEnemySummaryLine(enemy) {
   if (drops) parts.push(`${formatNumber(drops)} drop${drops === 1 ? "" : "s"}`);
   if (respawn !== null) parts.push(`${formatTicks(respawn)} respawn`);
   if (roam !== null) parts.push(`Roam ${formatNumber(roam)}`);
-  if (data.attackStyle || data.combatStyle || data.family) parts.push(humanizeId(data.attackStyle || data.combatStyle || data.family));
+  if (data.stats?.hitpoints !== undefined) parts.unshift(`${data.stats.hitpoints} HP`);
+  if (data.behavior?.aggroType) parts.push(humanizeId(data.behavior.aggroType));
   return parts.length ? parts.join(" | ") : "Enemy encounter";
 }
 
@@ -209,12 +210,6 @@ function renderManualEntryCard(bundle, entry, manualEntry, siteAssets, type) {
         </div>
       </div>
       ${renderChipList(labels, { className: "pill-list pill-list--dense" })}
-      ${renderRichText(manualEntry.howToGetStarted, {
-        emptyText: "No start notes yet.",
-        listClassName: "guide-list guide-list--compact",
-        linkRegistry: siteAssets.linkRegistry,
-        excludeHrefs: [entry.path]
-      })}
       ${supportCopy}
     </article>
   `;
@@ -324,38 +319,11 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
   `;
 
   const body = `
-    <section class="section-card"><p class="eyebrow">Start here</p><h3>Learn the controls and finish your first lessons.</h3><div class="guide-contents"><a href="${buildCodexHomePath()}wiki/">How to play</a><a href="https://pazneria.github.io/osrs-clone/">Play OSRS Clone</a></div></section>
-    ${renderGuideBlockSection({
-      eyebrow: "Manual Portal",
-      title: "A homepage that tracks what is live right now",
-      badges: ["Encounter pages", "Talk-to aware", "Quest-ready"],
-      blocks: [
-        {
-          label: "At a glance",
-          body: introParagraphs.length ? introParagraphs : [editorial.tagline]
-        },
-        {
-          label: "How to use it",
-          body: [
-            "Start with a journey or the current quest routes, then open the linked skills, encounters, NPCs, and worlds to keep the active loop visible.",
-            "Use the How to play guide for controls, tutorial steps, combat, quests, and saving progress."
-          ]
-        },
-        {
-          label: "What's live now",
-          body: editorialCards.length
-            ? editorialCards.map((section) => `${section.title}: ${section.body}`)
-            : ["Stable IDs and exported content keep the portal predictable across builds."]
-        }
-      ],
-      linkRegistry: siteAssets.linkRegistry
-    })}
-
+    <section class="section-card"><h2>Start playing</h2><div class="guide-contents"><a href="${buildCodexHomePath()}wiki/">How to play</a><a href="https://pazneria.github.io/osrs-clone/">Play OSRS Clone</a></div></section>
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Start Here Journeys</p>
-          <h3>Choose a route that already explains the loop, or points you toward the current quest routes.</h3>
+          <h2>Choose a goal</h2>
         </div>
         <a class="text-link" href="${escapeHtml(buildSectionPath("journeys"))}">Browse all journeys</a>
       </div>
@@ -371,8 +339,7 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Featured Skills</p>
-          <h3>Skills that anchor the manual with concrete loops and outcomes.</h3>
+          <h2>Train your skills</h2>
         </div>
         <a class="text-link" href="${escapeHtml(buildSectionPath("skills"))}">Open skills index</a>
       </div>
@@ -384,8 +351,7 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">World Highlights</p>
-          <h3>Regions that tell you what is actually live before you go, including service districts and starter-town homesteads.</h3>
+          <h2>Explore the worlds</h2>
         </div>
         <a class="text-link" href="${escapeHtml(buildSectionPath("world"))}">Open world index</a>
       </div>
@@ -397,8 +363,7 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Enemy Encounters</p>
-          <h3>Live encounter pages with danger level, roaming, respawn, and loot at a glance.</h3>
+          <h2>Enemies and drops</h2>
         </div>
         <a class="text-link" href="${escapeHtml(buildSectionPath("enemies"))}">Open enemies index</a>
       </div>
@@ -407,25 +372,6 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
       </div>
     </section>
 
-    <section class="section-card">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Player Goal Entry Points</p>
-          <h3>Jump into the path that matches what you want to do next, from starter loops to the current quest routes.</h3>
-        </div>
-        <a class="text-link" href="${escapeHtml(buildSectionPath("journeys"))}">See all goal routes</a>
-      </div>
-      <div class="prose">
-        <p>${renderInlineLinkedText(
-          `Good starting routes: ${describeList(goalRows.map((row) => row.label))}.`,
-          { linkRegistry: siteAssets.linkRegistry }
-        )}</p>
-        ${supportRows.length ? `<p>${renderInlineLinkedText(
-          `Supporting pages that reinforce those routes: ${describeList(supportRows.map((row) => row.label))}.`,
-          { linkRegistry: siteAssets.linkRegistry }
-        )}</p>` : ""}
-      </div>
-    </section>
 
   `;
 
@@ -434,13 +380,13 @@ function renderHomePage(bundle, editorial, manualContentOrSiteAssets = {}, maybe
     manifest: bundle.manifest,
     currentPath: buildCodexHomePath(),
     pageTitle: editorial.siteTitle,
-    eyebrow: "Player-First Codex",
+    eyebrow: "OSRS Clone wiki",
     heroTitle: editorial.siteTitle,
     heroBody: `
       <p>${escapeHtml(editorial.tagline)}</p>
-      <p>${escapeHtml("Open a journey, inspect the supporting encounters, Talk-to NPCs, homestead-heavy world pages, and the current quest routes, then follow the links back to the exported game data.")}</p>
+      <p>${escapeHtml("New characters begin on Tutorial Island. Learn the controls and lessons in How to play, then choose a walkthrough or browse the references below.")}</p>
     `,
-    heroBadges: ["Reference-first", "Encounter pages", "Talk-to and quest aware"],
+    heroBadges: [],
     heroAside,
     body
   });

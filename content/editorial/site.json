@@ -1,24 +1,10 @@
 {
   "siteTitle": "OSRS Clone Codex",
   "brandKicker": "Pazneria Player Reference",
-  "tagline": "Controls, tutorial lessons, quests, and source-backed reference pages for OSRS Clone.",
-  "footerNote": "Reviewed gameplay guidance and reference data for the game revision linked below.",
+  "tagline": "Guides to controls, quests, equipment, skills, and worlds.",
+  "footerNote": "",
   "intro": [
-    "Start with How to play for controls, Tutorial Island, combat, quests, settings, and local saves. Open a journey when you want a practical resource or equipment goal.",
-    "Item, skill, world, and enemy pages use the game export. The version note explains the reviewed runtime revision and coverage."
+    "New characters begin on Tutorial Island. Follow its instructors, then continue to Main Overworld to gather supplies, make equipment, and complete quests."
   ],
-  "homeSections": [
-    {
-      "title": "Tutorial Island",
-      "body": "New characters learn gathering, food, smithing, melee, ranged, magic, runes, crafting, and the shared bank before Main Overworld."
-    },
-    {
-      "title": "Six runtime quests",
-      "body": "Quest objectives and rewards now cover Tanner Rusk, Thrain Deepforge, the Advanced Fletcher and Woodsman, the Fishing Teacher, and Elira Gemhand."
-    },
-    {
-      "title": "Current reference data",
-      "body": "The current export includes cooked and burnt animal meat, borrowed jewelry, clay moulds, combat item requirements, and ten enemy definitions."
-    }
-  ]
+  "homeSections": []
 }

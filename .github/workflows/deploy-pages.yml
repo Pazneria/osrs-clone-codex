@@ -29,7 +29,7 @@ jobs:
         with:
           repository: Pazneria/osrs-clone
           # Keep runtime facts and reviewed editorial on the same revision.
-          ref: ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7
+          ref: 485eb1cf0a4373f2356c58d5fc62cb1255fece37
           path: osrs-clone-source
 
       - name: Setup Node.js

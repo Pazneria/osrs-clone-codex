@@ -106,9 +106,9 @@ function resolveWorldIndexArgs(manualContentOrSiteAssets, maybeSiteAssets) {
 
 function renderParagraphCopy(paragraphs, emptyText, options = {}) {
   const rows = normalizeParagraphs(paragraphs);
-  if (!rows.length) return `<p class="subtle">${escapeHtml(emptyText || "No guidance yet.")}</p>`;
+  if (!rows.length) return "";
   if (rows.length === 1) return `<p class="card-note">${renderInlineLinkedText(rows[0], options)}</p>`;
-  return `<ul class="guide-list">${rows.map((entry) => `<li>${renderInlineLinkedText(entry, options)}</li>`).join("")}</ul>`;
+  return `<div class="prose">${rows.map((entry) => `<p>${renderInlineLinkedText(entry, options)}</p>`).join("")}</div>`;
 }
 
 function buildWorldSummaryLine(world, manualWorld) {
@@ -188,8 +188,7 @@ function renderServiceSection(world) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Services</p>
-          <h3>Trade, travel, and station access</h3>
+          <h2>Trade, travel, and station access</h2>
         </div>
       </div>
       ${renderTable({
@@ -218,8 +217,7 @@ function renderTravelSection(world, worldIndex) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Travel</p>
-          <h3>Fast links to connected regions</h3>
+          <h2>Travel destinations</h2>
         </div>
       </div>
       ${renderTable({
@@ -249,8 +247,7 @@ function renderResourceSection(world, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Resource Coverage</p>
-          <h3>What players can gather here at a glance</h3>
+          <h2>Resources</h2>
         </div>
       </div>
       ${renderTable({
@@ -276,8 +273,7 @@ function renderRouteSection(world) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Route Anchors</p>
-          <h3>Skill-linked locations and route labels</h3>
+          <h2>Gathering routes</h2>
         </div>
       </div>
       <div class="page-stack page-stack--tight">
@@ -285,7 +281,7 @@ function renderRouteSection(world) {
           const routes = Array.isArray(groups[skillId]) ? groups[skillId] : [];
           return `
             <article class="section-card section-card--nested">
-              <h4><a href="${escapeHtml(buildCodexEntityPath("skill", skillId))}">${escapeHtml(humanizeId(skillId))}</a></h4>
+              <h3><a href="${escapeHtml(buildCodexEntityPath("skill", skillId))}">${escapeHtml(humanizeId(skillId))}</a></h3>
               ${renderTable({
                 columns: [
                   { label: "Label", render: (row) => escapeHtml(row.label) },
@@ -315,15 +311,14 @@ function renderLandmarkSection(world) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Landmarks</p>
-          <h3>Named or grouped spatial details</h3>
+          <h2>Landmarks</h2>
         </div>
       </div>
       <div class="entity-grid">
         ${rows.length ? rows.map((row) => `
           <article class="entity-card">
             <p class="eyebrow">${escapeHtml(humanizeId(row.key))}</p>
-            <h4>${escapeHtml(`${row.count} entries`)}</h4>
+            <h3>${escapeHtml(`${row.count} entries`)}</h3>
             <p>${escapeHtml(`Sample: ${humanizeId(row.sampleId)}`)}</p>
           </article>
         `).join("") : "<p class=\"subtle\">No landmark groups exported.</p>"}
@@ -345,25 +340,20 @@ function renderManualBriefSection(manualWorld, options = {}) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Manual Briefing</p>
-          <h3>What to do here first</h3>
+          <h2>Explore this world</h2>
         </div>
       </div>
       <div class="manual-grid">
         <article class="section-card section-card--nested manual-card">
-          <p class="eyebrow">What to do here</p>
-          ${renderParagraphCopy(manualWorld.overview, "No overview yet.", options)}
-        </article>
-        <article class="section-card section-card--nested manual-card">
-          <p class="eyebrow">How to get started</p>
+          <h3>Start here</h3>
           ${renderParagraphCopy(manualWorld.howToGetStarted, "No starter guidance yet.", options)}
         </article>
         <article class="section-card section-card--nested manual-card">
-          <p class="eyebrow">Why it matters</p>
+          <h3>Enemies and supplies</h3>
           ${renderParagraphCopy(manualWorld.whyItMatters, "No impact notes yet.", options)}
         </article>
         <article class="section-card section-card--nested manual-card">
-          <p class="eyebrow">Next steps</p>
+          <h3>Where to go next</h3>
           ${renderParagraphCopy(manualWorld.nextSteps, "No next steps yet.", options)}
         </article>
       </div>
@@ -383,7 +373,7 @@ function renderFeaturedLoopsSection(world, manualWorld, bundle, linkRegistry) {
       render: (id) => ({
         href: buildCodexEntityPath("item", id),
         label: (itemIndex.get(id) || {}).title || humanizeId(id),
-        meta: "Item loop"
+        meta: "Item"
       })
     },
     {
@@ -392,7 +382,7 @@ function renderFeaturedLoopsSection(world, manualWorld, bundle, linkRegistry) {
       render: (id) => ({
         href: buildCodexEntityPath("skill", id),
         label: (skillIndex.get(id) || {}).title || humanizeId(id),
-        meta: "Skill loop"
+        meta: "Skill"
       })
     },
     {
@@ -401,7 +391,7 @@ function renderFeaturedLoopsSection(world, manualWorld, bundle, linkRegistry) {
       render: (id) => ({
         href: buildCodexEntityPath("world", id),
         label: (worldIndex.get(id) || {}).title || humanizeId(id),
-        meta: "World loop"
+        meta: "World"
       })
     }
   ].filter((section) => section.ids.length);
@@ -412,8 +402,7 @@ function renderFeaturedLoopsSection(world, manualWorld, bundle, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Play Patterns</p>
-          <h3>Shortest ways to read this region in context</h3>
+          <h2>Useful items and skills</h2>
         </div>
       </div>
       <div class="prose">
@@ -439,8 +428,7 @@ function renderConnectedSystemsSection(world, manualWorld, options = {}) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Connected Systems</p>
-          <h3>Where this world plugs into the sandbox</h3>
+          <h2>Services and resources</h2>
         </div>
       </div>
       <div class="split-grid">
@@ -488,8 +476,7 @@ function renderJourneySection(world, manualWorld, manualContent, linkRegistry) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Guided Routes</p>
-          <h3>Journeys that pass through this world</h3>
+          <h2>Journeys that pass through this world</h2>
         </div>
       </div>
       <div class="prose">
@@ -541,8 +528,8 @@ function renderWorldPage(bundle, editorial, manualContentOrWorld, worldOrSiteAss
   `;
 
   const manualHeroText = manualWorld && Array.isArray(manualWorld.overview) && manualWorld.overview.length
-    ? `${manualWorld.overview[0]} This page then moves through the manual briefing, play patterns, connected systems, guided routes, and the raw export tables.`
-    : `Use this page to scan ${world.title}'s services, travel options, resource coverage, and route anchors before dropping into the raw region export.`;
+    ? manualWorld.overview[0]
+    : `${world.title} services, resources, and travel destinations.`;
 
   const body = `
     ${renderManualBriefSection(manualWorld, { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [world.path] })}
@@ -552,8 +539,7 @@ function renderWorldPage(bundle, editorial, manualContentOrWorld, worldOrSiteAss
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Quick Facts</p>
-          <h3>Core region metadata</h3>
+          <h2>World details</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -578,8 +564,7 @@ function renderWorldPage(bundle, editorial, manualContentOrWorld, worldOrSiteAss
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Skill Coverage</p>
-          <h3>Skill pages connected to this region</h3>
+          <h2>Skill pages connected to this region</h2>
         </div>
       </div>
       <div class="prose">
@@ -649,8 +634,7 @@ function renderWorldIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Browse Worlds</p>
-          <h3>Search by region name, world ID, manual guidance, or linked system families.</h3>
+          <h2>Find a world</h2>
         </div>
         ${renderSearchHeader("worlds", "Search worlds by id, title, guide text, or skill group", bundle.worlds.length)}
       </div>
@@ -669,8 +653,8 @@ function renderWorldIndexPage(bundle, editorial, manualContentOrSiteAssets, mayb
       pageTitle: "Worlds",
       eyebrow: "Entity Index",
       heroTitle: "Worlds",
-      heroBody: "<p>Browse region pages that open with a manual briefing, play patterns, connected systems, and guided routes before the raw world export.</p>",
-      heroBadges: ["Manual-first reading", "Linked journeys", "Travel-aware"],
+      heroBody: "<p>Find services, resource locations, travel destinations, and walkthroughs for each world.</p>",
+      heroBadges: [],
       heroAside,
       body
     })

@@ -5,7 +5,7 @@
     "entries":  {
                     "logs":  {
                                  "description":  "Logs are a woodcutting resource used in Firemaking and Fletching.",
-                                 "acquisition":  "They are usually gathered from Normal Trees with Woodcutting at level 1.",
+                                 "acquisition":  "Gather them from Normal Trees with Woodcutting at level 1.",
                                  "uses":  "They are used in Firemaking, and in Fletching to make Normal Longbow (u), Normal Shortbow (u), Plain Staff (Wood), Wooden Handle, and Wooden Shafts.",
                                  "status":  "draft"
                              },
@@ -29,14 +29,14 @@
                                               },
                     "maple_logs":  {
                                        "description":  "Maple Logs are a woodcutting resource used in Firemaking and Fletching.",
-                                       "acquisition":  "They are usually gathered from Maple Trees with Woodcutting at level 30.",
+                                       "acquisition":  "Gather them from Maple Trees with Woodcutting at level 30.",
                                        "uses":  "They are used in Firemaking, and in Fletching to make Maple Handle, Maple Longbow (u), Maple Shafts, Maple Shortbow (u), and Plain Staff (Maple).",
                                        "status":  "draft"
                                    },
                     "maple_longbow":  {
                                           "description":  "A finished bow made through Fletching.",
                                           "acquisition":  "It is made by stringing Maple Longbow (u) with Bow String at level 32.",
-                                          "uses":  "It can be sold to Advanced Fletcher.",
+                                          "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                           "status":  "draft"
                                       },
                     "maple_longbow_u":  {
@@ -54,7 +54,7 @@
                     "maple_shortbow":  {
                                            "description":  "A finished bow made through Fletching.",
                                            "acquisition":  "It is made by stringing Maple Shortbow (u) with Bow String at level 34.",
-                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                            "status":  "draft"
                                        },
                     "maple_shortbow_u":  {
@@ -66,7 +66,7 @@
                     "normal_longbow":  {
                                            "description":  "A finished bow made through Fletching.",
                                            "acquisition":  "It is made by stringing Normal Longbow (u) with Bow String at level 3.",
-                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                            "status":  "draft"
                                        },
                     "normal_longbow_u":  {
@@ -77,8 +77,8 @@
                                          },
                     "normal_shortbow":  {
                                             "description":  "A finished bow made through Fletching.",
-                                            "acquisition":  "Mainly produced through Fletching at level 1 using Normal Shortbow (u) x1, Bow String x1.",
-                                            "uses":  "Equip it for ranged combat with compatible arrows, or sell it to the Advanced Fletcher when his trade access is open.",
+                                            "acquisition":  "Made through Fletching at level 1 using Normal Shortbow (u) x1, Bow String x1.",
+                                            "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                             "status":  "draft"
                                         },
                     "normal_shortbow_u":  {
@@ -107,14 +107,14 @@
                                             },
                     "oak_logs":  {
                                      "description":  "Oak Logs are a woodcutting resource used in Firemaking and Fletching.",
-                                     "acquisition":  "They are usually gathered from Oak Trees with Woodcutting at level 10.",
+                                     "acquisition":  "Gather them from Oak Trees with Woodcutting at level 10.",
                                      "uses":  "They are used in Firemaking, and in Fletching to make Oak Handle, Oak Longbow (u), Oak Shafts, Oak Shortbow (u), and Plain Staff (Oak).",
                                      "status":  "draft"
                                  },
                     "oak_longbow":  {
                                         "description":  "A finished bow made through Fletching.",
                                         "acquisition":  "It is made by stringing Oak Longbow (u) with Bow String at level 12.",
-                                        "uses":  "It can be sold to Advanced Fletcher.",
+                                        "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                         "status":  "draft"
                                     },
                     "oak_longbow_u":  {
@@ -132,7 +132,7 @@
                     "oak_shortbow":  {
                                          "description":  "A finished bow made through Fletching.",
                                          "acquisition":  "It is made by stringing Oak Shortbow (u) with Bow String at level 14.",
-                                         "uses":  "It can be sold to Advanced Fletcher.",
+                                         "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                          "status":  "draft"
                                      },
                     "oak_shortbow_u":  {
@@ -142,33 +142,33 @@
                                            "status":  "draft"
                                        },
                     "plain_staff_maple":  {
-                                              "description":  "A plain staff base used in elemental staff crafting.",
+                                              "description":  "An equippable magic staff made through Fletching.",
                                               "acquisition":  "It is made through Fletching with a Knife from Maple Logs at level 31.",
-                                              "uses":  "It is used in Crafting to make Earth Staff.",
+                                              "uses":  "Equip it for magic combat with compatible runes in your inventory. Each attack consumes a rune, including misses. It is used in Crafting to make Earth Staff.",
                                               "status":  "draft"
                                           },
                     "plain_staff_oak":  {
-                                            "description":  "A plain staff base used in elemental staff crafting.",
+                                            "description":  "An equippable magic staff made through Fletching.",
                                             "acquisition":  "It is made through Fletching with a Knife from Oak Logs at level 11.",
-                                            "uses":  "It is used in Crafting to make Fire Staff.",
+                                            "uses":  "Equip it for magic combat with compatible runes in your inventory. Each attack consumes a rune, including misses. It is used in Crafting to make Fire Staff.",
                                             "status":  "draft"
                                         },
                     "plain_staff_willow":  {
-                                               "description":  "A plain staff base used in elemental staff crafting.",
+                                               "description":  "An equippable magic staff made through Fletching.",
                                                "acquisition":  "It is made through Fletching with a Knife from Willow Logs at level 21.",
-                                               "uses":  "It is used in Crafting to make Water Staff.",
+                                               "uses":  "Equip it for magic combat with compatible runes in your inventory. Each attack consumes a rune, including misses. It is used in Crafting to make Water Staff.",
                                                "status":  "draft"
                                            },
                     "plain_staff_wood":  {
-                                             "description":  "A plain staff base used in elemental staff crafting.",
+                                             "description":  "An equippable magic staff made through Fletching.",
                                              "acquisition":  "It is made through Fletching with a Knife from Logs at level 2.",
-                                             "uses":  "It can be sold to Advanced Fletcher.",
+                                             "uses":  "Equip it for magic combat with compatible runes in your inventory. Each attack consumes a rune, including misses. The Advanced Fletcher buys it when his trade access is open.",
                                              "status":  "draft"
                                          },
                     "plain_staff_yew":  {
-                                            "description":  "A plain staff base used in elemental staff crafting.",
+                                            "description":  "An equippable magic staff made through Fletching.",
                                             "acquisition":  "It is made through Fletching with a Knife from Yew Logs at level 41.",
-                                            "uses":  "It is used in Crafting to make Air Staff.",
+                                            "uses":  "Equip it for magic combat with compatible runes in your inventory. Each attack consumes a rune, including misses. It is used in Crafting to make Air Staff.",
                                             "status":  "draft"
                                         },
                     "willow_handle":  {
@@ -191,14 +191,14 @@
                                                },
                     "willow_logs":  {
                                         "description":  "Willow Logs are a woodcutting resource used in Firemaking and Fletching.",
-                                        "acquisition":  "They are usually gathered from Willow Trees with Woodcutting at level 20.",
+                                        "acquisition":  "Gather them from Willow Trees with Woodcutting at level 20.",
                                         "uses":  "They are used in Firemaking, and in Fletching to make Willow Handle, Willow Longbow (u), Willow Shafts, Willow Shortbow (u), and Plain Staff (Willow).",
                                         "status":  "draft"
                                     },
                     "willow_longbow":  {
                                            "description":  "A finished bow made through Fletching.",
                                            "acquisition":  "It is made by stringing Willow Longbow (u) with Bow String at level 22.",
-                                           "uses":  "It can be sold to Advanced Fletcher.",
+                                           "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                            "status":  "draft"
                                        },
                     "willow_longbow_u":  {
@@ -216,7 +216,7 @@
                     "willow_shortbow":  {
                                             "description":  "A finished bow made through Fletching.",
                                             "acquisition":  "It is made by stringing Willow Shortbow (u) with Bow String at level 24.",
-                                            "uses":  "It can be sold to Advanced Fletcher.",
+                                            "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                             "status":  "draft"
                                         },
                     "willow_shortbow_u":  {
@@ -269,14 +269,14 @@
                                             },
                     "yew_logs":  {
                                      "description":  "Yew Logs are a woodcutting resource used in Firemaking and Fletching.",
-                                     "acquisition":  "They are usually gathered from Yew Trees with Woodcutting at level 40.",
+                                     "acquisition":  "Gather them from Yew Trees with Woodcutting at level 40.",
                                      "uses":  "They are used in Firemaking, and in Fletching to make Yew Handle, Yew Longbow (u), Yew Shafts, Yew Shortbow (u), and Plain Staff (Yew).",
                                      "status":  "draft"
                                  },
                     "yew_longbow":  {
                                         "description":  "A finished bow made through Fletching.",
                                         "acquisition":  "It is made by stringing Yew Longbow (u) with Bow String at level 42.",
-                                        "uses":  "It can be sold to Advanced Fletcher.",
+                                        "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                         "status":  "draft"
                                     },
                     "yew_longbow_u":  {
@@ -294,7 +294,7 @@
                     "yew_shortbow":  {
                                          "description":  "A finished bow made through Fletching.",
                                          "acquisition":  "It is made by stringing Yew Shortbow (u) with Bow String at level 44.",
-                                         "uses":  "It can be sold to Advanced Fletcher.",
+                                         "uses":  "Equip it for ranged combat with compatible arrows. Each attack consumes an arrow, including misses. You can also sell it to the Advanced Fletcher when his trade access is open.",
                                          "status":  "draft"
                                      },
                     "yew_shortbow_u":  {

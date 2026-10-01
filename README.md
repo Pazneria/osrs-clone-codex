@@ -6,7 +6,7 @@ The codex does not duplicate gameplay facts by hand. Instead, it syncs a version
 
 The player guide at `/osrs-clone-codex/wiki/` supplements the entity export with reviewed runtime facts for controls, tutorial steps, combat, quests, and saves. Its source commit must match the export. The deployment workflow checks out that reviewed game commit and installs its locked exporter dependencies before validation.
 
-The [mobile controls handoff](docs/MOBILE_WIKI_HANDOFF.md) records the final review against published game commit `ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7`. Guide, export, and deployment pins agree. Physical-device, Safari, soft-keyboard, desktop drag-reordering, and hybrid-pointer limits remain explicit.
+The [prose and accuracy review](docs/PROSE_REVIEW.md) records the current source basis: published game commit `485eb1cf0a4373f2356c58d5fc62cb1255fece37`, including the hybrid-touch toolbar fix. Guide, export, and deployment pins agree. Physical devices, Safari, and real soft keyboards remain untested; drag reordering uses desktop controls. The earlier [mobile controls handoff](docs/MOBILE_WIKI_HANDOFF.md) is retained as review history.
 
 GitHub Pages deployment is handled by `.github/workflows/deploy-pages.yml`. The workflow checks out both this repo and `Pazneria/osrs-clone`, builds the static site, and publishes `dist/osrs-clone-codex/` to `https://pazneria.github.io/osrs-clone-codex/`.
 
