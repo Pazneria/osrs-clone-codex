@@ -23,6 +23,7 @@ function renderLayout(options) {
 
   const navLinks = [
     { label: "Home", href: buildCodexHomePath(), active: currentPath === buildCodexHomePath() },
+    { label: "How to play", href: `${buildCodexHomePath()}wiki/`, active: currentPath === `${buildCodexHomePath()}wiki/` },
     { label: "Journeys", href: buildSectionPath("journeys"), active: currentPath.startsWith(buildSectionPath("journeys")) },
     { label: "Items", href: buildSectionPath("items"), active: currentPath.startsWith(buildSectionPath("items")) },
     { label: "Skills", href: buildSectionPath("skills"), active: currentPath.startsWith(buildSectionPath("skills")) },
@@ -51,6 +52,7 @@ function renderLayout(options) {
     <script src="${buildCodexHomePath()}site.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-chrome"></div>
     <div class="site-shell">
       <header class="masthead">
@@ -64,7 +66,7 @@ function renderLayout(options) {
             </div>
           </div>
           <nav class="main-nav" aria-label="Codex navigation">
-            ${navLinks.map((link) => `<a href="${escapeHtml(link.href)}" data-active="${link.active ? "true" : "false"}">${escapeHtml(link.label)}</a>`).join("")}
+            ${navLinks.map((link) => `<a href="${escapeHtml(link.href)}" data-active="${link.active ? "true" : "false"}"${link.active ? ' aria-current="page"' : ''}>${escapeHtml(link.label)}</a>`).join("")}
           </nav>
         </div>
       </header>
@@ -81,12 +83,12 @@ function renderLayout(options) {
           </aside>
         </div>
       </section>
-      <main class="page-stack">
+      <main class="page-stack" id="main-content" tabindex="-1">
         ${body}
       </main>
       <footer class="footer-note">
         <p>${escapeHtml(footerNote)}</p>
-        <p>Generated from commit <strong>${escapeHtml(generatedCommit)}</strong> on ${escapeHtml(generatedAt)}.</p>
+        <p>Game source: <a href="https://github.com/Pazneria/osrs-clone/commit/${escapeHtml(manifest.sourceCommit)}">${escapeHtml(generatedCommit)}</a>. Built ${escapeHtml(generatedAt)}. <a href="${buildCodexHomePath()}wiki/#version">Coverage and update basis</a>.</p>
       </footer>
     </div>
   </body>

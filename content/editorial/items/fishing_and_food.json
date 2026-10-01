@@ -9,6 +9,18 @@
       "uses": "It is consumed by rod-based fishing methods and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
+    "burnt_boar_meat": {
+      "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
+      "acquisition": "Produced when Raw Boar Meat burns during Cooking attempts.",
+      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "status": "draft"
+    },
+    "burnt_chicken": {
+      "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
+      "acquisition": "Produced when Raw Chicken burns during Cooking attempts.",
+      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "status": "draft"
+    },
     "burnt_salmon": {
       "description": "A burnt version of Raw Salmon created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Salmon burns during Cooking.",
@@ -37,6 +49,24 @@
       "description": "A burnt version of Raw Tuna created by a failed Cooking attempt.",
       "acquisition": "It is created when Raw Tuna burns during Cooking.",
       "uses": "It has no gameplay use beyond being traded to the Fishing Supplier in Starter Town.",
+      "status": "draft"
+    },
+    "burnt_wolf_meat": {
+      "description": "Burnt animal meat from an unsuccessful Cooking attempt.",
+      "acquisition": "Produced when Raw Wolf Meat burns during Cooking attempts.",
+      "uses": "No strong downstream use is exported beyond its base economy presence, so this remains a conservative draft entry.",
+      "status": "draft"
+    },
+    "cooked_boar_meat": {
+      "description": "Cooked animal meat that restores health when eaten.",
+      "acquisition": "Mainly made through Cooking by cooking Raw Boar Meat starting at level 15.",
+      "uses": "Restores 6 HP when eaten.",
+      "status": "draft"
+    },
+    "cooked_chicken": {
+      "description": "Cooked animal meat that restores health when eaten.",
+      "acquisition": "Mainly made through Cooking by cooking Raw Chicken starting at level 5.",
+      "uses": "Restores 4 HP when eaten.",
       "status": "draft"
     },
     "cooked_salmon": {
@@ -69,6 +99,12 @@
       "uses": "It restores HP when eaten and can be traded to the Fishing Supplier in Starter Town.",
       "status": "draft"
     },
+    "cooked_wolf_meat": {
+      "description": "Cooked animal meat that restores health when eaten.",
+      "acquisition": "Mainly made through Cooking by cooking Raw Wolf Meat starting at level 25.",
+      "uses": "Restores 8 HP when eaten.",
+      "status": "draft"
+    },
     "fishing_rod": {
       "description": "A fishing tool used for rod fishing methods.",
       "acquisition": "It is usually bought from the Fishing Supplier in Starter Town.",
@@ -82,15 +118,15 @@
       "status": "draft"
     },
     "raw_boar_meat": {
-      "description": "A raw boar meat drop from the outer fields that sits on the combat side of the starter food economy.",
-      "acquisition": "It drops from Boars roaming the outer fields of Starter Town and North Road Camp.",
-      "uses": "No direct cooking recipe is exported for it yet, but it clearly belongs to the same outer-field progression loop around Tanner Rusk and Hides of the Frontier.",
+      "description": "Raw boar meat dropped by boars, with cooked and burnt Cooking outcomes.",
+      "acquisition": "Drops from Boar in Main Overworld.",
+      "uses": "Used in Cooking recipes that produce Cooked Boar Meat.",
       "status": "draft"
     },
     "raw_chicken": {
-      "description": "A raw chicken drop that functions as low-risk uncooked food stock in the Starter Town combat loop.",
-      "acquisition": "It drops from Chickens around Starter Town's safer training pockets.",
-      "uses": "No direct cooking recipe is exported for it yet, so it mainly reads as beginner combat loot before players push into the harsher outer-field routes.",
+      "description": "Raw chicken dropped by chickens, with cooked and burnt Cooking outcomes.",
+      "acquisition": "Drops from Chicken in Main Overworld, Tutorial Island.",
+      "uses": "Used in Cooking recipes that produce Cooked Chicken.",
       "status": "draft"
     },
     "raw_salmon": {
@@ -124,9 +160,9 @@
       "status": "draft"
     },
     "raw_wolf_meat": {
-      "description": "A raw wolf meat drop that marks the more dangerous end of the starter-region food-side combat loot.",
-      "acquisition": "It drops from Wolves in the outer reaches of Starter Town and North Road Camp.",
-      "uses": "No direct cooking recipe is exported for it yet, but it reads as part of the same animal-hunting loop that surrounds Tanner Rusk's tannery plot and Hides of the Frontier.",
+      "description": "Raw wolf meat dropped by wolves, with cooked and burnt Cooking outcomes.",
+      "acquisition": "Drops from Wolf in Main Overworld.",
+      "uses": "Used in Cooking recipes that produce Cooked Wolf Meat.",
       "status": "draft"
     },
     "rune_harpoon": {

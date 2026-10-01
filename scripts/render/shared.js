@@ -111,7 +111,7 @@ function buildInlineLinkRegistry(bundle, manualContent = {}) {
     routeEntries.push({
       href: world.path,
       label: world.title,
-      aliases: [world.title]
+      aliases: [world.title, ...(world.worldId === "main_overworld" ? ["Starter Town"] : [])]
     });
   });
   bundle.enemies.forEach((enemy) => {
@@ -375,7 +375,7 @@ function renderSearchHeader(groupId, placeholder, count) {
     <div class="filter-box">
       <label class="eyebrow" for="${escapeHtml(groupId)}">Filter</label>
       <input id="${escapeHtml(groupId)}" type="search" placeholder="${escapeHtml(placeholder)}" data-filter-input="${escapeHtml(groupId)}" />
-      <div class="filter-meta"><span data-filter-count="${escapeHtml(groupId)}">${escapeHtml(formatNumber(count))}</span> visible</div>
+      <div class="filter-meta" role="status" aria-live="polite"><span data-filter-count="${escapeHtml(groupId)}">${escapeHtml(formatNumber(count))}</span> visible</div>
     </div>
   `;
 }
@@ -394,14 +394,14 @@ function renderTable(options) {
   const rows = normalizeArray(options.rows);
   if (!rows.length) return `<p class="subtle">${escapeHtml(options.emptyText || "No rows yet.")}</p>`;
   return `
-    <div class="table-wrap">
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
       <table class="data-table">
         <thead>
-          <tr>${columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join("")}</tr>
+          <tr>${columns.map((column) => `<th scope="col">${escapeHtml(column.label)}</th>`).join("")}</tr>
         </thead>
         <tbody>
           ${rows.map((row) => `
-            <tr>${columns.map((column) => `<td>${column.render(row)}</td>`).join("")}</tr>
+            <tr>${columns.map((column) => `<td data-label="${escapeHtml(column.label)}">${column.render(row)}</td>`).join("")}</tr>
           `).join("")}
         </tbody>
       </table>

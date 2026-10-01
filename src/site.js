@@ -26,7 +26,7 @@
   }
 
   function getChipLabel(chip) {
-    return normalize(chip.getAttribute("data-filter-chip") || chip.getAttribute("data-filter-term") || chip.textContent);
+    return normalize(chip.getAttribute("data-filter-value") || chip.getAttribute("data-filter-term") || chip.textContent || chip.getAttribute("data-filter-chip"));
   }
 
   function getChipTokens(chip) {
@@ -109,7 +109,8 @@
       };
 
       chip.addEventListener("click", toggleChip);
-      chip.addEventListener("keydown", (event) => {
+      // Native buttons already dispatch click for Enter and Space.
+      if (chip.tagName !== "BUTTON") chip.addEventListener("keydown", (event) => {
         if (event.key === " " || event.key === "Enter") {
           event.preventDefault();
           toggleChip();

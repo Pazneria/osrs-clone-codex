@@ -10,9 +10,15 @@
       "status": "draft"
     },
     "air_staff": {
-      "description": "A crafted staff component made with a Plain Staff (Yew) and a cut diamond. No downstream recipe inputs or tool uses are listed in this batch.",
+      "description": "An equippable magic staff made with a Plain Staff (Yew) and a cut diamond.",
       "acquisition": "It is produced through Crafting at level 40 in the inventory using Plain Staff (Yew) x1 and Cut diamond x1.",
-      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "uses": "Equip it for magic combat with compatible runes in your inventory. The attack consumes a rune.",
+      "status": "draft"
+    },
+    "borrowed_tiara": {
+      "description": "Jewelry loaned for clay mould practice.",
+      "acquisition": "Elira Gemhand supplies it when Moulds of the Trade starts.",
+      "uses": "Used in Crafting recipes that produce Imprinted Tiara Mould.",
       "status": "draft"
     },
     "diamond_gold_tiara": {
@@ -34,9 +40,9 @@
       "status": "draft"
     },
     "earth_staff": {
-      "description": "A crafted staff component made with a Plain Staff (Maple) and a cut emerald. No downstream recipe inputs or tool uses are listed in this batch.",
+      "description": "An equippable magic staff made with a Plain Staff (Maple) and a cut emerald.",
       "acquisition": "It is produced through Crafting at level 30 in the inventory using Plain Staff (Maple) x1 and Cut emerald x1.",
-      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "uses": "Equip it for magic combat with compatible runes in your inventory. The attack consumes a rune.",
       "status": "draft"
     },
     "ember_rune": {
@@ -52,9 +58,9 @@
       "status": "draft"
     },
     "fire_staff": {
-      "description": "A crafted staff component made with a Plain Staff (Oak) and a cut ruby. No downstream recipe inputs or tool uses are listed in this batch.",
+      "description": "An equippable magic staff made with a Plain Staff (Oak) and a cut ruby.",
       "acquisition": "It is produced through Crafting at level 10 in the inventory using Plain Staff (Oak) x1 and Cut ruby x1.",
-      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "uses": "Equip it for magic combat with compatible runes in your inventory. The attack consumes a rune.",
       "status": "draft"
     },
     "gold_tiara": {
@@ -154,9 +160,9 @@
       "status": "draft"
     },
     "water_staff": {
-      "description": "A crafted staff component made with a Plain Staff (Willow) and a cut sapphire. No downstream recipe inputs or tool uses are listed in this batch.",
+      "description": "An equippable magic staff made with a Plain Staff (Willow) and a cut sapphire.",
       "acquisition": "It is produced through Crafting at level 20 in the inventory using Plain Staff (Willow) x1 and Cut sapphire x1.",
-      "uses": "No downstream recipe inputs, merchant buys, or tool uses are listed in this batch.",
+      "uses": "Equip it for magic combat with compatible runes in your inventory. The attack consumes a rune.",
       "status": "draft"
     }
   }

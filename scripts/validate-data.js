@@ -3,6 +3,7 @@ const path = require("path");
 const { loadCodexBundle, validateCodexBundle } = require("./lib/codex-data");
 const { loadItemEditorial, writeItemAuthoringArtifacts } = require("./lib/item-editorial");
 const { loadManualContent } = require("./lib/manual-content");
+const { loadPlayerGuide } = require("./lib/player-guide");
 const { syncCodexData } = require("./sync-data");
 
 function run() {
@@ -13,6 +14,7 @@ function run() {
   writeItemAuthoringArtifacts(projectRoot, bundle);
   const itemEditorial = loadItemEditorial(projectRoot, bundle);
   const manualContent = loadManualContent(projectRoot, bundle);
+  loadPlayerGuide(projectRoot, bundle);
   console.log(
     `Validated codex bundle `
     + `(${bundle.items.length} items, ${bundle.skills.length} skills, ${bundle.worlds.length} worlds, ${bundle.enemies.length} enemies, `

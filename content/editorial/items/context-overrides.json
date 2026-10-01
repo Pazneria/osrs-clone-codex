@@ -4,7 +4,7 @@
       "A jewelry mould used to shape amulets during crafting recipes."
     ],
     "acquisitionHints": [
-      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
     ],
     "useHints": [
       "Used in amulet-making recipes that turn silver or gold bars into wearable jewelry."
@@ -15,7 +15,7 @@
       "A jewelry mould used to shape rings during crafting recipes."
     ],
     "acquisitionHints": [
-      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
     ],
     "useHints": [
       "Used in ring-making recipes that turn silver or gold bars into wearable jewelry."
@@ -26,7 +26,7 @@
       "A jewelry mould used to shape tiaras during crafting recipes."
     ],
     "acquisitionHints": [
-      "Direct stock data is sparse in the export, so treat this as a workshop tool surfaced through jewelry economy tables."
+      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
     ],
     "useHints": [
       "Used in tiara-making recipes that turn silver or gold bars into runecrafting-oriented headgear."
@@ -59,7 +59,7 @@
       "A worked clay resource with crafting-oriented utility."
     ],
     "acquisitionHints": [
-      "No direct recipe or gathering source is exported for soft clay, so keep its acquisition wording sparse."
+      "Use clay on a water target to make soft clay through Crafting at level 1."
     ],
     "useHints": [
       "The export does not show strong downstream links, so describe it as a general crafting material rather than inventing specific recipes."
