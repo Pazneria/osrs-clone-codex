@@ -1,98 +1,95 @@
-# Mobile controls draft - 2026-10-01
+# Mobile controls source handoff - 2026-10-01
 
-Ready for final source reconciliation, not publication. The original refresh commit
-`f054bde0ce679ea1c9c3fc42e94f0580f1309b69` is preserved as the parent. No game,
-shared game build, hub, or save file was edited.
+Final source reconciliation is complete. The original wiki refresh `f054bde`
+and mobile draft `2c7fd24` are preserved in history. Publication was authorized
+through this wiki repository's existing GitHub Pages workflow. No game, Arcade
+hub, user save, account, or network configuration file was edited.
 
-## Exact review basis
+## Exact source basis
 
-The mobile owner supplied local game commit
-`7665a30ecbf3c2dd63596aed64b2fd0b48963638`, based on
-`f4703d738f6dc208fdf4fffeb1665a313ecf5b42`. The final game commit can change and
-has not been accepted as the wiki's publication pin.
+Guide, canonical export, and workflow game checkout now use
+`ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7`.
 
-The control specification is `docs/MOBILE_GAMEPLAY.md` at that local commit,
-blob `089f0d553edf3d0a766e98c3dd84a022b5f57a92`. The read-only supplied checkout
-is `C:/Users/jmore/Documents/Codex/2026-09-30/task-11/osrs-clone`. Gesture timing,
-action exclusivity, drawers, cancellation, Stop, and save-before-Home were also
-checked against immutable source at that commit:
+- [Merged mobile game PR #10](https://github.com/Pazneria/osrs-clone/pull/10).
+- [Successful game Pages run 36795133351](https://github.com/Pazneria/osrs-clone/actions/runs/36795133351); its head SHA matches the pinned commit.
+- [Canonical mobile control notes](https://github.com/Pazneria/osrs-clone/blob/ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7/docs/MOBILE_GAMEPLAY.md), blob `71b9bad2e631bad4588b4c017f8b9b4ad93c5fc5`.
 
-- `src/game/input/touch.ts`
-- `src/game/input/mobile-hud.ts`
-- `src/game/input/stop-action.ts`
-- `src/js/input-render.js`, `src/js/core.js`, and `src/js/world.js`
-- `src/js/world/map-hud-runtime.js`
-- `src/js/inventory.js` and `src/js/context-menu-runtime.js`
-- `src/js/core-player-entry-runtime.js` and `index.html`
+Compared with reviewed local mobile commit
+`7665a30ecbf3c2dd63596aed64b2fd0b48963638`, the final revision changes only the
+bank guard, live-Home playtest support, and related documentation. Gesture/input
+implementation is unchanged. A source diff against original game `f4703d7`
+confirms no changes to canonical content, content tools, item/quest catalogs,
+skill definitions, or combat definitions. The export remains 254 items, nine
+gathering/production skill pages, two worlds, and ten enemy definitions.
 
-The change list does not alter canonical content, item/quest catalogs, skill
-definitions, enemy definitions, or the exporter. Quantity choices were verified
-in the existing inventory runtime, rather than inferred from gesture support.
+Runtime review used the touch, mobile HUD, Stop, input-render, core, world/map,
+inventory, context-menu, character-entry, and markup files identified in the
+guide and prior review. The guide has 21 source links pinned to the final commit,
+including the canonical mobile notes. Their paths exist in the reviewed source.
+The narrow source-path validator now permits `docs/` with the same traversal
+rejection as runtime paths.
 
-## Prepared content
+## Resulting guide
 
-The existing player guide now pairs touch and desktop controls: tap movement and
-primary actions, half-second hold menus, one-finger camera rotation, pinch zoom,
-Bag/Chat drawers, item combinations, equipment and combat settings, minimap and
-world map, quantity prompts, Stop, and Home/Exit. Bank quantities are 1/5/10/All/X;
-shop quantities are 1/5/10/50/X. Cancel leaves the amount prompt.
+Touch and desktop controls are paired: tap movement and primary actions,
+half-second hold menus, camera drag/pinch, Bag/Chat drawers, item combinations,
+equipment/combat, minimap/world map, quantities, Stop, and saved Home/Exit. Bank
+quantities are 1/5/10/All/X; shop quantities are 1/5/10/50/X. Cancel leaves the
+amount prompt. Requirements, prices, attack ticks, cooldowns, and progression
+continue to use the game runtime.
 
-The settings section records save-before-Home, failed-save retry, background
-Stop/save, gesture cancellation, character creation/recovery exits, and current
-test limits. Inventory/bank drag reordering remains desktop-only; no touch drag
-reordering claim is made. Physical devices, Safari, real soft keyboards, and OS
-gesture interruptions were not tested by the mobile owner. The wiki does not
-claim a game playtest of its own.
+Local-draft notices and `pendingSourceReview` were removed. Settings describe
+failed-save retry, background Stop/save, gesture cancellation, and creation/
+WebGL recovery exits. The known limits remain explicit:
 
-`pendingSourceReview` records this local basis separately from the existing
-`sourceCommit`. The rendered guide visibly labels the mobile controls and save/
-exit behavior as an unpublished draft. Entity export and workflow pins remain
-`f4703d738f6dc208fdf4fffeb1665a313ecf5b42`; no new game commit was pinned. Existing
-source links are explicitly labelled as baseline references while the draft is
-pending. A new baseline inventory link supports equipment and transfer facts.
+- Inventory/bank drag reordering retains the existing desktop implementation;
+  touch uses tap/hold actions and transfer choices.
+- Physical phones/tablets, Safari, real soft keyboards, and OS gesture
+  interruption remain untested. Emulation does not establish those results.
+- The touch layout uses `(pointer: coarse)` in `mobile-hud.ts`. On a hybrid device
+  reporting a fine primary pointer, gestures may work while Bag/Chat/Stop/Home
+  remain hidden. This source limitation was verified in the HUD and styles;
+  no physical hybrid-device test was performed.
 
-## Finalization after the published game commit arrives
+## Validation and security scope
 
-1. Verify the final published game commit and compare it with the reviewed local
-   mobile commit. Reconcile any changed controls, preservation behavior, or limits.
-2. In the guide, replace draft/publication-pending wording with the verified final
-   behavior, remove `pendingSourceReview`, and update `sourceCommit` and `reviewedAt`.
-3. Update the workflow's game checkout `ref` to the same final commit. Add pinned
-   source links for `src/game/input/touch.ts`, `mobile-hud.ts`, `stop-action.ts`, and
-   `docs/MOBILE_GAMEPLAY.md` as appropriate. The current source path validator
-   supports runtime paths; a documentation source link would require a narrow
-   addition allowing `docs/` with the same traversal checks, or keep its evidence
-   in this handoff instead.
-4. Regenerate through `sync:data` / `check` / `build` with a clean checkout at the
-   final commit; run the static link check and a short guide browser check. Confirm
-   the displayed source and export manifest agree and draft notices are gone.
-5. Await the separately authorized wiki publication. The exact hub target remains
-   `https://pazneria.github.io/osrs-clone-codex/wiki/`; link it only after it is live.
+The exporter guard and skill validation passed. Wiki `check`, `build`, and
+`scripts/check-site.js` passed: 289 pages, 11,516 local targets, and 23 distinct
+outbound URLs. The workflow now runs the existing rendered-link/active-content
+check before uploading the Pages artifact.
 
-## Narrow security and validation scope
+Short headless Edge checks passed for seven representative routes at local
+preview. The guide passed at 1280x900, 390x844, and 844x390 without page overflow;
+14 control rows retain touch labels, skip-link focus works, final source IDs
+agree, all 21 pinned source links appear, and draft notices are absent. There
+were no page or failed-resource errors. Owned browser/server processes close in
+`finally`. This wiki check does not duplicate the mobile owner's game playtest.
 
-This follow-up reads public authored source and control notes. It adds no frontend
-dependency, resource, iframe, message listener, save access, account, or network
-configuration. Pending source fields are validated and rendered as escaped text,
-without a link to an unpublished commit or a local filesystem path. Existing
-fixed play and pinned baseline source links are retained. Wiki content escaping,
-unsafe-link rejection, source traversal rejection, and draft metadata validation
-are checked separately from functional rendering. Passing these checks is not a
-security certification or a game/browser compatibility audit.
+Ten unsafe-link, source-traversal, and malformed/mismatched-commit fixtures were
+rejected. Title/paragraph/table/source-label payloads stayed escaped. Query/hash
+payload navigation produced no executable links. The owned change handles only
+public authored documentation and local filter input; it adds no save access,
+import parsing, external resource, frontend dependency, iframe, or postMessage
+surface. No secrets or private game data are included. This is focused checking,
+not a security certification or whole-repository audit.
 
-The previously delivered desktop/mobile screenshots describe `f054bde`; they are
-not evidence of this later controls draft. No duplicate Library upload is needed.
+Detailed final local/live results and publication evidence are kept in the
+delegated task's `evidence/` directory and returned in the publication handoff.
+The original Library screenshots describe `f054bde`, not this final controls
+revision; no new screenshot was recorded or duplicate upload made.
 
-Performed checks: `npm.cmd run check`, `npm.cmd run build`, and
-`node scripts/check-site.js` passed against the unchanged baseline source pin.
-The structural check covered 289 pages, 11,517 local targets, and 19 distinct
-outbound URLs. A short headless Edge check passed at 1280x900, 390x844, and 844x390:
-14 control rows fit without page overflow, stacked touch cells retain their
-labels, the skip link works, draft status and both source bases are visible, and
-query/hash payloads produce no executable links. Seven malformed metadata/URL
-fixtures were rejected; injected new table/metadata fields stayed escaped.
-There were no page or failed-resource errors. The owned browser and loopback
-server closed in `finally`; no new screenshots were recorded or uploaded.
-Detailed results are in the delegated task's `evidence/mobile-guide-check.json`,
-outside the repository. The final source/export and remote deployment remain
-pending and were not tested by these checks.
+## Publication and hub integration
+
+Publish through a normal branch/PR merge into the current remote main, preserving
+existing history. Verify the Pages build and deploy jobs, then the live manifest
+and guide source pin, controls, and representative desktop/mobile layouts before
+reporting success. The exact wiki deployment commit/run are reported after that
+verification; the successful game run above is not wiki deployment evidence.
+
+Canonical relative route: `wiki/`.
+
+Exact hub target: `https://pazneria.github.io/osrs-clone-codex/wiki/`.
+
+The hub can link this URL after successful live verification. This wiki remains
+in its own Pages repository; no game `/osrs-clone/wiki/` route or hub edit is part
+of this task.

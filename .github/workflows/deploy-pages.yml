@@ -29,7 +29,7 @@ jobs:
         with:
           repository: Pazneria/osrs-clone
           # Keep runtime facts and reviewed editorial on the same revision.
-          ref: f4703d738f6dc208fdf4fffeb1665a313ecf5b42
+          ref: ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7
           path: osrs-clone-source
 
       - name: Setup Node.js
@@ -46,6 +46,9 @@ jobs:
 
       - name: Build codex site
         run: npm run build
+
+      - name: Check rendered links and active content
+        run: node scripts/check-site.js
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

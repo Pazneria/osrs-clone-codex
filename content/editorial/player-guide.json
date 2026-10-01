@@ -1,12 +1,7 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "f4703d738f6dc208fdf4fffeb1665a313ecf5b42",
-  "reviewedAt": "2026-09-30",
-  "pendingSourceReview": {
-    "localCommit": "7665a30ecbf3c2dd63596aed64b2fd0b48963638",
-    "reviewedAt": "2026-10-01",
-    "sourceDocument": "docs/MOBILE_GAMEPLAY.md"
-  },
+  "sourceCommit": "ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7",
+  "reviewedAt": "2026-10-01",
   "sections": [
     {
       "id": "start",
@@ -26,7 +21,7 @@
       "id": "controls",
       "title": "Touch and desktop controls",
       "paragraphs": [
-        "The touch controls below are verified against the local mobile implementation recorded under Version and coverage. They are an unpublished draft awaiting the final published game source. Desktop mouse and keyboard bindings remain available.",
+        "The touch and desktop controls below are verified against the published game revision recorded under Version and coverage. Desktop mouse and keyboard bindings remain available alongside touch gestures.",
         "On touch screens, Bag opens Inventory, Equipment, Combat, Skills, and Quests; Chat opens messages. Scroll within the drawer to reach its controls. Bag and Chat open one at a time; Close returns to the world.",
         "Hold a target or item for half a second, lift your finger, then tap a menu choice. Holding opens choices without also performing the primary action. Menus remain open until a choice, Cancel, or an outside tap.",
         "Dragging the world rotates the camera without walking or using a target. Rotation, pointer cancellation, or backgrounding cancels pending gestures. Keep game text fields unfocused when using desktop camera keys; arrow keys move the camera, while character movement uses selected destinations."
@@ -70,7 +65,7 @@
         "Use a furnace to smelt and an anvil to forge. Some outputs are components that need a separate inventory assembly step. Recipe tables show required levels, ingredients, tools, stations, and XP; owning a component does not automatically make the finished tool.",
         "Runecrafting begins with ember runes at level 1, then water at 10, earth at 20, and air at 30. Combination recipes start at 40 and require the combination unlock as well as essence and a secondary rune. Pouches hold extra essence subject to their level and capacity rules.",
         "Talk-to explains NPC roles and quest gates. Trade and shop options handle merchant stock; a value in an item table alone does not guarantee a merchant currently sells it. Use bank booths to store items in the shared bank and free inventory space.",
-        "Bank menus offer Deposit or Withdraw quantities of 1, 5, 10, All, or X. Shops offer Buy or Sell quantities of 1, 5, 10, 50, or X. Choose X to enter an amount, or Cancel to leave the prompt. Available stock, coins, and storage space still constrain transfers. The mobile draft exposes these existing choices through hold menus, with inventory and service panels visible together."
+        "Bank menus offer Deposit or Withdraw quantities of 1, 5, 10, All, or X. Shops offer Buy or Sell quantities of 1, 5, 10, 50, or X. Choose X to enter an amount, or Cancel to leave the prompt. Available stock, coins, and storage space still constrain transfers. Touch hold menus expose these choices, with inventory and service panels visible together."
       ],
       "links": [
         { "label": "Skill requirements and recipes", "href": "/osrs-clone-codex/skills/" },
@@ -115,10 +110,11 @@
         "Use the Run button to toggle running. Combat controls let you choose a melee training style and toggle Auto Retaliate. Inventory context menus can set a preferred primary action for a click or tap; that preference is saved.",
         "Progress saves to local browser storage every 10 seconds and through lifecycle save hooks. It includes your character, position, skill XP, inventory, bank, equipment, quests, unlocks, run mode, and item preferences. The current storage key is osrsClone.progress.v2. A different browser or device has separate local storage; there is no account-based cloud-save workflow in this revision.",
         "Keep browser site data to retain progress. Starting a fresh session or clearing the game's storage resets local progress. This wiki update does not modify the game's saves.",
-        "In the mobile draft, Home saves completed character progress before returning to Arcade. If saving fails, the game stays open with a retry message. Backgrounding stops active player actions and saves completed progress. Rotation or pointer cancellation cancels pending gestures. Character creation has touch appearance choices, a draggable preview, a scrollable form, and Exit to Arcade; WebGL recovery offers Reload and Exit without erasing stored progress.",
+        "Home saves completed character progress before returning to Arcade. If saving fails, the game stays open with a retry message. Backgrounding stops active player actions and saves completed progress. Rotation or pointer cancellation cancels pending gestures. Character creation has touch appearance choices, a draggable preview, a scrollable form, and Exit to Arcade; WebGL recovery offers Reload and Exit without erasing stored progress.",
         "Inventory and bank drag reordering retain their existing desktop implementation. Touch item actions and bank transfers use tap and hold choices; touch drag reordering is not implemented by this mobile change.",
         "Mobile-owner testing used Chromium touch emulation. Physical phones and tablets, Safari, a real soft keyboard, and operating-system gesture interruptions were not tested. The wiki checks its own rendering and links; it does not establish those game-device results.",
-        "Combat, ranged, magic, tutorial lessons, and quests are implemented even though the export only creates nine gathering and production skill pages. A spellbook progression system and the old standalone North Road Camp region are not documented as playable features. The touch controls above remain a local draft until the final published game revision is reviewed and pinned."
+        "The game's touch layout uses the browser's primary-pointer classification. On hybrid devices that report a fine primary pointer, touch gestures may work while the Bag, Chat, Stop, and Home toolbar stays hidden. This source limitation has not been tested on a physical hybrid device.",
+        "Combat, ranged, magic, tutorial lessons, and quests are implemented even though the export only creates nine gathering and production skill pages. A spellbook progression system and the old standalone North Road Camp region are not documented as playable features."
       ]
     }
   ],
@@ -127,6 +123,10 @@
     { "path": "src/js/core-player-entry-runtime.js", "label": "Character creation and returning characters" },
     { "path": "src/js/core-tutorial-runtime.js", "label": "Tutorial order, gates, practical checks, and recovery items" },
     { "path": "src/game/input/controller.ts", "label": "Mouse camera and interaction decisions" },
+    { "path": "src/game/input/touch.ts", "label": "Touch tap/hold/drag/pinch timing and cancellation" },
+    { "path": "src/game/input/mobile-hud.ts", "label": "Touch drawers, primary-pointer layout, Stop, saved Home, and background behavior" },
+    { "path": "src/game/input/stop-action.ts", "label": "Stopped actions and preserved player state" },
+    { "path": "docs/MOBILE_GAMEPLAY.md", "label": "Verified mobile controls and testing limits" },
     { "path": "src/js/input-render.js", "label": "Camera keys and world interactions" },
     { "path": "src/js/world/map-hud-runtime.js", "label": "Minimap movement and world-map controls" },
     { "path": "src/js/inventory.js", "label": "Equipment actions and bank/shop quantity choices" },

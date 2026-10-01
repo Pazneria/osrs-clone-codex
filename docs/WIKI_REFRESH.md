@@ -2,7 +2,7 @@
 
 Prepared for review. No push, PR, merge, deployment, or hub edit was performed.
 
-This document records the original `f054bde` refresh. The subsequent [mobile controls draft](MOBILE_WIKI_HANDOFF.md) has a separate local source basis and awaits the final published game pin.
+This document records the original `f054bde` refresh. The subsequent [mobile controls handoff](MOBILE_WIKI_HANDOFF.md) records reconciliation against the final published game commit and supersedes the original pre-mobile source pin below.
 
 ## Source and freshness
 

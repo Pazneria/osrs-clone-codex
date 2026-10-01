@@ -30,7 +30,7 @@ function loadPlayerGuide(projectRoot, bundle) {
     }
   }
   for (const source of guide.sources) {
-    if (!/^(src|content|tools)\/[a-zA-Z0-9_./-]+$/.test(source.path) || source.path.split("/").includes("..")) {
+    if (!/^(src|content|tools|docs)\/[a-zA-Z0-9_./-]+$/.test(source.path) || source.path.split("/").includes("..")) {
       throw new Error("Invalid player guide source path");
     }
   }
