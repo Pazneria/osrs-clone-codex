@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "ed2efee3f9bee9ec84a7447773a2dad1a19b9bd7",
+  "sourceCommit": "485eb1cf0a4373f2356c58d5fc62cb1255fece37",
   "reviewedAt": "2026-10-01",
   "sections": [
     {
@@ -9,39 +9,116 @@
       "paragraphs": [
         "Create your adventurer and choose Start Adventure. A new character begins on Tutorial Island. Returning progress resumes your character and tutorial state.",
         "Progress comes from skill XP, higher levels, better equipment, supplies, and completed quests. Skills cap at level 99. Hitpoints starts at level 10; the other implemented skills start at level 1.",
-        "After the tutorial, a useful first goal is to prepare cooked food and a bronze kit, then explore the Starter Town area of Main Overworld. The linked journeys explain the gathering, smithing, fishing, and rune loops."
+        "After the tutorial, prepare cooked food and bronze equipment in Starter Town, the service area within Main Overworld. The journeys below give steps for equipment, fishing, and runes."
       ],
       "links": [
-        { "label": "Early progression", "href": "/osrs-clone-codex/journeys/early_progression" },
-        { "label": "Bronze gear", "href": "/osrs-clone-codex/journeys/bronze_gear" },
-        { "label": "Main Overworld", "href": "/osrs-clone-codex/world/main_overworld" }
+        {
+          "label": "Early progression",
+          "href": "/osrs-clone-codex/journeys/early_progression"
+        },
+        {
+          "label": "Bronze gear",
+          "href": "/osrs-clone-codex/journeys/bronze_gear"
+        },
+        {
+          "label": "Main Overworld",
+          "href": "/osrs-clone-codex/world/main_overworld"
+        }
       ]
     },
     {
       "id": "controls",
       "title": "Touch and desktop controls",
       "paragraphs": [
-        "The touch and desktop controls below are verified against the published game revision recorded under Version and coverage. Desktop mouse and keyboard bindings remain available alongside touch gestures.",
-        "On touch screens, Bag opens Inventory, Equipment, Combat, Skills, and Quests; Chat opens messages. Scroll within the drawer to reach its controls. Bag and Chat open one at a time; Close returns to the world.",
+        "Use a mouse and keyboard or the touch gestures below. On touch screens, Bag opens Inventory, Equipment, Combat, Skills, and Quests; Chat opens messages. Scroll inside a drawer to reach its controls, and use Close to return to the world. Bag and Chat open one at a time.",
         "Hold a target or item for half a second, lift your finger, then tap a menu choice. Holding opens choices without also performing the primary action. Menus remain open until a choice, Cancel, or an outside tap.",
-        "Dragging the world rotates the camera without walking or using a target. Rotation, pointer cancellation, or backgrounding cancels pending gestures. Keep game text fields unfocused when using desktop camera keys; arrow keys move the camera, while character movement uses selected destinations."
+        "Dragging the world rotates the camera without walking or using a target. Keep text fields unfocused when using desktop camera keys: arrow keys move the camera, while selecting a destination moves your character."
       ],
-      "columns": [ { "key": "action", "label": "Action" }, { "key": "touch", "label": "Touch" }, { "key": "desktop", "label": "Mouse and keyboard" } ],
+      "columns": [
+        {
+          "key": "action",
+          "label": "Action"
+        },
+        {
+          "key": "touch",
+          "label": "Touch"
+        },
+        {
+          "key": "desktop",
+          "label": "Mouse and keyboard"
+        }
+      ],
       "rows": [
-        { "action": "Walk or perform a default world action", "touch": "Tap the ground, object, or NPC. Combat follows the existing targeting and tick rules.", "desktop": "Left-click a ground destination, object, or NPC." },
-        { "action": "Choose another action", "touch": "Hold a world target or item for half a second; lift, then tap Talk-to, Attack, Use, Examine, or another available choice.", "desktop": "Right-click to open the context menu, then click a choice." },
-        { "action": "Use an inventory item", "touch": "Open Bag and tap an item for its current primary action. Hold for applicable choices such as Use, Equip, Eat, or Drop.", "desktop": "Left-click an item for its preferred primary action; right-click for its choices." },
-        { "action": "Use an item on something", "touch": "Hold an inventory item, choose Use, then tap the second item or world target. Recipe ingredients, tools, and skill requirements still apply.", "desktop": "Choose Use on an inventory item, then click its target." },
-        { "action": "Equipment and combat settings", "touch": "Open Bag's Equipment or Combat tab. Tap equipped gear to unequip it; use Combat to select a melee training style or toggle Auto Retaliate.", "desktop": "Open Equipment or Combat and click the corresponding gear or setting." },
-        { "action": "Turn and tilt the camera", "touch": "Drag the world with one finger.", "desktop": "Hold the middle mouse button and drag, or use the arrow keys." },
-        { "action": "Zoom the camera", "touch": "Pinch the world.", "desktop": "Scroll the mouse wheel over the game view." },
-        { "action": "Minimap", "touch": "Tap a destination to walk; pinch to change the minimap zoom.", "desktop": "Left-click a destination to walk; use the wheel to change zoom." },
-        { "action": "World map", "touch": "Open the map button, drag to pan, pinch to zoom, and close with X.", "desktop": "Open the map button; wheel zooms and left-drag pans. Escape closes it." },
-        { "action": "Chat", "touch": "Open Chat, type a message, and tap Send or use the keyboard's Enter key.", "desktop": "Enter focuses chat and submits a message; Escape leaves the field." },
-        { "action": "Bank and shop quantities", "touch": "With the service open, hold an inventory, bank, or shop item and tap the transfer quantity. X opens an amount prompt; Cancel dismisses it.", "desktop": "Right-click the item and choose a quantity. X opens the same amount prompt." },
-        { "action": "Stop an action", "touch": "Tap Stop to cancel walking, the combat target, queued interaction, selected Use item, or a repeated skill session. Hitpoints, progress, and cooldowns are preserved.", "desktop": "The touch toolbar provides Stop; normal mouse and keyboard bindings remain available." },
-        { "action": "Home / Exit to Arcade", "touch": "Home saves completed character progress and returns to the fixed Arcade address. If saving fails, stay in the game and retry Home after the message.", "desktop": "Exit to Arcade is also available in character creation and recovery screens." },
-        { "action": "Close overlays", "touch": "Use Close, X, or Cancel as shown. Tap outside an action menu to dismiss it.", "desktop": "Use close buttons. Escape closes NPC dialogue, the bank, world map, and touch drawers." }
+        {
+          "action": "Walk or perform a default world action",
+          "touch": "Tap the ground, object, or NPC.",
+          "desktop": "Left-click a ground destination, object, or NPC."
+        },
+        {
+          "action": "Choose another action",
+          "touch": "Hold a world target or item for half a second; lift, then tap Talk-to, Attack, Use, Examine, or another available choice.",
+          "desktop": "Right-click to open the context menu, then click a choice."
+        },
+        {
+          "action": "Use an inventory item",
+          "touch": "Open Bag and tap an item for its current primary action. Hold for applicable choices such as Use, Equip, Eat, or Drop.",
+          "desktop": "Left-click an item for its preferred primary action; right-click for its choices."
+        },
+        {
+          "action": "Use an item on something",
+          "touch": "Hold an inventory item, choose Use, then tap the second item or world target.",
+          "desktop": "Choose Use on an inventory item, then click its target."
+        },
+        {
+          "action": "Equipment and combat settings",
+          "touch": "Open Bag's Equipment or Combat tab. Tap equipped gear to unequip it; use Combat to select a melee training style or toggle Auto Retaliate.",
+          "desktop": "Open Equipment or Combat and click the corresponding gear or setting."
+        },
+        {
+          "action": "Turn and tilt the camera",
+          "touch": "Drag the world with one finger.",
+          "desktop": "Hold the middle mouse button and drag, or use the arrow keys."
+        },
+        {
+          "action": "Zoom the camera",
+          "touch": "Pinch the world.",
+          "desktop": "Scroll the mouse wheel over the game view."
+        },
+        {
+          "action": "Minimap",
+          "touch": "Tap a destination to walk; pinch to change the minimap zoom.",
+          "desktop": "Left-click a destination to walk; use the wheel to change zoom."
+        },
+        {
+          "action": "World map",
+          "touch": "Open the map button, drag to pan, pinch to zoom, and close with X.",
+          "desktop": "Open the map button; wheel zooms and left-drag pans. Escape closes it."
+        },
+        {
+          "action": "Chat",
+          "touch": "Open Chat, type a message, and tap Send or use the keyboard's Enter key.",
+          "desktop": "Enter opens Chat and focuses its input; press Enter again to send. Typing also opens chat. Escape leaves the field."
+        },
+        {
+          "action": "Bank and shop quantities",
+          "touch": "With the service open, hold an inventory, bank, or shop item and tap the transfer quantity. X opens an amount prompt; Cancel dismisses it.",
+          "desktop": "Right-click the item and choose a quantity. X opens the same amount prompt."
+        },
+        {
+          "action": "Stop an action",
+          "touch": "Tap Stop to cancel walking, combat targeting, a queued interaction, a selected Use item, or a repeated skill action. It preserves progress, Hitpoints, and cooldowns.",
+          "desktop": "The touch toolbar provides Stop; normal mouse and keyboard bindings remain available."
+        },
+        {
+          "action": "Home / Exit to Arcade",
+          "touch": "Home saves completed character progress and returns to the fixed Arcade address. If saving fails, stay in the game and retry Home after the message.",
+          "desktop": "Exit to Arcade is also available in character creation and recovery screens."
+        },
+        {
+          "action": "Close overlays",
+          "touch": "Use Close, X, or Cancel as shown. Tap outside an action menu to dismiss it.",
+          "desktop": "Use close buttons. Escape closes NPC dialogue, the bank, world map, and touch drawers."
+        }
       ]
     },
     {
@@ -54,7 +131,12 @@
         "For magic, equip the plain staff and keep ember runes in your inventory; attacking a chicken from range uses a rune automatically. For crafting, soften clay at the pond, stand near the bench, and use soft clay on the borrowed ring in your inventory.",
         "The bank lesson requires depositing the supplied coin at one booth and withdrawing it at the other, then reporting to the Bank Tutor. Both booths share your bank. If supplies are missing, talk to the current instructor again for the lesson's recovery items."
       ],
-      "links": [ { "label": "Tutorial Island reference", "href": "/osrs-clone-codex/world/tutorial_island" } ]
+      "links": [
+        {
+          "label": "Tutorial Island reference",
+          "href": "/osrs-clone-codex/world/tutorial_island"
+        }
+      ]
     },
     {
       "id": "skills",
@@ -68,9 +150,18 @@
         "Bank menus offer Deposit or Withdraw quantities of 1, 5, 10, All, or X. Shops offer Buy or Sell quantities of 1, 5, 10, 50, or X. Choose X to enter an amount, or Cancel to leave the prompt. Available stock, coins, and storage space still constrain transfers. Touch hold menus expose these choices, with inventory and service panels visible together."
       ],
       "links": [
-        { "label": "Skill requirements and recipes", "href": "/osrs-clone-codex/skills/" },
-        { "label": "Food and items", "href": "/osrs-clone-codex/items/" },
-        { "label": "First runes", "href": "/osrs-clone-codex/journeys/first_runes" }
+        {
+          "label": "Skill requirements and recipes",
+          "href": "/osrs-clone-codex/skills/"
+        },
+        {
+          "label": "Food and items",
+          "href": "/osrs-clone-codex/items/"
+        },
+        {
+          "label": "First runes",
+          "href": "/osrs-clone-codex/journeys/first_runes"
+        }
       ]
     },
     {
@@ -78,67 +169,177 @@
       "title": "Combat and survival",
       "paragraphs": [
         "Choose Attack on an enemy. Combat locks a target and runs on attack cooldowns, range, hit rolls, and equipment requirements. Walking away changes your position and engagement; it does not guarantee that a chasing enemy immediately gives up.",
-        "Melee supports Attack, Strength, and Defense training styles. Bows use compatible arrows, and staffs use compatible runes. Ranged ammunition can be equipped or selected from inventory; magic runes come from inventory. The current runtime spends one ammunition item on each consuming attack, including misses.",
+        "Melee supports Attack, Strength, and Defense training styles. Bows use compatible arrows, and staffs use compatible runes. Ranged ammunition can be equipped or selected from inventory; magic runes come from inventory. Each attack spends one ammunition item if it consumes ammunition, including misses.",
         "Damage above zero grants four XP per damage point to the attack's training skill and one XP per damage point to Hitpoints. Melee uses the selected training style; ranged and magic award their respective skill XP.",
         "Eat cooked food from your inventory to restore Hitpoints, up to your maximum. Food has its own eating delay, and you cannot eat on the same tick as attacking or casting. Check each food's healing amount before relying on it.",
-        "At zero Hitpoints, you return to the current world's default safety spawn with full health and cleared combat state. The reviewed defeat handler retains inventory and equipment. Enemy drops appear as ground loot; choose Take to collect them. Enemy pages show their current drop tables, aggression, and respawn data."
+        "At zero Hitpoints, you return to the current world's default safety spawn with full health and cleared combat state. You keep your inventory and equipment. Enemy drops appear as ground loot; choose Take to collect them. Enemy pages show their current drop tables, aggression, and respawn data."
       ],
-      "links": [ { "label": "Enemies and drops", "href": "/osrs-clone-codex/enemies/" } ]
+      "links": [
+        {
+          "label": "Enemies and drops",
+          "href": "/osrs-clone-codex/enemies/"
+        }
+      ]
     },
     {
       "id": "quests",
       "title": "Quest objectives and unlocks",
       "paragraphs": [
-        "Six quests are defined in the reviewed runtime. Talk to their NPCs to begin or check progress, then follow the dialogue to finish. Turn-in quests consume the requested materials; the quest log records objectives and status.",
+        "Six quests are available. Talk to their NPCs to begin or check progress, then follow the dialogue to finish. Turn-in quests consume the requested materials; the quest log records objectives and status.",
         "Tanner Rusk's quest is one early option. Boars and wolves are stronger than tutorial chickens, so bring suitable equipment and food before collecting his materials. Advanced merchant quests open their associated trade access."
       ],
-      "columns": [ { "key": "quest", "label": "Quest and NPC" }, { "key": "objective", "label": "Objective" }, { "key": "reward", "label": "Reward / unlock" } ],
-      "rows": [
-        { "quest": "Hides of the Frontier — Tanner Rusk", "objective": "Turn in 4 boar tusks and 2 wolf fangs.", "reward": "200 coins, 125 Crafting XP, tannery merchant access." },
-        { "quest": "Proof of the Deepforge — Thrain Deepforge", "objective": "Turn in 6 coal, 2 gold ore, and 1 uncut emerald.", "reward": "200 Smithing XP and advanced ore stock." },
-        { "quest": "Proof of the Yew — Advanced Fletcher", "objective": "Turn in 1 yew handle, 1 yew longbow, and 1 yew shortbow.", "reward": "250 Fletching XP and the full buyer ledger." },
-        { "quest": "Proof of the Grain — Advanced Woodsman", "objective": "Turn in 1 willow log, 1 maple log, and 1 yew log.", "reward": "200 Woodcutting XP and full merchant stock." },
-        { "quest": "From Net to Harpoon — Fishing Teacher", "objective": "Turn in 1 each of raw shrimp, trout, salmon, tuna, and swordfish.", "reward": "1 rune harpoon and 250 Fishing XP." },
-        { "quest": "Moulds of the Trade — Elira Gemhand", "objective": "Use her borrowed jewelry to imprint clay moulds, fire them, and hold a ring, amulet, and tiara mould.", "reward": "150 Crafting XP and all three mould unlocks. Borrowed jewelry is removed on completion." }
+      "columns": [
+        {
+          "key": "quest",
+          "label": "Quest and NPC"
+        },
+        {
+          "key": "objective",
+          "label": "Objective"
+        },
+        {
+          "key": "reward",
+          "label": "Reward / unlock"
+        }
       ],
-      "links": [ { "label": "Tanner Rusk walkthrough", "href": "/osrs-clone-codex/journeys/hides_of_the_frontier" } ]
+      "rows": [
+        {
+          "quest": "Hides of the Frontier — Tanner Rusk",
+          "objective": "Turn in 4 boar tusks and 2 wolf fangs.",
+          "reward": "200 coins, 125 Crafting XP, tannery merchant access."
+        },
+        {
+          "quest": "Proof of the Deepforge — Thrain Deepforge",
+          "objective": "Turn in 6 coal, 2 gold ore, and 1 uncut emerald.",
+          "reward": "200 Smithing XP and advanced ore stock."
+        },
+        {
+          "quest": "Proof of the Yew — Advanced Fletcher",
+          "objective": "Turn in 1 yew handle, 1 yew longbow, and 1 yew shortbow.",
+          "reward": "250 Fletching XP and the full buyer ledger."
+        },
+        {
+          "quest": "Proof of the Grain — Advanced Woodsman",
+          "objective": "Turn in 1 willow log, 1 maple log, and 1 yew log.",
+          "reward": "200 Woodcutting XP and full merchant stock."
+        },
+        {
+          "quest": "From Net to Harpoon — Fishing Teacher",
+          "objective": "Turn in 1 each of raw shrimp, trout, salmon, tuna, and swordfish.",
+          "reward": "1 rune harpoon and 250 Fishing XP."
+        },
+        {
+          "quest": "Moulds of the Trade — Elira Gemhand",
+          "objective": "Use her borrowed jewelry to imprint clay moulds, fire them, and hold a ring, amulet, and tiara mould.",
+          "reward": "150 Crafting XP and all three mould unlocks. Borrowed jewelry is removed on completion."
+        }
+      ],
+      "links": [
+        {
+          "label": "Tanner Rusk walkthrough",
+          "href": "/osrs-clone-codex/journeys/hides_of_the_frontier"
+        }
+      ]
     },
     {
       "id": "settings",
       "title": "Settings, saves, and limits",
       "paragraphs": [
-        "Use the Run button to toggle running. Combat controls let you choose a melee training style and toggle Auto Retaliate. Inventory context menus can set a preferred primary action for a click or tap; that preference is saved.",
-        "Progress saves to local browser storage every 10 seconds and through lifecycle save hooks. It includes your character, position, skill XP, inventory, bank, equipment, quests, unlocks, run mode, and item preferences. The current storage key is osrsClone.progress.v2. A different browser or device has separate local storage; there is no account-based cloud-save workflow in this revision.",
-        "Keep browser site data to retain progress. Starting a fresh session or clearing the game's storage resets local progress. This wiki update does not modify the game's saves.",
-        "Home saves completed character progress before returning to Arcade. If saving fails, the game stays open with a retry message. Backgrounding stops active player actions and saves completed progress. Rotation or pointer cancellation cancels pending gestures. Character creation has touch appearance choices, a draggable preview, a scrollable form, and Exit to Arcade; WebGL recovery offers Reload and Exit without erasing stored progress.",
-        "Inventory and bank drag reordering retain their existing desktop implementation. Touch item actions and bank transfers use tap and hold choices; touch drag reordering is not implemented by this mobile change.",
-        "Mobile-owner testing used Chromium touch emulation. Physical phones and tablets, Safari, a real soft keyboard, and operating-system gesture interruptions were not tested. The wiki checks its own rendering and links; it does not establish those game-device results.",
-        "The game's touch layout uses the browser's primary-pointer classification. On hybrid devices that report a fine primary pointer, touch gestures may work while the Bag, Chat, Stop, and Home toolbar stays hidden. This source limitation has not been tested on a physical hybrid device.",
-        "Combat, ranged, magic, tutorial lessons, and quests are implemented even though the export only creates nine gathering and production skill pages. A spellbook progression system and the old standalone North Road Camp region are not documented as playable features."
+        "Use Run to toggle running. In Combat, choose a melee training style or toggle Auto Retaliate. An inventory item's context menu can set its preferred primary action for clicks and taps; that preference is saved.",
+        "Progress saves in this browser every 10 seconds and when you leave or background the game. Saves include your character, position, skills, inventory, bank, equipment, quests, unlocks, run mode, and item preferences. Another browser or device has its own save; there are no account-based cloud saves.",
+        "Keep the game's browser site data to retain progress. Starting a fresh session or clearing that data resets your local progress. Home saves before returning to Arcade; if saving fails, the game stays open so you can retry.",
+        "Backgrounding stops active actions and saves completed progress. Rotation or pointer cancellation cancels pending gestures. Character creation offers appearance choices, a draggable preview, and Exit to Arcade. The WebGL recovery screen offers Reload and Exit without clearing stored progress.",
+        "Inventory and bank drag reordering require the desktop controls. Use tap and hold menus for touch item actions and bank transfers.",
+        "Touch and hybrid mouse/keyboard flows were tested with Chromium emulation. Physical phones and tablets, Safari, a real soft keyboard, and operating-system gesture interruptions were not tested.",
+        "The touch toolbar appears when the browser reports touch capability or after you use touch. It stays available when you switch to a mouse or keyboard, so you can still use Stop and Home. Keyboard chat shortcuts open the Chat drawer before focusing its input.",
+        "Combat, Ranged, Magic, tutorial lessons, and quests are implemented. The nine skill reference pages cover gathering and production; they do not include separate combat skill pages. A spellbook progression system and the retired standalone North Road Camp region are not playable features documented here."
       ]
     }
   ],
   "sources": [
-    { "path": "src/js/core.js", "label": "Character defaults, save key, run mode, keyboard bindings" },
-    { "path": "src/js/core-player-entry-runtime.js", "label": "Character creation and returning characters" },
-    { "path": "src/js/core-tutorial-runtime.js", "label": "Tutorial order, gates, practical checks, and recovery items" },
-    { "path": "src/game/input/controller.ts", "label": "Mouse camera and interaction decisions" },
-    { "path": "src/game/input/touch.ts", "label": "Touch tap/hold/drag/pinch timing and cancellation" },
-    { "path": "src/game/input/mobile-hud.ts", "label": "Touch drawers, primary-pointer layout, Stop, saved Home, and background behavior" },
-    { "path": "src/game/input/stop-action.ts", "label": "Stopped actions and preserved player state" },
-    { "path": "docs/MOBILE_GAMEPLAY.md", "label": "Verified mobile controls and testing limits" },
-    { "path": "src/js/input-render.js", "label": "Camera keys and world interactions" },
-    { "path": "src/js/world/map-hud-runtime.js", "label": "Minimap movement and world-map controls" },
-    { "path": "src/js/inventory.js", "label": "Equipment actions and bank/shop quantity choices" },
-    { "path": "src/js/combat.js", "label": "Attack resolution, ammunition consumption, combat XP" },
-    { "path": "src/game/combat/formulas.ts", "label": "Melee, ranged, and magic requirements and snapshots" },
-    { "path": "src/js/food-item-runtime.js", "label": "Healing and eating delays" },
-    { "path": "src/js/combat-player-defeat-runtime.js", "label": "Defeat and safety respawn" },
-    { "path": "src/js/content/quest-catalog.js", "label": "Six quests, objectives, rewards, and merchant gates" },
-    { "path": "src/js/core-progress-runtime.js", "label": "Local persistence and fresh-session behavior" },
-    { "path": "src/game/session/save.ts", "label": "Saved progress fields" },
-    { "path": "src/js/skill-progress-runtime.js", "label": "Skill XP and level cap" },
-    { "path": "content/world/manifest.json", "label": "Current playable world registry" },
-    { "path": "tools/content/codex-export.js", "label": "Canonical export scope and entity links" }
+    {
+      "path": "src/js/core.js",
+      "label": "Character defaults, save key, run mode, keyboard bindings"
+    },
+    {
+      "path": "src/js/core-player-entry-runtime.js",
+      "label": "Character creation and returning characters"
+    },
+    {
+      "path": "src/js/core-tutorial-runtime.js",
+      "label": "Tutorial order, gates, practical checks, and recovery items"
+    },
+    {
+      "path": "src/game/input/controller.ts",
+      "label": "Mouse camera and interaction decisions"
+    },
+    {
+      "path": "src/game/input/touch.ts",
+      "label": "Touch tap/hold/drag/pinch timing and cancellation"
+    },
+    {
+      "path": "src/game/input/mobile-hud.ts",
+      "label": "Touch drawers, hybrid toolbar, Stop, saved Home, and background behavior"
+    },
+    {
+      "path": "src/game/input/stop-action.ts",
+      "label": "Stopped actions and preserved player state"
+    },
+    {
+      "path": "docs/MOBILE_GAMEPLAY.md",
+      "label": "Verified mobile controls and testing limits"
+    },
+    {
+      "path": "src/js/input-render.js",
+      "label": "Camera keys and world interactions"
+    },
+    {
+      "path": "src/js/world/map-hud-runtime.js",
+      "label": "Minimap movement and world-map controls"
+    },
+    {
+      "path": "src/js/inventory.js",
+      "label": "Equipment actions and bank/shop quantity choices"
+    },
+    {
+      "path": "src/js/combat.js",
+      "label": "Attack resolution, ammunition consumption, combat XP"
+    },
+    {
+      "path": "src/game/combat/formulas.ts",
+      "label": "Melee, ranged, and magic requirements and snapshots"
+    },
+    {
+      "path": "src/js/food-item-runtime.js",
+      "label": "Healing and eating delays"
+    },
+    {
+      "path": "src/js/combat-player-defeat-runtime.js",
+      "label": "Defeat and safety respawn"
+    },
+    {
+      "path": "src/js/content/quest-catalog.js",
+      "label": "Six quests, objectives, rewards, and merchant gates"
+    },
+    {
+      "path": "src/js/core-progress-runtime.js",
+      "label": "Local persistence and fresh-session behavior"
+    },
+    {
+      "path": "src/game/session/save.ts",
+      "label": "Saved progress fields"
+    },
+    {
+      "path": "src/js/skill-progress-runtime.js",
+      "label": "Skill XP and level cap"
+    },
+    {
+      "path": "content/world/manifest.json",
+      "label": "Current playable world registry"
+    },
+    {
+      "path": "tools/content/codex-export.js",
+      "label": "Canonical export scope and entity links"
+    }
   ]
 }

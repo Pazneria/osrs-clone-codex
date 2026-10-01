@@ -1,5 +1,7 @@
 # Mobile controls source handoff - 2026-10-01
 
+This records the original mobile review. The later [prose and accuracy review](PROSE_REVIEW.md) supersedes its source pin and hybrid-pointer limitation with published game revision `485eb1cf0a4373f2356c58d5fc62cb1255fece37`.
+
 Final source reconciliation is complete. The original wiki refresh `f054bde`
 and mobile draft `2c7fd24` are preserved in history. Publication was authorized
 through this wiki repository's existing GitHub Pages workflow. No game, Arcade

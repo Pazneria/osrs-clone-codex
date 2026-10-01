@@ -1,79 +1,79 @@
 {
   "amulet_mould": {
     "descriptionHints": [
-      "A jewelry mould used to shape amulets during crafting recipes."
+      "A fired clay mould for amulet-making."
     ],
     "acquisitionHints": [
-      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
+      "Made through Crafting at level 1 at a fire using Imprinted Amulet Mould x1."
     ],
     "useHints": [
-      "Used in amulet-making recipes that turn silver or gold bars into wearable jewelry."
+      "Used for matching amulet jewelry recipes after the amulet mould unlock. Complete Moulds of the Trade for Elira Gemhand to earn all three unlocks."
     ]
   },
   "ring_mould": {
     "descriptionHints": [
-      "A jewelry mould used to shape rings during crafting recipes."
+      "A fired clay mould for ring-making."
     ],
     "acquisitionHints": [
-      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
+      "Made through Crafting at level 1 at a fire using Imprinted Ring Mould x1."
     ],
     "useHints": [
-      "Used in ring-making recipes that turn silver or gold bars into wearable jewelry."
+      "Used for matching ring jewelry recipes after the ring mould unlock. Complete Moulds of the Trade for Elira Gemhand to earn all three unlocks."
     ]
   },
   "tiara_mould": {
     "descriptionHints": [
-      "A jewelry mould used to shape tiaras during crafting recipes."
+      "A fired clay mould for tiara-making."
     ],
     "acquisitionHints": [
-      "Use soft clay on the matching borrowed jewelry to imprint a mould, then fire the imprinted mould."
+      "Made through Crafting at level 1 at a fire using Imprinted Tiara Mould x1."
     ],
     "useHints": [
-      "Used in tiara-making recipes that turn silver or gold bars into runecrafting-oriented headgear."
+      "Used for matching tiara jewelry recipes after the tiara mould unlock. Complete Moulds of the Trade for Elira Gemhand to earn all three unlocks."
     ]
   },
   "coins": {
     "descriptionHints": [
-      "Standard currency used across shop and trade interactions."
+      "Currency used to buy items from merchants."
     ],
     "acquisitionHints": [
-      "The export does not expose a single primary source, so treat coins as general economy currency earned through broader gameplay."
+      "Earn Coins by selling items, collecting enemy drops, or completing quests such as Hides of the Frontier."
     ],
     "useHints": [
-      "Used to buy items from merchants and to represent value across the project economy."
+      "Spend Coins at merchants. Check stock and trade access before planning a purchase."
     ]
   },
   "ashes": {
     "descriptionHints": [
-      "A low-value residue item associated with completed fires."
+      "Ashes left by a burnt-out fire."
     ],
     "acquisitionHints": [
-      "The export links ashes to Firemaking economy data, but the exact production step is not spelled out, so keep the wording conservative."
+      "Take the Ashes that appear on the ground when a Firemaking fire burns out."
     ],
     "useHints": [
-      "No major downstream crafting use is exported, so it mainly serves as a minor economy item."
+      "Ashes have no recipe use in the current game."
     ]
   },
   "soft_clay": {
     "descriptionHints": [
-      "A worked clay resource with crafting-oriented utility."
+      "Soft clay used to imprint jewelry moulds."
     ],
     "acquisitionHints": [
-      "Use clay on a water target to make soft clay through Crafting at level 1."
+      "Use Clay on water at Crafting level 1."
     ],
     "useHints": [
-      "The export does not show strong downstream links, so describe it as a general crafting material rather than inventing specific recipes."
+      "Near a crafting bench, use Soft Clay on a Borrowed Ring, Borrowed Amulet, or Borrowed Tiara to make the matching imprinted mould. Fire the imprinted mould before using it for jewelry."
     ]
   },
   "tinderbox": {
     "descriptionHints": [
-      "A basic utility tool used to start fires."
+      "A basic firemaking tool used to ignite logs."
     ],
     "acquisitionHints": [
-      "Usually stocked through general-store style economy data and firemaking support tables."
+      "Stocked by general stores in Main Overworld."
     ],
     "useHints": [
-      "Used to light logs for Firemaking and other fire-starting interactions."
+      "Used to light logs for Firemaking."
     ]
   }
 }

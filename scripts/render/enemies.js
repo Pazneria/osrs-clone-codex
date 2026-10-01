@@ -62,7 +62,9 @@ function getEnemyLevel(enemy) {
 
 function getEnemyHitpoints(enemy) {
   const data = getEnemyData(enemy);
-  return data.hitpoints !== undefined
+  return data.stats && data.stats.hitpoints !== undefined
+    ? data.stats.hitpoints
+    : data.hitpoints !== undefined
     ? data.hitpoints
     : data.hp !== undefined
       ? data.hp
@@ -78,7 +80,17 @@ function getEnemyRespawnTicks(enemy) {
 
 function getEnemyRoamingRadius(enemy) {
   const data = getEnemyData(enemy);
-  return data.roamingRadius !== undefined ? data.roamingRadius : enemy.roamingRadius !== undefined ? enemy.roamingRadius : null;
+  return data.behavior?.roamingRadius ?? data.roamingRadius ?? enemy.roamingRadius ?? null;
+}
+
+function getEnemyStyle(enemy) {
+  const data = getEnemyData(enemy);
+  return data.attackProfile?.styleFamily || data.combatFamily || data.attackStyle || data.combatStyle || "Not listed";
+}
+
+function getEnemyAggression(enemy) {
+  const behavior = getEnemyData(enemy).behavior;
+  return behavior && typeof behavior === "object" ? behavior.aggroType : "Not listed";
 }
 
 function getEnemyHomeTile(enemy) {
@@ -111,6 +123,7 @@ function looksLikeDropEntry(value) {
   if (!value) return false;
   if (typeof value === "string") return Boolean(String(value).trim());
   if (typeof value !== "object") return false;
+  if (value.kind === "nothing") return true;
   return [
     value.itemId,
     value.rewardItemId,
@@ -220,6 +233,9 @@ function formatDropAmount(entry) {
 }
 
 function formatDropChance(entry) {
+  if (entry.chance === undefined && entry.dropChance === undefined && entry.weight !== undefined) {
+    return formatNumber(entry.weight);
+  }
   const chance = entry.chance !== undefined
     ? entry.chance
     : entry.dropChance !== undefined
@@ -246,8 +262,8 @@ function buildEnemySummaryLine(enemy) {
   if (drops) parts.push(`${drops} drop${drops === 1 ? "" : "s"}`);
   if (getEnemyRespawnTicks(enemy) !== null) parts.push(`${formatTicks(getEnemyRespawnTicks(enemy))} respawn`);
   if (getEnemyRoamingRadius(enemy) !== null) parts.push(`Roam ${formatNumber(getEnemyRoamingRadius(enemy))}`);
-  if (data.attackStyle || data.combatStyle || data.family) parts.push(humanizeId(data.attackStyle || data.combatStyle || data.family));
-  if (data.behavior && typeof data.behavior === "string") parts.push(humanizeId(data.behavior));
+  parts.push(humanizeId(getEnemyStyle(enemy)));
+  parts.push(humanizeId(getEnemyAggression(enemy)));
   return parts.length ? parts.join(" | ") : "Enemy encounter";
 }
 
@@ -258,7 +274,7 @@ function buildEnemySearchText(enemy) {
     enemy.enemyId,
     data.combatStyle || "",
     data.attackStyle || "",
-    data.behavior || "",
+    getEnemyAggression(enemy),
     data.family || "",
     getEnemyRelatedWorldIds(enemy).join(" "),
     getEnemyRelatedItemIds(enemy).join(" "),
@@ -305,7 +321,7 @@ function renderEnemyCard(enemy, siteAssets) {
 function renderDropTableSection(enemy, itemIndex) {
   const rows = getEnemyDropEntries(enemy).map((entry, index) => {
     const itemId = String(
-      entry.itemId
+      (entry.kind === "coins" ? "coins" : entry.itemId)
       || entry.rewardItemId
       || entry.outputItemId
       || entry.dropItemId
@@ -316,11 +332,11 @@ function renderDropTableSection(enemy, itemIndex) {
     return {
       key: `${itemId || "drop"}-${index}`,
       itemId,
-      itemLabel: item ? item.title : humanizeId(itemId || entry.label || `Drop ${index + 1}`),
+      itemLabel: entry.kind === "nothing" ? "No drop" : item ? item.title : humanizeId(itemId || entry.label || `Drop ${index + 1}`),
       itemHref: itemId ? buildCodexEntityPath("item", itemId) : null,
-      amount: formatDropAmount(entry),
+      amount: entry.kind === "nothing" ? "—" : formatDropAmount(entry),
       chance: formatDropChance(entry),
-      note: entry.note || entry.notes || entry.rarity || entry.category || "Varies"
+      note: entry.note || entry.notes || entry.rarity || entry.category || ""
     };
   });
 
@@ -328,10 +344,10 @@ function renderDropTableSection(enemy, itemIndex) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Drop Table</p>
-          <h3>What this enemy can drop</h3>
+            <h2>Drop table</h2>
         </div>
       </div>
+      <p>Weights describe the relative chances of the outcomes below. A No drop outcome gives no loot.</p>
       ${renderTable({
         columns: [
           {
@@ -383,9 +399,9 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
         </div>
       </div>
       ${renderStatGrid([
-        { label: "Level", value: level !== null && level !== undefined ? level : "None" },
-        { label: "HP", value: hp !== null && hp !== undefined ? hp : "None" },
-        { label: "Drops", value: dropEntries.length },
+        { label: "Hitpoints", value: hp ?? "Not listed" },
+        { label: "Aggression", value: humanizeId(getEnemyAggression(enemy)) },
+        { label: "Loot outcomes", value: dropEntries.length },
         { label: "Worlds", value: relatedWorldIds.length }
       ], {
         className: "hero-stat-grid",
@@ -398,26 +414,30 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Reference Layer</p>
-          <h3>Core facts and encounter metadata</h3>
+          <h2>Combat and behavior</h2>
         </div>
       </div>
       ${renderMetaList([
         { label: "Enemy ID", value: enemy.enemyId },
         { label: "Type", value: data.type ? humanizeId(data.type) : "Enemy" },
-        { label: "Level", value: level !== null && level !== undefined ? level : "None" },
+        ...(level === null || level === undefined ? [] : [{ label: "Combat level", value: level }]),
+        { label: "Attack", value: data.stats?.attack },
+        { label: "Strength", value: data.stats?.strength },
+        { label: "Defense", value: data.stats?.defense },
         { label: "Hitpoints", value: hp !== null && hp !== undefined ? hp : "None" },
         { label: "Respawn", value: respawnTicks !== null ? formatTicks(respawnTicks) : "None" },
         { label: "Roaming radius", value: roamingRadius !== null && roamingRadius !== undefined ? formatNumber(roamingRadius) : "None" },
-        { label: "Home tile", value: homeTile ? formatCoordinates(homeTile) : "None" },
-        { label: "Battle style", value: data.attackStyle || data.combatStyle || data.behavior || "None" }
+        { label: "Battle style", value: humanizeId(getEnemyStyle(enemy)) },
+        { label: "Attack cycle", value: data.attackProfile?.tickCycle !== undefined ? formatTicks(data.attackProfile.tickCycle) : "Not listed" },
+        { label: "Aggression", value: humanizeId(getEnemyAggression(enemy)) },
+        { label: "Aggression radius", value: data.behavior?.aggroRadius },
+        { label: "Chase range", value: data.behavior?.chaseRange }
       ])}
     </section>
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Placement</p>
-          <h3>Where this enemy is meant to live</h3>
+          <h2>Locations and loot</h2>
         </div>
       </div>
       ${renderMetaList([
@@ -435,8 +455,7 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
             { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [enemy.path], emptyText: "None" }
           )
         },
-        { label: "Attack family", value: data.family || data.combatFamily || "None" },
-        { label: "Behavior", value: data.behavior || "None" }
+        { label: "Attack family", value: data.family || data.combatFamily || "Not listed" }
       ])}
       <div class="prose">
         <p>${renderInlineLinkedText(
@@ -444,7 +463,7 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
           { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [enemy.path] }
         )}</p>
         <p>${renderInlineLinkedText(
-          `Its drop and reference context runs through ${describeList(relatedItemIds.map((itemId) => (itemIndex.get(itemId) || {}).title || humanizeId(itemId)))}.`,
+          `Drops include ${describeList(relatedItemIds.map((itemId) => (itemIndex.get(itemId) || {}).title || humanizeId(itemId)))}.`,
           { linkRegistry: siteAssets.linkRegistry, excludeHrefs: [enemy.path] }
         )}</p>
       </div>
@@ -453,8 +472,7 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Raw Data</p>
-          <h3>Export payload for this enemy</h3>
+          <h2>Source data</h2>
         </div>
       </div>
       ${renderJsonDetails("Raw exported enemy data", enemy.data)}
@@ -470,7 +488,7 @@ function renderEnemyPage(bundle, editorial, enemy, siteAssets) {
       pageTitle: enemy.title,
       eyebrow: "Enemy Reference",
       heroTitle: enemy.title,
-      heroBody: `<p>${renderInlineLinkedText(`Use this page to inspect ${enemy.title}'s encounter profile, placement, and drop table before opening the raw export data.`, {
+      heroBody: `<p>${renderInlineLinkedText(`${enemy.title} has ${hp} Hitpoints and ${getEnemyAggression(enemy)} behavior. ${getEnemyAggression(enemy) === "aggressive" ? "It can attack when you approach; bring food and suitable equipment." : "It does not initiate an attack when you approach."}`, {
         linkRegistry: siteAssets.linkRegistry,
         excludeHrefs: [enemy.path]
       })}</p>`,
@@ -495,7 +513,7 @@ function renderEnemyIndexPage(bundle, editorial, siteAssets) {
     return leftSortLevel - rightSortLevel || String(left.title || "").localeCompare(String(right.title || ""));
   });
   const totalDrops = enemies.reduce((sum, enemy) => sum + getEnemyDropEntries(enemy).length, 0);
-  const roamingCount = enemies.filter((enemy) => getEnemyRoamingRadius(enemy) !== null && getEnemyRoamingRadius(enemy) !== undefined).length;
+  const roamingCount = enemies.filter((enemy) => Number(getEnemyRoamingRadius(enemy)) > 0).length;
   const worldLinkedCount = enemies.reduce((sum, enemy) => sum + getEnemyRelatedWorldIds(enemy).length, 0);
   const cards = enemies.map((enemy) => renderEnemyCard(enemy, siteAssets)).join("");
 
@@ -517,8 +535,7 @@ function renderEnemyIndexPage(bundle, editorial, siteAssets) {
     <section class="section-card">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Browse Enemies</p>
-          <h3>Search by enemy id, title, or the loot and worlds tied to the encounter.</h3>
+          <h2>Find an enemy</h2>
         </div>
         ${renderSearchHeader("enemies", "Search enemies by id, title, drop item, or world", enemies.length)}
       </div>
@@ -537,8 +554,8 @@ function renderEnemyIndexPage(bundle, editorial, siteAssets) {
       pageTitle: "Enemies",
       eyebrow: "Encounter Index",
       heroTitle: "Enemies",
-      heroBody: "<p>Browse encounter pages for hostile creatures, their placement, and their drop tables.</p>",
-      heroBadges: ["Encounter pages", "Drop tables", "World-linked"],
+      heroBody: "<p>Check Hitpoints, aggression, attack timing, locations, and drops before choosing an enemy to fight.</p>",
+      heroBadges: [],
       heroAside,
       body
     })

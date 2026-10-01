@@ -366,7 +366,7 @@ code {
   margin-bottom: 0.85rem;
 }
 
-.section-heading h3,
+.section-heading h2,
 .entity-card h3,
 .entity-card h4,
 .section-card h4 {
@@ -838,7 +838,7 @@ code {
 .filter-chip-list button { cursor: pointer; }
 .table-wrap { max-width: 100%; }
 .page-stack, .hero-copy, .hero-aside { min-width: 0; }
-.page-stack > *, .section-card { min-width: 0; }
+.page-stack > *, .section-card, .entity-card { min-width: 0; }
 .filter-chip-list li:has([data-filter-active="true"]) { background: rgba(69, 103, 96, 0.18); border-color: var(--pine); }
 .footer-note, .prose { overflow-wrap: anywhere; }
 section[id] { scroll-margin-top: 1rem; }

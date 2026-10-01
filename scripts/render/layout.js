@@ -34,7 +34,7 @@ function renderLayout(options) {
   const generatedCommit = manifest && manifest.sourceCommit ? String(manifest.sourceCommit).slice(0, 12) : "unknown";
   const generatedAt = manifest && manifest.generatedAt ? String(manifest.generatedAt) : "unknown";
   const brandKicker = editorial.brandKicker || "Pazneria Reference Hub";
-  const footerNote = editorial.footerNote || "Export-backed reference pages for the OSRS Clone sandbox.";
+  const footerNote = editorial.footerNote || "";
   const heroAsideHtml = heroAside || renderStatGrid(heroStats, {
     className: "hero-stat-grid",
     itemClassName: "hero-stat-card",
@@ -61,7 +61,7 @@ function renderLayout(options) {
             <a class="brand-mark" href="${escapeHtml(buildCodexHomePath())}" aria-label="${escapeHtml(editorial.siteTitle)} home">OC</a>
             <div>
               <p class="brand-kicker">${escapeHtml(brandKicker)}</p>
-              <h1 class="site-title">${escapeHtml(editorial.siteTitle)}</h1>
+              <p class="site-title">${escapeHtml(editorial.siteTitle)}</p>
               <p class="site-tagline">${escapeHtml(editorial.tagline)}</p>
             </div>
           </div>
@@ -74,7 +74,7 @@ function renderLayout(options) {
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">${escapeHtml(eyebrow)}</p>
-            <h2 class="page-title">${escapeHtml(heroTitle)}</h2>
+            <h1 class="page-title">${escapeHtml(heroTitle)}</h1>
             <div class="prose">${heroBody}</div>
             ${heroBadges.length ? renderChipList(heroBadges, { className: "hero-badge-list" }) : ""}
           </div>
@@ -87,8 +87,8 @@ function renderLayout(options) {
         ${body}
       </main>
       <footer class="footer-note">
-        <p>${escapeHtml(footerNote)}</p>
-        <p>Game source: <a href="https://github.com/Pazneria/osrs-clone/commit/${escapeHtml(manifest.sourceCommit)}">${escapeHtml(generatedCommit)}</a>. Built ${escapeHtml(generatedAt)}. <a href="${buildCodexHomePath()}wiki/#version">Coverage and update basis</a>.</p>
+        ${footerNote ? `<p>${escapeHtml(footerNote)}</p>` : ""}
+        <details><summary>Version and sources</summary><p>Game source: <a href="https://github.com/Pazneria/osrs-clone/commit/${escapeHtml(manifest.sourceCommit)}">${escapeHtml(generatedCommit)}</a>. Built ${escapeHtml(generatedAt)}. <a href="${buildCodexHomePath()}wiki/#version">Version details</a>.</p></details>
       </footer>
     </div>
   </body>

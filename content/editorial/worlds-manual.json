@@ -3,29 +3,22 @@
   "entries": {
     "main_overworld": {
       "overview": [
-        "Main Overworld contains Starter Town, the main service hub, and the surrounding resource and combat regions. Starter Town is now an area in this world rather than a separate world ID.",
-        "The hub is denser than before: named NPCs live in bespoke homesteads and work plots, town NPCs roam instead of reading as static markers, and the castle, store, smithing, tannery, pond, grove, mine, and altar lanes all connect cleanly.",
-        "It still exports the broadest early-game resource coverage in the bundle, but the current build also uses it as the reference map for dialogue, quest hooks, merchant gating, bespoke NPC presentation, and safe-versus-dangerous route spacing."
+        "Main Overworld contains Starter Town and the surrounding resource and combat areas. After Tutorial Island, use the town to bank, trade, make equipment, and begin quests."
       ],
       "whyItMatters": [
-        "After Tutorial Island, this world connects gathering, refining, crafting, dialogue, quests, trade, and combat.",
-        "It is the main reference world for authored encounter rollout, with roaming chickens, rats, goblins, boars, wolves, guards, and training content layered around protected service lanes.",
-        "It also anchors the first named-NPC presentation pass: bespoke homesteads, Talk-to dialogue, roaming service NPC behavior, Tanner Rusk's dedicated tannery plot and bespoke appearance, and his first quest/shop gate."
+        "Chickens and rats offer early combat practice, while goblins, boars, wolves, guards, and other enemies populate the surrounding areas. Bring food and check an enemy's aggression before approaching it."
       ],
       "howToGetStarted": [
-        "Begin in the central hub, use Talk-to on the named NPCs, and learn the lane layout before pushing into the outer fields where goblins, boars, and wolves roam much more heavily than before.",
-        "Treat the training dummy pocket and south-field critters as the safe combat read, then step outward into the broader authored encounter bands once you know where the town routes stay protected.",
-        "Visit Tanner Rusk early: his tannery plot is now a major crafting landmark, and Hides of the Frontier is the clearest first example of how dialogue, drops, quests, and merchant gating connect."
+        "Find the bank, general store, furnace, and anvil in Starter Town before heading out. Use Talk-to on NPCs to learn their services and quest requirements.",
+        "Visit Tanner Rusk at the tannery for Hides of the Frontier. His quest needs boar tusks and wolf fangs; prepare a weapon and cooked food before hunting boars and wolves."
       ],
       "connectedSystems": [
-        "Services and NPCs: general store, fishing supplier, fishing teacher, crafting teacher, Tanner Rusk, Borin Ironvein, Thrain Deepforge, Elira Gemhand, Rune Tutor, Combination Sage, and the caravan guides, all with Talk-to dialogue and authored roaming placements.",
-        "Combat: training dummy, guards, and large authored roaming populations of rats, chickens, goblins, boars, and wolves spread from starter lanes to the far outskirts.",
-        "Routes, access, and progression: starter mine, iron mine, coal mine, precious mine, gem mine, rune essence mine, starter grove, oak path, willow bend, maple ridge, yew frontier, the four altar routes, the cleaned-up staircase/access links, and Tanner Rusk's first quest/shop gate."
+        "The town includes the Fishing Supplier and Teacher, Crafting Teacher, Tanner Rusk, Borin Ironvein, Thrain Deepforge, Elira Gemhand, Rune Tutor, and Combination Sage. Some merchant access depends on quests.",
+        "Resource routes lead to ore, coal, gems, rune essence, five wood types, fishing water, and the four elemental altars. Use the route and service locations below to plan a trip."
       ],
       "nextSteps": [
-        "Use Starter Town as the baseline world for comparing hub-safe paths against outer encounter density, roaming behavior, and named-NPC placement quality.",
-        "Cross-check Tanner Rusk's tannery, dialogue, quest gate, and leather shop against the crafting pages, item pages, and the newer enemy drops that feed them.",
-        "Explore the resource and encounter routes within Main Overworld. The old separate North Road Camp world is absent from the current world manifest."
+        "Choose a gathering or equipment goal, gather its materials, and return to the appropriate station. Bank unused supplies before exploring farther from town.",
+        "The retired standalone North Road Camp region is not a destination in the current game."
       ],
       "featuredItemIds": [
         "hammer",
