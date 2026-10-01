@@ -6,6 +6,8 @@ The codex does not duplicate gameplay facts by hand. Instead, it syncs a version
 
 The player guide at `/osrs-clone-codex/wiki/` supplements the entity export with reviewed runtime facts for controls, tutorial steps, combat, quests, and saves. Its source commit must match the export. The deployment workflow checks out that reviewed game commit and installs its locked exporter dependencies before validation.
 
+The [mobile controls handoff](docs/MOBILE_WIKI_HANDOFF.md) records a local implementation draft awaiting the final published game revision. The guide displays that pending review separately; its export and deployment pins have not changed. Do not publish this draft before final source reconciliation.
+
 GitHub Pages deployment is handled by `.github/workflows/deploy-pages.yml`. The workflow checks out both this repo and `Pazneria/osrs-clone`, builds the static site, and publishes `dist/osrs-clone-codex/` to `https://pazneria.github.io/osrs-clone-codex/`.
 
 ## Expected workspace layout

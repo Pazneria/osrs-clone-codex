@@ -9,6 +9,13 @@ function loadPlayerGuide(projectRoot, bundle) {
   if (!Array.isArray(guide.sections) || !guide.sections.length || !Array.isArray(guide.sources) || !guide.sources.length) {
     throw new Error("Player guide requires sections and source references.");
   }
+  const pending = guide.pendingSourceReview;
+  if (pending && (!/^[a-f0-9]{40}$/.test(pending.localCommit)
+    || !/^\d{4}-\d{2}-\d{2}$/.test(pending.reviewedAt)
+    || !/^docs\/[a-zA-Z0-9_./-]+\.md$/.test(pending.sourceDocument)
+    || pending.sourceDocument.split("/").includes(".."))) {
+    throw new Error("Invalid pending player guide source review.");
+  }
   const ids = new Set();
   for (const section of guide.sections) {
     if (!/^[a-z][a-z0-9-]*$/.test(section.id) || ids.has(section.id) || !section.title || !section.paragraphs?.length) {

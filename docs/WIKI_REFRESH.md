@@ -2,6 +2,8 @@
 
 Prepared for review. No push, PR, merge, deployment, or hub edit was performed.
 
+This document records the original `f054bde` refresh. The subsequent [mobile controls draft](MOBILE_WIKI_HANDOFF.md) has a separate local source basis and awaits the final published game pin.
+
 ## Source and freshness
 
 - Game source: `Pazneria/osrs-clone`, clean main commit `f4703d738f6dc208fdf4fffeb1665a313ecf5b42` (2026-06-25). The public API's main revision matched the supplied checkout. All game reads and exporter checks used a separate checkout at that revision.
